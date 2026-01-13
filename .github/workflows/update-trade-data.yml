@@ -1,25 +1,14 @@
 name: Update Trade Data
 
 on:
-  # Run once daily at midnight UTC
-  schedule:
-    - cron: '0 0 * * *'
-
-  # Allow manual triggering from GitHub Actions tab
+  # Allow manual triggering from GitHub Actions tab only
+  # Data fetching should be done manually via the UI
   workflow_dispatch:
 
-  # Run on push to main (for testing)
-  push:
-    branches:
-      - main
-    paths:
-      - 'scripts/fetch_trade_data.py'
-      - '.github/workflows/update-trade-data.yml'
-
-# Prevent multiple workflow runs from executing simultaneously
+# Prevent conflicts with Pages deployment
 concurrency:
   group: trade-data-update
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   fetch-and-update:
@@ -31,46 +20,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      - name: Random delay (24-30 hours since last run)
-        if: github.event_name == 'schedule'
-        run: |
-          # Check if cache file exists and get last modified time
-          if [ -f data/trade_cache.json ]; then
-            LAST_UPDATE=$(jq -r '.metadata.last_updated' data/trade_cache.json)
-            LAST_EPOCH=$(date -d "$LAST_UPDATE" +%s 2>/dev/null || echo 0)
-            NOW_EPOCH=$(date +%s)
-            HOURS_SINCE=$((($NOW_EPOCH - $LAST_EPOCH) / 3600))
-
-            echo "Hours since last update: $HOURS_SINCE"
-
-            # Only proceed if at least 24 hours have passed
-            if [ $HOURS_SINCE -lt 24 ]; then
-              echo "Last update was less than 24 hours ago. Skipping."
-              exit 0
-            fi
-
-            # Random delay between 0-6 hours (to spread runs across 24-30 hour window)
-            RANDOM_HOURS=$((RANDOM % 7))
-
-            # If already past 30 hours, run immediately
-            if [ $HOURS_SINCE -ge 30 ]; then
-              echo "More than 30 hours since last update. Running immediately."
-            else
-              # Check if current time + random delay would exceed 30 hours
-              TARGET_HOURS=$((24 + $RANDOM_HOURS))
-              if [ $HOURS_SINCE -ge $TARGET_HOURS ]; then
-                echo "Target time reached ($TARGET_HOURS hours). Running now."
-              else
-                WAIT_HOURS=$(($TARGET_HOURS - $HOURS_SINCE))
-                echo "Waiting $WAIT_HOURS hours to reach random target of $TARGET_HOURS hours total."
-                echo "This maintains 24-30 hour update interval."
-                exit 0
-              fi
-            fi
-          else
-            echo "No previous data found. Running immediately."
-          fi
 
       - name: Set up Python
         uses: actions/setup-python@v5
