@@ -99,6 +99,7 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add data/trade_cache.json
           git commit -m "Update trade data - $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          git pull --rebase origin main
           git push
 
       - name: Summary
