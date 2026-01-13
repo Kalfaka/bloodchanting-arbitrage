@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-01-13T07:44:58.375827",
+    "last_updated": "2026-01-13T07:55:32.403153",
     "total_trades": 14154,
     "items_processed": 217,
     "items_with_trades": 212,
@@ -25716,6 +25716,17 @@
       "buyer": "podinjsh"
     },
     {
+      "id": 3232543,
+      "time": "2026-01-13 07:44:14.874221",
+      "item_id": 23131,
+      "item_name": "Blade of saeldor",
+      "amount": 1,
+      "price": 700,
+      "currency": 1,
+      "seller": "darthvadorz",
+      "buyer": "npc66"
+    },
+    {
       "id": 3232181,
       "time": "2026-01-13 06:56:44.929651",
       "item_id": 23131,
@@ -26527,17 +26538,6 @@
       "price": 500,
       "currency": 1,
       "seller": "lt_blood",
-      "buyer": "7"
-    },
-    {
-      "id": 3212535,
-      "time": "2026-01-11 20:07:05.200356",
-      "item_id": 23131,
-      "item_name": "Blade of saeldor",
-      "amount": 1,
-      "price": 490,
-      "currency": 1,
-      "seller": "abobakr",
       "buyer": "7"
     },
     {
@@ -33053,6 +33053,17 @@
       "buyer": "dingos"
     },
     {
+      "id": 3232550,
+      "time": "2026-01-13 07:45:32.254376",
+      "item_id": 22120,
+      "item_name": "Bloodfire shield",
+      "amount": 1,
+      "price": 575,
+      "currency": 1,
+      "seller": "handigeh",
+      "buyer": "DogInVarrock"
+    },
+    {
       "id": 3232358,
       "time": "2026-01-13 07:30:10.724032",
       "item_id": 22120,
@@ -33865,17 +33876,6 @@
       "currency": 1,
       "seller": "ballman9595",
       "buyer": "Likeass"
-    },
-    {
-      "id": 3208017,
-      "time": "2026-01-11 13:49:30.377613",
-      "item_id": 22120,
-      "item_name": "Bloodfire shield",
-      "amount": 1,
-      "price": 525,
-      "currency": 1,
-      "seller": "ballman9595",
-      "buyer": "crown d"
     },
     {
       "id": 2643232,
@@ -40698,6 +40698,17 @@
       "buyer": "zaki"
     },
     {
+      "id": 3232545,
+      "time": "2026-01-13 07:45:09.563488",
+      "item_id": 15038,
+      "item_name": "Chaotic longsword",
+      "amount": 2,
+      "price": 5,
+      "currency": 1,
+      "seller": "cnh_97",
+      "buyer": "Kalfka"
+    },
+    {
       "id": 3221652,
       "time": "2026-01-12 13:07:06.294954",
       "item_id": 15038,
@@ -41510,17 +41521,6 @@
       "currency": 1,
       "seller": "secret_vip",
       "buyer": "DYLLAN92"
-    },
-    {
-      "id": 1408789,
-      "time": "2025-06-26 21:55:01.428226",
-      "item_id": 15038,
-      "item_name": "Chaotic longsword",
-      "amount": 3,
-      "price": 215000000,
-      "currency": 0,
-      "seller": "auberyrsps",
-      "buyer": "iCrixxus"
     },
     {
       "id": 3229649,
@@ -45483,6 +45483,61 @@
       "buyer": "retrospectz"
     },
     {
+      "id": 3232539,
+      "time": "2026-01-13 07:43:43.621443",
+      "item_id": 23475,
+      "item_name": "Crystal helmet",
+      "amount": 1,
+      "price": 700,
+      "currency": 1,
+      "seller": "ramiar",
+      "buyer": "npc66"
+    },
+    {
+      "id": 3232538,
+      "time": "2026-01-13 07:43:39.414319",
+      "item_id": 23475,
+      "item_name": "Crystal helmet",
+      "amount": 2,
+      "price": 700,
+      "currency": 1,
+      "seller": "zipgeenbike",
+      "buyer": "npc66"
+    },
+    {
+      "id": 3232533,
+      "time": "2026-01-13 07:43:27.397545",
+      "item_id": 23475,
+      "item_name": "Crystal helmet",
+      "amount": 1,
+      "price": 600,
+      "currency": 1,
+      "seller": "jackson1337",
+      "buyer": "npc66"
+    },
+    {
+      "id": 3232532,
+      "time": "2026-01-13 07:43:24.394063",
+      "item_id": 23475,
+      "item_name": "Crystal helmet",
+      "amount": 1,
+      "price": 550,
+      "currency": 1,
+      "seller": "cogent",
+      "buyer": "npc66"
+    },
+    {
+      "id": 3232530,
+      "time": "2026-01-13 07:43:15.975682",
+      "item_id": 23475,
+      "item_name": "Crystal helmet",
+      "amount": 1,
+      "price": 550,
+      "currency": 1,
+      "seller": "rocksbr",
+      "buyer": "npc66"
+    },
+    {
       "id": 3232095,
       "time": "2026-01-13 06:41:26.602356",
       "item_id": 23475,
@@ -46253,59 +46308,15 @@
       "buyer": "i am epic"
     },
     {
-      "id": 3207776,
-      "time": "2026-01-11 13:22:05.726842",
-      "item_id": 23475,
-      "item_name": "Crystal helmet",
-      "amount": 6,
-      "price": 625,
+      "id": 3232531,
+      "time": "2026-01-13 07:43:20.786675",
+      "item_id": 23476,
+      "item_name": "Crystal platebody",
+      "amount": 2,
+      "price": 600,
       "currency": 1,
-      "seller": "i_am_habibi",
-      "buyer": "i am epic"
-    },
-    {
-      "id": 3207336,
-      "time": "2026-01-11 12:31:22.853664",
-      "item_id": 23475,
-      "item_name": "Crystal helmet",
-      "amount": 1,
-      "price": 450,
-      "currency": 1,
-      "seller": "tylerr",
-      "buyer": "the retardd"
-    },
-    {
-      "id": 3206909,
-      "time": "2026-01-11 11:36:57.340944",
-      "item_id": 23475,
-      "item_name": "Crystal helmet",
-      "amount": 1,
-      "price": 500,
-      "currency": 1,
-      "seller": "mr_handsome",
-      "buyer": "zangana"
-    },
-    {
-      "id": 3204359,
-      "time": "2026-01-11 05:59:15.672917",
-      "item_id": 23475,
-      "item_name": "Crystal helmet",
-      "amount": 1,
-      "price": 550,
-      "currency": 1,
-      "seller": "poopy_poop",
-      "buyer": "hailey"
-    },
-    {
-      "id": 3204356,
-      "time": "2026-01-11 05:59:04.260382",
-      "item_id": 23475,
-      "item_name": "Crystal helmet",
-      "amount": 1,
-      "price": 450,
-      "currency": 1,
-      "seller": "pearly_gates",
-      "buyer": "hailey"
+      "seller": "handigeh",
+      "buyer": "npc66"
     },
     {
       "id": 3231998,
@@ -47122,15 +47133,37 @@
       "buyer": "Thunder jety"
     },
     {
-      "id": 3205234,
-      "time": "2026-01-11 07:39:37.249130",
-      "item_id": 23476,
-      "item_name": "Crystal platebody",
-      "amount": 4,
-      "price": 1000,
+      "id": 3232542,
+      "time": "2026-01-13 07:43:50.832397",
+      "item_id": 23477,
+      "item_name": "Crystal platelegs",
+      "amount": 3,
+      "price": 850,
       "currency": 1,
-      "seller": "i_eat_dropss",
-      "buyer": "planker101"
+      "seller": "zerkyy",
+      "buyer": "npc66"
+    },
+    {
+      "id": 3232536,
+      "time": "2026-01-13 07:43:35.205991",
+      "item_id": 23477,
+      "item_name": "Crystal platelegs",
+      "amount": 1,
+      "price": 600,
+      "currency": 1,
+      "seller": "dclevo",
+      "buyer": "npc66"
+    },
+    {
+      "id": 3232534,
+      "time": "2026-01-13 07:43:31.000847",
+      "item_id": 23477,
+      "item_name": "Crystal platelegs",
+      "amount": 1,
+      "price": 580,
+      "currency": 1,
+      "seller": "anger",
+      "buyer": "npc66"
     },
     {
       "id": 3231984,
@@ -47923,39 +47956,6 @@
       "currency": 1,
       "seller": "velocity_ink",
       "buyer": "Girl Scout"
-    },
-    {
-      "id": 3206316,
-      "time": "2026-01-11 10:32:47.949602",
-      "item_id": 23477,
-      "item_name": "Crystal platelegs",
-      "amount": 1,
-      "price": 500,
-      "currency": 1,
-      "seller": "hadlaigh",
-      "buyer": "Girl Scout"
-    },
-    {
-      "id": 3204362,
-      "time": "2026-01-11 05:59:19.681705",
-      "item_id": 23477,
-      "item_name": "Crystal platelegs",
-      "amount": 1,
-      "price": 550,
-      "currency": 1,
-      "seller": "simplyput",
-      "buyer": "hailey"
-    },
-    {
-      "id": 3204157,
-      "time": "2026-01-11 05:44:21.515802",
-      "item_id": 23477,
-      "item_name": "Crystal platelegs",
-      "amount": 1,
-      "price": 550,
-      "currency": 1,
-      "seller": "mlandrum559",
-      "buyer": "AgnalienSkys"
     },
     {
       "id": 3228408,
@@ -55988,6 +55988,28 @@
       "buyer": "yadeddumdog"
     },
     {
+      "id": 3232579,
+      "time": "2026-01-13 07:51:03.814544",
+      "item_id": 22831,
+      "item_name": "Dragon hasta",
+      "amount": 1,
+      "price": 20,
+      "currency": 1,
+      "seller": "meteorite",
+      "buyer": "tuntun"
+    },
+    {
+      "id": 3232577,
+      "time": "2026-01-13 07:50:55.598680",
+      "item_id": 22831,
+      "item_name": "Dragon hasta",
+      "amount": 7,
+      "price": 20,
+      "currency": 1,
+      "seller": "meteorite",
+      "buyer": "tuntun"
+    },
+    {
       "id": 3232399,
       "time": "2026-01-13 07:32:43.727426",
       "item_id": 22831,
@@ -56791,26 +56813,15 @@
       "buyer": "SHITANYAHU"
     },
     {
-      "id": 2888490,
-      "time": "2025-12-01 16:02:15.813000",
-      "item_id": 22831,
-      "item_name": "Dragon hasta",
-      "amount": 9,
-      "price": 15,
+      "id": 3232551,
+      "time": "2026-01-13 07:45:35.665930",
+      "item_id": 22827,
+      "item_name": "Dragon hunter lance",
+      "amount": 1,
+      "price": 2475,
       "currency": 1,
-      "seller": "bounder",
-      "buyer": "SHITANYAHU"
-    },
-    {
-      "id": 2888068,
-      "time": "2025-12-01 15:17:14.050845",
-      "item_id": 22831,
-      "item_name": "Dragon hasta",
-      "amount": 18,
-      "price": 15,
-      "currency": 1,
-      "seller": "bounder",
-      "buyer": "Moonlight"
+      "seller": "handigeh",
+      "buyer": "28th"
     },
     {
       "id": 3232278,
@@ -57624,17 +57635,6 @@
       "price": 6000,
       "currency": 1,
       "seller": "trashy_washy",
-      "buyer": "aero"
-    },
-    {
-      "id": 3196772,
-      "time": "2026-01-10 18:51:26.088874",
-      "item_id": 22114,
-      "item_name": "Dragon hunter lance (i)",
-      "amount": 1,
-      "price": 5600,
-      "currency": 1,
-      "seller": "diffusions",
       "buyer": "aero"
     },
     {
@@ -61763,6 +61763,17 @@
       "buyer": "Haxerz"
     },
     {
+      "id": 3232580,
+      "time": "2026-01-13 07:51:08.825186",
+      "item_id": 20485,
+      "item_name": "Elder maul",
+      "amount": 1,
+      "price": 4000,
+      "currency": 1,
+      "seller": "beyonder",
+      "buyer": "tuntun"
+    },
+    {
       "id": 3232517,
       "time": "2026-01-13 07:41:19.380004",
       "item_id": 20485,
@@ -62574,17 +62585,6 @@
       "price": 3500,
       "currency": 1,
       "seller": "bobbertt",
-      "buyer": "yadeddumdog"
-    },
-    {
-      "id": 3149402,
-      "time": "2026-01-06 05:07:41.215236",
-      "item_id": 20485,
-      "item_name": "Elder maul",
-      "amount": 1,
-      "price": 3250,
-      "currency": 1,
-      "seller": "i_fallacy",
       "buyer": "yadeddumdog"
     },
     {
@@ -104190,6 +104190,17 @@
       "buyer": "clitsplit"
     },
     {
+      "id": 3232589,
+      "time": "2026-01-13 07:52:48.984473",
+      "item_id": 14995,
+      "item_name": "Pernix body",
+      "amount": 2,
+      "price": 3780,
+      "currency": 1,
+      "seller": "bigzog",
+      "buyer": "tuntun"
+    },
+    {
       "id": 3232058,
       "time": "2026-01-13 06:35:57.857435",
       "item_id": 14995,
@@ -105001,17 +105012,6 @@
       "price": 3200,
       "currency": 1,
       "seller": "rivora",
-      "buyer": "9too5"
-    },
-    {
-      "id": 3148108,
-      "time": "2026-01-06 01:10:27.753143",
-      "item_id": 14995,
-      "item_name": "Pernix body",
-      "amount": 1,
-      "price": 2500,
-      "currency": 1,
-      "seller": "bag_snatcher",
       "buyer": "9too5"
     },
     {
@@ -149928,6 +149928,28 @@
       "buyer": "U"
     },
     {
+      "id": 3232585,
+      "time": "2026-01-13 07:52:11.463753",
+      "item_id": 15020,
+      "item_name": "Warrior ring (i)",
+      "amount": 1,
+      "price": 699000000,
+      "currency": 0,
+      "seller": "ring_keeper",
+      "buyer": "tuntun"
+    },
+    {
+      "id": 3232584,
+      "time": "2026-01-13 07:52:06.313364",
+      "item_id": 15020,
+      "item_name": "Warrior ring (i)",
+      "amount": 60,
+      "price": 699000000,
+      "currency": 0,
+      "seller": "ring_keeper",
+      "buyer": "tuntun"
+    },
+    {
       "id": 3222794,
       "time": "2026-01-12 15:17:47.410969",
       "item_id": 15020,
@@ -150729,28 +150751,6 @@
       "currency": 0,
       "seller": "nitro_dm",
       "buyer": "timekiller"
-    },
-    {
-      "id": 2818343,
-      "time": "2025-11-23 01:47:09.217059",
-      "item_id": 15020,
-      "item_name": "Warrior ring (i)",
-      "amount": 20,
-      "price": 850000000,
-      "currency": 0,
-      "seller": "gmaulwarning",
-      "buyer": "timekiller"
-    },
-    {
-      "id": 2813847,
-      "time": "2025-11-22 16:11:28.200526",
-      "item_id": 15020,
-      "item_name": "Warrior ring (i)",
-      "amount": 8,
-      "price": 850000000,
-      "currency": 0,
-      "seller": "gmaulwarning",
-      "buyer": "shadow touch"
     },
     {
       "id": 3227447,
