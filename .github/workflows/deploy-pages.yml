@@ -54,6 +54,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: build
+    timeout-minutes: 10  # Set timeout at job level
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -62,5 +63,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          timeout: 120000  # 2 minutes timeout (more than enough for static site)
