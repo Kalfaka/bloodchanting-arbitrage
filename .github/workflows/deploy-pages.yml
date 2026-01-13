@@ -31,10 +31,24 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
+      - name: Prepare deployment directory
+        run: |
+          mkdir -p _site
+          # Copy only the files needed for the website
+          cp index.html _site/
+          cp -r css _site/
+          cp -r js _site/
+          cp -r data _site/
+          # Copy favicon if it exists
+          if [ -f favicon.png ]; then cp favicon.png _site/; fi
+          if [ -f favicon.ico ]; then cp favicon.ico _site/; fi
+          # Copy any markdown documentation you want accessible
+          if [ -f README.md ]; then cp README.md _site/; fi
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: '_site'
 
   # Deploy job
   deploy:
@@ -49,4 +63,4 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          timeout: 600000  # 10 minutes timeout
+          timeout: 120000  # 2 minutes timeout (more than enough for static site)
