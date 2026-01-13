@@ -16,6 +16,11 @@ on:
       - 'scripts/fetch_trade_data.py'
       - '.github/workflows/update-trade-data.yml'
 
+# Prevent multiple workflow runs from executing simultaneously
+concurrency:
+  group: trade-data-update
+  cancel-in-progress: false
+
 jobs:
   fetch-and-update:
     runs-on: ubuntu-latest
@@ -99,8 +104,7 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add data/trade_cache.json
           git commit -m "Update trade data - $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
-          git pull --rebase origin main
-          git push
+          git push origin main
 
       - name: Summary
         run: |
