@@ -1,0 +1,122 @@
+name: Update Trade Data
+
+on:
+  # Run once daily at midnight UTC
+  schedule:
+    - cron: '0 0 * * *'
+
+  # Allow manual triggering from GitHub Actions tab
+  workflow_dispatch:
+
+  # Run on push to main (for testing)
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/fetch_trade_data.py'
+      - '.github/workflows/update-trade-data.yml'
+
+jobs:
+  fetch-and-update:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write  # Required to commit changes
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Random delay (24-30 hours since last run)
+        if: github.event_name == 'schedule'
+        run: |
+          # Check if cache file exists and get last modified time
+          if [ -f data/trade_cache.json ]; then
+            LAST_UPDATE=$(jq -r '.metadata.last_updated' data/trade_cache.json)
+            LAST_EPOCH=$(date -d "$LAST_UPDATE" +%s 2>/dev/null || echo 0)
+            NOW_EPOCH=$(date +%s)
+            HOURS_SINCE=$((($NOW_EPOCH - $LAST_EPOCH) / 3600))
+
+            echo "Hours since last update: $HOURS_SINCE"
+
+            # Only proceed if at least 24 hours have passed
+            if [ $HOURS_SINCE -lt 24 ]; then
+              echo "Last update was less than 24 hours ago. Skipping."
+              exit 0
+            fi
+
+            # Random delay between 0-6 hours (to spread runs across 24-30 hour window)
+            RANDOM_HOURS=$((RANDOM % 7))
+
+            # If already past 30 hours, run immediately
+            if [ $HOURS_SINCE -ge 30 ]; then
+              echo "More than 30 hours since last update. Running immediately."
+            else
+              # Check if current time + random delay would exceed 30 hours
+              TARGET_HOURS=$((24 + $RANDOM_HOURS))
+              if [ $HOURS_SINCE -ge $TARGET_HOURS ]; then
+                echo "Target time reached ($TARGET_HOURS hours). Running now."
+              else
+                WAIT_HOURS=$(($TARGET_HOURS - $HOURS_SINCE))
+                echo "Waiting $WAIT_HOURS hours to reach random target of $TARGET_HOURS hours total."
+                echo "This maintains 24-30 hour update interval."
+                exit 0
+              fi
+            fi
+          else
+            echo "No previous data found. Running immediately."
+          fi
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Fetch trade data
+        run: |
+          python scripts/fetch_trade_data.py
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if git diff --quiet data/trade_cache.json; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "No changes to trade data"
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "Trade data has been updated"
+          fi
+
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/trade_cache.json
+          git commit -m "Update trade data - $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          git push
+
+      - name: Summary
+        run: |
+          echo "## Trade Data Update Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **Status:** ✓ Success" >> $GITHUB_STEP_SUMMARY
+          echo "- **Time:** $(date -u '+%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
+
+          if [ -f data/trade_cache.json ]; then
+            TOTAL_TRADES=$(jq '.metadata.total_trades' data/trade_cache.json)
+            ITEMS_WITH_TRADES=$(jq '.metadata.items_with_trades' data/trade_cache.json)
+            echo "- **Total Trades:** $TOTAL_TRADES" >> $GITHUB_STEP_SUMMARY
+            echo "- **Items with Trades:** $ITEMS_WITH_TRADES" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          if [ "${{ steps.check_changes.outputs.changed }}" == "true" ]; then
+            echo "- **Changes:** Yes - Data committed to repository" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "- **Changes:** No - Data unchanged" >> $GITHUB_STEP_SUMMARY
+          fi
