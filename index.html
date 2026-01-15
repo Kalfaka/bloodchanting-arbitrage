@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpawnPK Trade Economics</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+  <!-- Custom OSRS Styling -->
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* Purchase Zone Styles */
+    .recommendation-card {
+      background: linear-gradient(135deg, #2a1810 0%, #1a0f08 100%);
+      border: 2px solid #8b7355;
+      transition: all 0.3s ease;
+    }
+
+    .recommendation-card:hover {
+      border-color: #d4af37;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+    }
+
+    .zone-indicator {
+      height: 8px;
+      border-radius: 4px;
+      background: linear-gradient(to right,
+        #10b981 0%, #10b981 25%,
+        #fbbf24 25%, #fbbf24 50%,
+        #fb923c 50%, #fb923c 75%,
+        #ef4444 75%, #ef4444 100%);
+      position: relative;
+      margin: 8px 0;
+    }
+
+    .zone-marker {
+      position: absolute;
+      width: 3px;
+      height: 16px;
+      background: white;
+      top: -4px;
+      box-shadow: 0 0 4px rgba(0,0,0,0.8);
+    }
+
+    .confidence-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: bold;
+    }
+
+    .confidence-high { background: #10b981; color: white; }
+    .confidence-medium { background: #fbbf24; color: #1a0f08; }
+    .confidence-low { background: #ef4444; color: white; }
+
+    .time-tab {
+      padding: 8px 16px;
+      background: #2a1810;
+      border: 2px solid #8b7355;
+      color: #d4af37;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-weight: 600;
+      font-size: 0.875rem;
+    }
+
+    .time-tab:hover {
+      background: #3a2820;
+      border-color: #d4af37;
+    }
+
+    .time-tab.active {
+      background: #d4af37;
+      color: #1a0f08;
+      border-color: #d4af37;
+    }
+
+    .chart-container {
+      position: relative;
+      height: 250px;
+      background: #1a0f08;
+      border-radius: 8px;
+      padding: 12px;
+    }
+
+    @media (max-width: 640px) {
+      .chart-container {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="max-w-7xl mx-auto p-4 sm:p-6 space-y-6 min-h-screen">
+
+    <!-- Header -->
+    <div class="osrs-header rounded-lg p-6">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div>
+          <h1 class="text-3xl font-bold text-osrs-dark" style="font-family: 'Cinzel', serif">
+            SpawnPK Trade Economics
+          </h1>
+          <p class="text-sm text-gray-600 mt-1">Smart recommendations with statistical analysis</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Status Bar -->
+    <div class="osrs-status-bar flex justify-between items-center flex-wrap gap-2">
+      <span id="status-text" class="status-text">Loading market data...</span>
+      <span id="last-updated" class="text-osrs-light text-sm"></span>
+    </div>
+
+    <!-- Bloodchanting Stone Calculator -->
+    <div class="osrs-recommend rounded-lg p-6">
+      <h2 class="text-2xl font-bold text-osrs-gold mb-4" style="font-family: 'Cinzel', serif">
+        Bloodchanting Stone Calculator
+      </h2>
+
+      <!-- Scenario Tabs -->
+      <div class="flex flex-wrap gap-2 mb-4">
+        <button class="scenario-tab time-tab active" data-scenario="min">Best Case (Min)</button>
+        <button class="scenario-tab time-tab" data-scenario="avg">Average Case</button>
+      </div>
+
+      <!-- Bloodchanting Display -->
+      <div id="bloodchanting-display">
+        <p class="text-osrs-light text-center py-8">Loading calculator...</p>
+      </div>
+    </div>
+
+    <!-- Time Window & Currency Selector -->
+    <div class="osrs-panel rounded-lg p-6">
+      <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+        <div>
+          <h2 class="text-xl font-bold text-osrs-gold mb-2" style="font-family: 'Cinzel', serif">
+            Market Analysis
+          </h2>
+          <p class="text-sm text-osrs-light">
+            Select time window and currency to see smart buy recommendations
+          </p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
+          <!-- Time Window -->
+          <div>
+            <label class="block text-xs text-osrs-light mb-1">Time Window</label>
+            <div class="flex flex-wrap gap-2">
+              <button class="time-tab" data-window="1h">1h</button>
+              <button class="time-tab" data-window="24h">24h</button>
+              <button class="time-tab active" data-window="7d">7d</button>
+              <button class="time-tab" data-window="30d">30d</button>
+              <button class="time-tab" data-window="all">All</button>
+            </div>
+          </div>
+
+          <!-- Currency -->
+          <div>
+            <label class="block text-xs text-osrs-light mb-1">Currency</label>
+            <div class="flex gap-2">
+              <button class="currency-tab time-tab active" data-currency="Blood Shards">Shards</button>
+              <button class="currency-tab time-tab" data-currency="Blood Synthesis Tokens">Tokens</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Market Overview Charts -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <!-- ROI Distribution -->
+      <div class="osrs-panel rounded-lg p-4">
+        <h3 class="text-lg font-bold text-osrs-gold mb-3">Top 15 by ROI</h3>
+        <div class="chart-container">
+          <canvas id="roi-chart"></canvas>
+        </div>
+      </div>
+
+      <!-- Confidence vs ROI -->
+      <div class="osrs-panel rounded-lg p-4">
+        <h3 class="text-lg font-bold text-osrs-gold mb-3">Confidence vs ROI</h3>
+        <div class="chart-container">
+          <canvas id="confidence-chart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Top Performers -->
+    <div class="osrs-recommend rounded-lg p-6">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-2xl font-bold text-osrs-gold" style="font-family: 'Cinzel', serif">
+          Top Performers
+        </h2>
+        <span id="showing-count" class="text-sm text-osrs-light">Showing top 20</span>
+      </div>
+
+      <div id="recommendations-list" class="grid grid-cols-1 gap-3">
+        <!-- Will be populated by JavaScript -->
+        <div class="text-center text-osrs-light py-8">Loading recommendations...</div>
+      </div>
+    </div>
+
+    <!-- Loading Indicator -->
+    <div id="loading" class="osrs-loading hidden">
+      Loading market data...
+    </div>
+
+  </div>
+
+  <!-- JavaScript -->
+  <script type="module" src="js/unified.js"></script>
+</body>
+</html>
