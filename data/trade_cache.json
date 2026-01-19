@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-01-19T09:45:56.102863",
-    "total_trades": 38157,
+    "last_updated": "2026-01-19T10:37:25.421697",
+    "total_trades": 38154,
     "items_processed": 50,
     "items_with_trades": 50,
     "source": "GitHub Actions (Optimized - Top Items Only)",
@@ -9094,28 +9094,6 @@
       "currency": 1,
       "seller": "hostingbj",
       "buyer": "mr smoke"
-    },
-    {
-      "id": 2516430,
-      "time": "2025-10-21 09:44:14.582745",
-      "item_id": 15020,
-      "item_name": "Warrior ring (i)",
-      "amount": 4,
-      "price": 898000000,
-      "currency": 0,
-      "seller": "ring_keeper",
-      "buyer": "pornmaker"
-    },
-    {
-      "id": 2516426,
-      "time": "2025-10-21 09:43:25.898140",
-      "item_id": 15020,
-      "item_name": "Warrior ring (i)",
-      "amount": 42,
-      "price": 898000000,
-      "currency": 0,
-      "seller": "ring_keeper",
-      "buyer": "pornmaker"
     },
     {
       "id": 3298797,
@@ -113706,17 +113684,6 @@
       "buyer": "Wr3cked YT"
     },
     {
-      "id": 2516650,
-      "time": "2025-10-21 10:25:16.266330",
-      "item_id": 15220,
-      "item_name": "Berserker ring (i)",
-      "amount": 62,
-      "price": 8,
-      "currency": 1,
-      "seller": "slipping",
-      "buyer": "TP MASTER"
-    },
-    {
       "id": 3294969,
       "time": "2026-01-18 23:57:03.017376",
       "item_id": 12006,
@@ -163206,6 +163173,17 @@
       "buyer": "F U X"
     },
     {
+      "id": 3298928,
+      "time": "2026-01-19 10:01:52.794660",
+      "item_id": 22218,
+      "item_name": "Swift bow",
+      "amount": 1,
+      "price": 1850,
+      "currency": 1,
+      "seller": "dab_em_up",
+      "buyer": "Sm4rt"
+    },
+    {
       "id": 3298790,
       "time": "2026-01-19 09:30:26.260581",
       "item_id": 22218,
@@ -179695,15 +179673,26 @@
       "buyer": "bag snatcher"
     },
     {
-      "id": 3045094,
-      "time": "2025-12-23 18:33:44.139230",
-      "item_id": 22218,
-      "item_name": "Swift bow",
+      "id": 3298947,
+      "time": "2026-01-19 10:05:53.801466",
+      "item_id": 24100,
+      "item_name": "Void ranger helm (or)",
       "amount": 1,
-      "price": 1400,
+      "price": 2500,
       "currency": 1,
-      "seller": "rngr",
-      "buyer": "Ghettokala"
+      "seller": "2026",
+      "buyer": "3d176"
+    },
+    {
+      "id": 3298924,
+      "time": "2026-01-19 10:00:02.958980",
+      "item_id": 11675,
+      "item_name": "Void ranger helm (or)",
+      "amount": 5,
+      "price": 650,
+      "currency": 1,
+      "seller": "bread_v2",
+      "buyer": "CARIBBEAN"
     },
     {
       "id": 3298602,
@@ -196182,28 +196171,6 @@
       "currency": 1,
       "seller": "kie",
       "buyer": "voidwaker95"
-    },
-    {
-      "id": 2895179,
-      "time": "2025-12-02 11:08:00.189949",
-      "item_id": 11675,
-      "item_name": "Void ranger helm (or)",
-      "amount": 1,
-      "price": 900,
-      "currency": 1,
-      "seller": "deezee20",
-      "buyer": "CRY IS FREE"
-    },
-    {
-      "id": 2895178,
-      "time": "2025-12-02 11:07:57.784682",
-      "item_id": 11675,
-      "item_name": "Void ranger helm (or)",
-      "amount": 1,
-      "price": 840,
-      "currency": 1,
-      "seller": "ssj",
-      "buyer": "CRY IS FREE"
     },
     {
       "id": 3298331,
@@ -253076,6 +253043,17 @@
       "buyer": "and youdab"
     },
     {
+      "id": 3299039,
+      "time": "2026-01-19 10:31:01.242343",
+      "item_id": 22120,
+      "item_name": "Bloodfire shield",
+      "amount": 1,
+      "price": 449,
+      "currency": 1,
+      "seller": "toasted",
+      "buyer": "big dome"
+    },
+    {
       "id": 3296879,
       "time": "2026-01-19 03:13:05.964078",
       "item_id": 22120,
@@ -269562,17 +269540,6 @@
       "price": 400,
       "currency": 1,
       "seller": "ragzyyxon",
-      "buyer": "Bullet Pker"
-    },
-    {
-      "id": 2953524,
-      "time": "2025-12-10 20:15:14.111970",
-      "item_id": 22120,
-      "item_name": "Bloodfire shield",
-      "amount": 1,
-      "price": 390,
-      "currency": 1,
-      "seller": "ubot",
       "buyer": "Bullet Pker"
     },
     {
@@ -343562,6 +343529,17 @@
       "buyer": "cappenana"
     },
     {
+      "id": 3299041,
+      "time": "2026-01-19 10:31:37.161119",
+      "item_id": 23476,
+      "item_name": "Crystal platebody",
+      "amount": 1,
+      "price": 450,
+      "currency": 1,
+      "seller": "best_x_mage2",
+      "buyer": "raketen"
+    },
+    {
       "id": 3296811,
       "time": "2026-01-19 03:01:37.360136",
       "item_id": 23476,
@@ -360051,17 +360029,6 @@
       "buyer": "Its Moey"
     },
     {
-      "id": 2833909,
-      "time": "2025-11-24 20:07:00.607536",
-      "item_id": 23476,
-      "item_name": "Crystal platebody",
-      "amount": 1,
-      "price": 750,
-      "currency": 1,
-      "seller": "dikke_stack",
-      "buyer": "Anna Lafitte"
-    },
-    {
       "id": 3296224,
       "time": "2026-01-19 02:01:10.921521",
       "item_id": 12808,
@@ -362205,6 +362172,28 @@
       "currency": 1,
       "seller": "nika",
       "buyer": "Sjaak V2"
+    },
+    {
+      "id": 3298961,
+      "time": "2026-01-19 10:15:24.290248",
+      "item_id": 22135,
+      "item_name": "Dark toxic blowpipe",
+      "amount": 1,
+      "price": 21500,
+      "currency": 1,
+      "seller": "swagg0t",
+      "buyer": "anthrax"
+    },
+    {
+      "id": 3298894,
+      "time": "2026-01-19 09:51:36.563632",
+      "item_id": 22135,
+      "item_name": "Dark toxic blowpipe",
+      "amount": 1,
+      "price": 22995,
+      "currency": 1,
+      "seller": "trashy_rashy",
+      "buyer": "newpker123"
     },
     {
       "id": 3298594,
@@ -378683,28 +378672,6 @@
       "currency": 1,
       "seller": "free_lewtt",
       "buyer": "royel otis"
-    },
-    {
-      "id": 3002517,
-      "time": "2025-12-17 21:33:40.884129",
-      "item_id": 12926,
-      "item_name": "Toxic blowpipe",
-      "amount": 1,
-      "price": 17,
-      "currency": 1,
-      "seller": "free_lewtt",
-      "buyer": "strk0ed"
-    },
-    {
-      "id": 3002156,
-      "time": "2025-12-17 20:23:17.327906",
-      "item_id": 12926,
-      "item_name": "Toxic blowpipe",
-      "amount": 1,
-      "price": 17,
-      "currency": 1,
-      "seller": "free_lewtt",
-      "buyer": "starker bar"
     },
     {
       "id": 3288194,
@@ -397561,6 +397528,17 @@
       "buyer": "slb309"
     },
     {
+      "id": 3298871,
+      "time": "2026-01-19 09:45:22.485679",
+      "item_id": 22114,
+      "item_name": "Dragon hunter lance (i)",
+      "amount": 1,
+      "price": 4800,
+      "currency": 1,
+      "seller": "gamblermann",
+      "buyer": "Taeverius"
+    },
+    {
       "id": 3298506,
       "time": "2026-01-19 08:23:18.143102",
       "item_id": 22114,
@@ -399198,17 +399176,6 @@
       "currency": 1,
       "seller": "improvegoose",
       "buyer": "hold up"
-    },
-    {
-      "id": 3140067,
-      "time": "2026-01-05 03:01:54.767992",
-      "item_id": 22114,
-      "item_name": "Dragon hunter lance (i)",
-      "amount": 1,
-      "price": 3000,
-      "currency": 1,
-      "seller": "rob_da_grave",
-      "buyer": "jackel"
     },
     {
       "id": 3140067,
