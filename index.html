@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SPK Helper</title>
+  <title>Bloodchanting Stones</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
@@ -104,6 +104,47 @@
         height: 200px;
       }
     }
+
+    /* Tooltip Styles */
+    .tooltip-trigger {
+      position: relative;
+      cursor: help;
+      border-bottom: 1px dotted #d4af37;
+    }
+
+    .tooltip-trigger:hover::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 8px 12px;
+      background: #1a0f08;
+      color: #d4af37;
+      border: 2px solid #8b7355;
+      border-radius: 6px;
+      white-space: normal;
+      width: max-content;
+      max-width: 300px;
+      z-index: 1000;
+      font-size: 0.75rem;
+      line-height: 1.4;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    .tooltip-trigger:hover::before {
+      content: '';
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 6px solid transparent;
+      border-top-color: #8b7355;
+      margin-bottom: 2px;
+      z-index: 1000;
+    }
   </style>
 </head>
 <body>
@@ -130,13 +171,15 @@
     <!-- Bloodchanting Stone Calculator -->
     <div class="osrs-recommend rounded-lg p-6">
       <h2 class="text-2xl font-bold text-osrs-gold mb-4" style="font-family: 'Cinzel', serif">
-        Bloodchanting Stone Calculator
+        <span class="tooltip-trigger" data-tooltip="Calculates the most cost-effective way to craft bloodchanting stones by buying items from shops for Blood Shards/Tokens. Requires: 250 Blood Shards + 500 Blood Synthesis Tokens + 10 Blood Diamonds.">
+          Bloodchanting Stone Calculator
+        </span>
       </h2>
 
       <!-- Scenario Tabs -->
       <div class="flex flex-wrap gap-2 mb-4">
-        <button class="scenario-tab time-tab active" data-scenario="min">Best Case (Min)</button>
-        <button class="scenario-tab time-tab" data-scenario="avg">Average Case</button>
+        <button class="scenario-tab time-tab active" data-scenario="min" title="Shows the absolute lowest cost possible by buying items at their minimum observed prices">Best Case (Min)</button>
+        <button class="scenario-tab time-tab" data-scenario="avg" title="Shows typical cost using average market prices - more realistic for planning">Average Case</button>
       </div>
 
       <!-- Bloodchanting Display -->
@@ -160,22 +203,30 @@
         <div class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
           <!-- Time Window -->
           <div>
-            <label class="block text-xs text-osrs-light mb-1">Time Window</label>
+            <label class="block text-xs text-osrs-light mb-1">
+              <span class="tooltip-trigger" data-tooltip="Filter recommendations by trade recency. Shorter windows show current prices but have less data. Longer windows are more reliable but may not reflect recent market changes.">
+                Time Window
+              </span>
+            </label>
             <div class="flex flex-wrap gap-2">
-              <button class="time-tab" data-window="1h">1h</button>
-              <button class="time-tab" data-window="24h">24h</button>
-              <button class="time-tab active" data-window="7d">7d</button>
-              <button class="time-tab" data-window="30d">30d</button>
-              <button class="time-tab" data-window="all">All</button>
+              <button class="time-tab" data-window="1h" title="Last hour only - most current but volatile">1h</button>
+              <button class="time-tab" data-window="24h" title="Last 24 hours - recent trends">24h</button>
+              <button class="time-tab active" data-window="7d" title="Last 7 days - balanced view (recommended)">7d</button>
+              <button class="time-tab" data-window="30d" title="Last 30 days - stable, long-term trends">30d</button>
+              <button class="time-tab" data-window="all" title="All available data - most reliable statistics">All</button>
             </div>
           </div>
 
           <!-- Currency -->
           <div>
-            <label class="block text-xs text-osrs-light mb-1">Currency</label>
+            <label class="block text-xs text-osrs-light mb-1">
+              <span class="tooltip-trigger" data-tooltip="Choose which shop currency to analyze. Blood Shards are generally easier to obtain. Blood Synthesis Tokens require more gameplay.">
+                Currency
+              </span>
+            </label>
             <div class="flex gap-2">
-              <button class="currency-tab time-tab active" data-currency="Blood Shards">Shards</button>
-              <button class="currency-tab time-tab" data-currency="Blood Synthesis Tokens">Tokens</button>
+              <button class="currency-tab time-tab active" data-currency="Blood Shards" title="Analyze items from the Blood Shard Shop">Shards</button>
+              <button class="currency-tab time-tab" data-currency="Blood Synthesis Tokens" title="Analyze items from the Blood Synthesis Shop">Tokens</button>
             </div>
           </div>
         </div>
@@ -186,7 +237,11 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
       <!-- ROI Distribution -->
       <div class="osrs-panel rounded-lg p-4">
-        <h3 class="text-lg font-bold text-osrs-gold mb-3">Top 15 by ROI</h3>
+        <h3 class="text-lg font-bold text-osrs-gold mb-3">
+          <span class="tooltip-trigger" data-tooltip="ROI (Return on Investment) measures how much cheaper an item's GP price is compared to the median cost per shard/token. Positive ROI means you're paying less GP per currency unit than average - a better deal!">
+            Top 15 by ROI
+          </span>
+        </h3>
         <div class="chart-container">
           <canvas id="roi-chart"></canvas>
         </div>
@@ -194,7 +249,11 @@
 
       <!-- Confidence vs ROI -->
       <div class="osrs-panel rounded-lg p-4">
-        <h3 class="text-lg font-bold text-osrs-gold mb-3">Confidence vs ROI</h3>
+        <h3 class="text-lg font-bold text-osrs-gold mb-3">
+          <span class="tooltip-trigger" data-tooltip="Confidence Score (0-100) combines trade volume, price stability, and data quality. Higher confidence means more reliable recommendations. This chart shows the relationship between confidence and potential ROI.">
+            Confidence vs ROI
+          </span>
+        </h3>
         <div class="chart-container">
           <canvas id="confidence-chart"></canvas>
         </div>
@@ -205,9 +264,11 @@
     <div class="osrs-recommend rounded-lg p-6">
       <div class="flex items-center justify-between mb-4">
         <h2 class="text-2xl font-bold text-osrs-gold" style="font-family: 'Cinzel', serif">
-          Top Performers
+          <span class="tooltip-trigger" data-tooltip="Items ranked by overall performance score combining ROI, confidence, price trends, and market activity. These are the best items to buy for the selected currency and time window.">
+            Top Performers
+          </span>
         </h2>
-        <span id="showing-count" class="text-sm text-osrs-light">Showing top 20</span>
+        <span id="showing-count" class="text-osrs-light text-sm">Showing top 20</span>
       </div>
 
       <div id="recommendations-list" class="grid grid-cols-1 gap-3">
@@ -227,4 +288,3 @@
   <script type="module" src="js/unified.js"></script>
 </body>
 </html>
-
