@@ -311,11 +311,19 @@ class TradeEconomicsAnalyzer:
                 outliers_removed = len(group) - len(clean_group)
                 total_volume = clean_group['amount'].sum()
 
-                # Calculate ROI metrics based on THIS shop's cost
-                roi_avg = ((avg_price - shop_cost) / shop_cost) * 100
-                roi_median = ((median_price - shop_cost) / shop_cost) * 100
-                roi_min = ((min_price - shop_cost) / shop_cost) * 100
-                roi_max = ((max_price - shop_cost) / shop_cost) * 100
+                # Calculate cost per currency unit (GP per shard/token)
+                # Lower is better - means you're paying less GP per shard/token
+                cost_per_unit_avg = avg_price / shop_cost if shop_cost > 0 else float('inf')
+                cost_per_unit_median = median_price / shop_cost if shop_cost > 0 else float('inf')
+                cost_per_unit_min = min_price / shop_cost if shop_cost > 0 else float('inf')
+                cost_per_unit_max = max_price / shop_cost if shop_cost > 0 else float('inf')
+
+                # ROI will be calculated later relative to median cost per unit across all items
+                # For now, set placeholder values
+                roi_avg = 0
+                roi_median = 0
+                roi_min = 0
+                roi_max = 0
 
                 # Calculate coefficient of variation (volatility)
                 cv = (std_price / avg_price * 100) if avg_price > 0 else 0
@@ -366,6 +374,10 @@ class TradeEconomicsAnalyzer:
                     'max_price': max_price,
                     'p25_price': p25_price,
                     'p75_price': p75_price,
+                    'cost_per_unit_avg': cost_per_unit_avg,
+                    'cost_per_unit_median': cost_per_unit_median,
+                    'cost_per_unit_min': cost_per_unit_min,
+                    'cost_per_unit_max': cost_per_unit_max,
                     'roi_avg': roi_avg,
                     'roi_median': roi_median,
                     'roi_min': roi_min,
@@ -398,6 +410,10 @@ class TradeEconomicsAnalyzer:
                     'max_price': 0,
                     'p25_price': 0,
                     'p75_price': 0,
+                    'cost_per_unit_avg': 0,
+                    'cost_per_unit_median': 0,
+                    'cost_per_unit_min': 0,
+                    'cost_per_unit_max': 0,
                     'roi_avg': -100,
                     'roi_median': -100,
                     'roi_min': -100,
@@ -417,7 +433,33 @@ class TradeEconomicsAnalyzer:
                     'has_trades': False
                 })
 
-        return pd.DataFrame(results)
+        df_results = pd.DataFrame(results)
+
+        # Calculate ROI based on median cost per unit for each currency
+        # ROI = how much cheaper/expensive compared to the median
+        # Positive ROI = better deal than median (paying less GP per shard/token)
+        # Negative ROI = worse deal than median (paying more GP per shard/token)
+        for currency in ['Blood Shards', 'Blood Synthesis Tokens']:
+            currency_mask = (df_results['currency'] == currency) & (df_results['has_trades'] == True)
+            currency_items = df_results[currency_mask]
+
+            if len(currency_items) > 0:
+                median_cost_per_unit = currency_items['cost_per_unit_median'].median()
+
+                # Calculate ROI for items with trades in this currency
+                for idx in currency_items.index:
+                    item_cost = df_results.loc[idx, 'cost_per_unit_median']
+                    item_cost_avg = df_results.loc[idx, 'cost_per_unit_avg']
+                    item_cost_min = df_results.loc[idx, 'cost_per_unit_min']
+                    item_cost_max = df_results.loc[idx, 'cost_per_unit_max']
+
+                    # ROI: positive means you're paying less than median (good)
+                    df_results.loc[idx, 'roi_median'] = ((median_cost_per_unit - item_cost) / median_cost_per_unit * 100) if median_cost_per_unit > 0 else 0
+                    df_results.loc[idx, 'roi_avg'] = ((median_cost_per_unit - item_cost_avg) / median_cost_per_unit * 100) if median_cost_per_unit > 0 else 0
+                    df_results.loc[idx, 'roi_min'] = ((median_cost_per_unit - item_cost_min) / median_cost_per_unit * 100) if median_cost_per_unit > 0 else 0
+                    df_results.loc[idx, 'roi_max'] = ((median_cost_per_unit - item_cost_max) / median_cost_per_unit * 100) if median_cost_per_unit > 0 else 0
+
+        return df_results
 
     def identify_exponentially_worse_items(self, roi_df: pd.DataFrame) -> pd.DataFrame:
         """Identify items that are exponentially worse (never worth it)"""
