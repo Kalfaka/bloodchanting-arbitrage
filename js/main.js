@@ -47,8 +47,9 @@ class ArbitrageApp {
 
     // Show CORS notice if using proxy
     const corsProxyMode = window.CORS_PROXY_MODE || 'allorigins';
-    if (corsProxyMode !== 'none') {
-      document.getElementById('cors-notice').classList.remove('hidden');
+    const corsNotice = document.getElementById('cors-notice');
+    if (corsProxyMode !== 'none' && corsNotice) {
+      corsNotice.classList.remove('hidden');
     }
 
     console.log('Initialization complete');
@@ -344,13 +345,18 @@ class ArbitrageApp {
   renderTable() {
     const tbody = document.getElementById('table-body');
     const thead = document.getElementById('table-head');
+
+    // If elements don't exist, skip rendering (wrong HTML loaded)
+    if (!tbody || !thead) return;
+
     tbody.innerHTML = '';
 
     let filtered = this.filterOpportunities();
     filtered = this.sortOpportunities(filtered);
 
     // Update table headers based on selected shop
-    const selectedShop = document.getElementById('shop-select').value;
+    const shopSelect = document.getElementById('shop-select');
+    const selectedShop = shopSelect ? shopSelect.value : 'all';
     const currencyLabel = selectedShop === 'Blood Shard Shop' ? 'Shards' :
                           selectedShop === 'Blood Synthesis Shop' ? 'Tokens' :
                           'Shards/Tokens';
@@ -424,8 +430,13 @@ class ArbitrageApp {
    * Update Sort By dropdown labels based on selected shop
    */
   updateSortDropdownLabels() {
-    const selectedShop = document.getElementById('shop-select').value;
+    const shopSelect = document.getElementById('shop-select');
     const sortSelect = document.getElementById('sort-select');
+
+    // If elements don't exist, skip (wrong HTML loaded)
+    if (!shopSelect || !sortSelect) return;
+
+    const selectedShop = shopSelect.value;
 
     const costMinLabel = selectedShop === 'Blood Shard Shop' ? 'Cost/Shard (Min Price)' :
                          selectedShop === 'Blood Synthesis Shop' ? 'Cost/Token (Min Price)' :
@@ -442,7 +453,8 @@ class ArbitrageApp {
    * Filter opportunities by selected shop
    */
   filterOpportunities() {
-    const selectedShop = document.getElementById('shop-select').value;
+    const shopSelect = document.getElementById('shop-select');
+    const selectedShop = shopSelect ? shopSelect.value : 'all';
 
     if (selectedShop === 'all') {
       return this.opportunities;
@@ -455,7 +467,8 @@ class ArbitrageApp {
    * Sort opportunities by selected criteria
    */
   sortOpportunities(opportunities) {
-    const sortBy = document.getElementById('sort-select').value;
+    const sortSelect = document.getElementById('sort-select');
+    const sortBy = sortSelect ? sortSelect.value : 'cost_min';
 
     const sorters = {
       'cost_min': (a, b) => {
@@ -479,44 +492,59 @@ class ArbitrageApp {
    */
   setupEventListeners() {
     // Refresh button
-    document.getElementById('refresh-btn').addEventListener('click', () => {
-      this.fetchAllTradeData();
-    });
+    const refreshBtn = document.getElementById('refresh-btn');
+    if (refreshBtn) {
+      refreshBtn.addEventListener('click', () => {
+        this.fetchAllTradeData();
+      });
+    }
 
     // Bloodchanting date filter - triggers recalculation for bloodchanting only
-    document.getElementById('bloodchanting-date-select').addEventListener('change', (e) => {
-      this.bloodchantingDateFilter = e.target.value;
-      if (this.tradeData.length > 0) {
-        this.calculateAndRender();
-      }
-      this.savePreferences();
-    });
+    const bloodchantingDateSelect = document.getElementById('bloodchanting-date-select');
+    if (bloodchantingDateSelect) {
+      bloodchantingDateSelect.addEventListener('change', (e) => {
+        this.bloodchantingDateFilter = e.target.value;
+        if (this.tradeData.length > 0) {
+          this.calculateAndRender();
+        }
+        this.savePreferences();
+      });
+    }
 
     // Date filter - triggers recalculation
-    document.getElementById('date-select').addEventListener('change', (e) => {
-      this.currentDateFilter = e.target.value;
-      if (this.tradeData.length > 0) {
-        this.calculateAndRender();
-      }
-      this.savePreferences();
-    });
+    const dateSelect = document.getElementById('date-select');
+    if (dateSelect) {
+      dateSelect.addEventListener('change', (e) => {
+        this.currentDateFilter = e.target.value;
+        if (this.tradeData.length > 0) {
+          this.calculateAndRender();
+        }
+        this.savePreferences();
+      });
+    }
 
     // Shop filter - only affects table display
-    document.getElementById('shop-select').addEventListener('change', () => {
-      if (this.opportunities.length > 0) {
-        this.updateSortDropdownLabels();
-        this.renderTable();
-      }
-      this.savePreferences();
-    });
+    const shopSelect = document.getElementById('shop-select');
+    if (shopSelect) {
+      shopSelect.addEventListener('change', () => {
+        if (this.opportunities.length > 0) {
+          this.updateSortDropdownLabels();
+          this.renderTable();
+        }
+        this.savePreferences();
+      });
+    }
 
     // Sort select - only affects table display
-    document.getElementById('sort-select').addEventListener('change', () => {
-      if (this.opportunities.length > 0) {
-        this.renderTable();
-      }
-      this.savePreferences();
-    });
+    const sortSelect = document.getElementById('sort-select');
+    if (sortSelect) {
+      sortSelect.addEventListener('change', () => {
+        if (this.opportunities.length > 0) {
+          this.renderTable();
+        }
+        this.savePreferences();
+      });
+    }
 
     // Scenario tabs
     document.querySelectorAll('.scenario-tab').forEach(tab => {
@@ -533,9 +561,12 @@ class ArbitrageApp {
    * Save user preferences to localStorage
    */
   savePreferences() {
+    const sortSelect = document.getElementById('sort-select');
+    const shopSelect = document.getElementById('shop-select');
+
     const prefs = {
-      sortBy: document.getElementById('sort-select').value,
-      selectedShop: document.getElementById('shop-select').value,
+      sortBy: sortSelect ? sortSelect.value : 'cost_min',
+      selectedShop: shopSelect ? shopSelect.value : 'all',
       dateFilter: this.currentDateFilter,
       bloodchantingDateFilter: this.bloodchantingDateFilter
     };
@@ -547,10 +578,19 @@ class ArbitrageApp {
    */
   loadPreferences() {
     const prefs = this.cache.loadPreferences();
-    document.getElementById('sort-select').value = prefs.sortBy;
-    document.getElementById('shop-select').value = prefs.selectedShop;
-    document.getElementById('date-select').value = prefs.dateFilter;
-    document.getElementById('bloodchanting-date-select').value = prefs.bloodchantingDateFilter || prefs.dateFilter;
+
+    const sortSelect = document.getElementById('sort-select');
+    if (sortSelect) sortSelect.value = prefs.sortBy;
+
+    const shopSelect = document.getElementById('shop-select');
+    if (shopSelect) shopSelect.value = prefs.selectedShop;
+
+    const dateSelect = document.getElementById('date-select');
+    if (dateSelect) dateSelect.value = prefs.dateFilter;
+
+    const bloodchantingDateSelect = document.getElementById('bloodchanting-date-select');
+    if (bloodchantingDateSelect) bloodchantingDateSelect.value = prefs.bloodchantingDateFilter || prefs.dateFilter;
+
     this.currentDateFilter = prefs.dateFilter;
     this.bloodchantingDateFilter = prefs.bloodchantingDateFilter || prefs.dateFilter;
   }
