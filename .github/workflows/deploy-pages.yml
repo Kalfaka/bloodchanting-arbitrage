@@ -36,7 +36,7 @@ jobs:
           mkdir -p _site
           # Copy only the files needed for the website
           cp index.html _site/
-          cp -r css _site/
+          cp styles.css _site/
           cp -r js _site/
           cp -r data _site/
           # Copy favicon if it exists
