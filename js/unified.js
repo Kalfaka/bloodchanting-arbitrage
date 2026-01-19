@@ -365,14 +365,14 @@ class UnifiedDashboard {
 
                 <!-- Purchase Zone -->
                 <div class="mt-2">
-                  <div class="zone-indicator">
+                  <div class="zone-indicator tooltip-trigger" data-tooltip="Price zone indicator: Green=Excellent deal, Yellow=Good, Orange=Fair, Red=Overpriced. White marker shows current price position.">
                     <div class="zone-marker" style="left: ${markerPosition}%"></div>
                   </div>
                   <div class="flex justify-between text-xs text-osrs-light -mt-1">
-                    <span>🟢</span>
-                    <span>🟡</span>
-                    <span>🟠</span>
-                    <span>🔴</span>
+                    <span title="Excellent - Buy immediately!">🟢</span>
+                    <span title="Good - Recommended buy">🟡</span>
+                    <span title="Fair - Okay if needed">🟠</span>
+                    <span title="Overpriced - Avoid!">🔴</span>
                   </div>
                 </div>
 
@@ -387,27 +387,27 @@ class UnifiedDashboard {
           <!-- Right: Stats -->
           <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs sm:w-80">
             <div>
-              <p class="text-osrs-light">ROI</p>
+              <p class="text-osrs-light tooltip-trigger" data-tooltip="Return on Investment: How much cheaper this item is vs median cost per ${this.currentCurrency === 'Blood Shards' ? 'shard' : 'token'}. Positive = better deal!">ROI</p>
               <p class="font-bold" style="color: ${roiColor}">${roi >= 0 ? '+' : ''}${roi.toFixed(1)}%</p>
             </div>
             <div>
-              <p class="text-osrs-light">Confidence</p>
+              <p class="text-osrs-light tooltip-trigger" data-tooltip="Reliability score (0-100) based on trade volume, price stability, and data quality. >70=High, 40-70=Medium, <40=Low">Confidence</p>
               <p><span class="confidence-badge ${confidenceClass}">${confidence.toFixed(0)}</span></p>
             </div>
             <div>
-              <p class="text-osrs-light">Price</p>
+              <p class="text-osrs-light tooltip-trigger" data-tooltip="Current weighted median price giving more weight to recent trades">Price</p>
               <p class="font-bold text-osrs-gold">${this.formatPrice(windowData.weighted_median)}</p>
             </div>
             <div>
-              <p class="text-osrs-light">Buy Below</p>
+              <p class="text-osrs-light tooltip-trigger" data-tooltip="Recommended max purchase price for a good deal (75th percentile of historical trades)">Buy Below</p>
               <p class="font-bold text-green-400">${this.formatPrice(zones.good)}</p>
             </div>
             <div>
-              <p class="text-osrs-light">Avoid Above</p>
+              <p class="text-osrs-light tooltip-trigger" data-tooltip="Price threshold indicating overpriced - wait for lower prices">Avoid Above</p>
               <p class="font-bold text-red-400">${this.formatPrice(zones.avoid)}</p>
             </div>
             <div>
-              <p class="text-osrs-light">Trades</p>
+              <p class="text-osrs-light tooltip-trigger" data-tooltip="Number of observed trades in the selected time window">Trades</p>
               <p class="font-bold text-osrs-gold">${windowData.trades}</p>
             </div>
           </div>
