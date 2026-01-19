@@ -150,7 +150,13 @@ class UnifiedDashboard {
   filterTradesByTimeWindow(trades, window) {
     if (window === 'all') return trades;
 
-    const now = new Date();
+    if (trades.length === 0) return [];
+
+    // Use the latest trade timestamp as reference instead of current time
+    // This prevents all trades from appearing "old" if data isn't current
+    const tradeTimes = trades.map(t => new Date(t.time).getTime());
+    const latestTradeTime = Math.max(...tradeTimes);
+
     const windowMs = {
       '1h': 60 * 60 * 1000,
       '24h': 24 * 60 * 60 * 1000,
@@ -158,7 +164,7 @@ class UnifiedDashboard {
       '30d': 30 * 24 * 60 * 60 * 1000
     };
 
-    const cutoff = new Date(now - windowMs[window]);
+    const cutoff = new Date(latestTradeTime - windowMs[window]);
     return trades.filter(t => new Date(t.time) >= cutoff);
   }
 
@@ -262,9 +268,9 @@ class UnifiedDashboard {
       const profitPct = (profitMargin / totalCostGP * 100);
 
       if (profitMargin > 0) {
-        recommendation = `✅ CRAFT & SELL - Profit ${this.formatPrice(profitMargin)} GP (${profitPct.toFixed(1)}%)`;
+        recommendation = `✅ CRAFT & SELL - Profit ${this.formatPrice(profitMargin)} bags (${profitPct.toFixed(1)}%)`;
       } else {
-        recommendation = `⚠️ BUY FROM MARKET - Cheaper by ${this.formatPrice(Math.abs(profitMargin))} GP`;
+        recommendation = `⚠️ BUY FROM MARKET - Cheaper by ${this.formatPrice(Math.abs(profitMargin))} bags`;
       }
     } else {
       recommendation = 'No market data for bloodchanting stones';
@@ -324,7 +330,7 @@ class UnifiedDashboard {
         <div class="osrs-stat-box" style="background: ${bgColor}; border: 2px solid ${borderColor};">
           <div class="text-center">
             <div class="text-sm text-osrs-light">Market Price (${result.scenario === 'min' ? 'Min' : 'Avg'})</div>
-            <div class="text-2xl font-bold text-osrs-gold mt-1">${this.formatPrice(result.marketPrice)} GP</div>
+            <div class="text-2xl font-bold text-osrs-gold mt-1">${this.formatPrice(result.marketPrice)} bags</div>
             <div class="text-lg font-bold mt-2" style="color: ${textColor}">
               ${result.recommendation}
             </div>
@@ -339,10 +345,10 @@ class UnifiedDashboard {
         <!-- Total Cost and Market Comparison -->
         <div class="grid grid-cols-1 ${result.marketPrice ? 'md:grid-cols-2' : ''} gap-4">
           <div class="osrs-stat-box text-center">
-            <div class="text-sm text-osrs-light tooltip-trigger" data-tooltip="Total GP cost to buy items and craft one bloodchanting stone using ${result.scenario === 'min' ? 'minimum' : 'average'} prices from ${result.window} time window">
+            <div class="text-sm text-osrs-light tooltip-trigger" data-tooltip="Total cost in bags to buy items and craft one bloodchanting stone using ${result.scenario === 'min' ? 'minimum' : 'average'} prices from ${result.window} time window">
               ${result.scenario === 'min' ? 'Best' : 'Average'} cost to craft (${result.window})
             </div>
-            <div class="text-3xl font-bold text-osrs-gold mt-2">${this.formatPrice(totalCostGP)} GP</div>
+            <div class="text-3xl font-bold text-osrs-gold mt-2">${this.formatPrice(totalCostGP)} bags</div>
           </div>
           ${marketComparisonHTML}
         </div>
@@ -354,8 +360,8 @@ class UnifiedDashboard {
             <h4 class="text-osrs-gold font-bold mb-2">Blood Shards (250 needed)</h4>
             <p class="text-sm"><strong>Buy:</strong> ${shard.itemsToBuy}x ${shard.itemName}</p>
             <p class="text-sm"><strong>Receive:</strong> ${shard.totalShards} shards (${shard.shardsPerItem} each)</p>
-            <p class="text-sm"><strong>Price:</strong> ${this.formatPrice(shard.pricePerItem)} GP/item</p>
-            <p class="text-sm component-total"><strong>Cost:</strong> ${this.formatPrice(shard.totalCostGP)} GP</p>
+            <p class="text-sm"><strong>Price:</strong> ${this.formatPrice(shard.pricePerItem)} bags/item</p>
+            <p class="text-sm component-total"><strong>Cost:</strong> ${this.formatPrice(shard.totalCostGP)} bags</p>
           </div>
 
           <!-- Tokens -->
@@ -363,17 +369,17 @@ class UnifiedDashboard {
             <h4 class="text-osrs-gold font-bold mb-2">Tokens (500 needed)</h4>
             <p class="text-sm"><strong>Buy:</strong> ${token.itemsToBuy}x ${token.itemName}</p>
             <p class="text-sm"><strong>Receive:</strong> ${token.totalTokens} tokens (${token.tokensPerItem} each)</p>
-            <p class="text-sm"><strong>Price:</strong> ${this.formatPrice(token.pricePerItem)} GP/item</p>
-            <p class="text-sm component-total"><strong>Cost:</strong> ${this.formatPrice(token.totalCostGP)} GP</p>
+            <p class="text-sm"><strong>Price:</strong> ${this.formatPrice(token.pricePerItem)} bags/item</p>
+            <p class="text-sm component-total"><strong>Cost:</strong> ${this.formatPrice(token.totalCostGP)} bags</p>
           </div>
 
           <!-- Diamonds -->
           <div class="component-box">
             <h4 class="text-osrs-gold font-bold mb-2">Blood Diamonds (10 needed)</h4>
             <p class="text-sm"><strong>Buy:</strong> ${diamond.diamondsNeeded}x Blood diamonds</p>
-            <p class="text-sm"><strong>Price:</strong> ${this.formatPrice(diamond.pricePerDiamond)} GP/diamond</p>
+            <p class="text-sm"><strong>Price:</strong> ${this.formatPrice(diamond.pricePerDiamond)} bags/diamond</p>
             <p class="text-sm"><strong>Data:</strong> ${diamond.tradeCount} trades in ${result.window}</p>
-            <p class="text-sm component-total"><strong>Cost:</strong> ${this.formatPrice(diamond.totalCostGP)} GP</p>
+            <p class="text-sm component-total"><strong>Cost:</strong> ${this.formatPrice(diamond.totalCostGP)} bags</p>
           </div>
         </div>
       </div>
@@ -476,7 +482,7 @@ class UnifiedDashboard {
           <!-- Right: Stats -->
           <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs sm:w-80">
             <div>
-              <p class="text-osrs-light tooltip-trigger" data-tooltip="Return on Investment: How much cheaper this item is vs median cost per ${this.currentCurrency === 'Blood Shards' ? 'shard' : 'token'}. Positive = better deal!">ROI</p>
+              <p class="text-osrs-light tooltip-trigger" data-tooltip="Return on Investment: How much cheaper this item's bags-per-${this.currentCurrency === 'Blood Shards' ? 'shard' : 'token'} is vs median. Positive = better deal!">ROI</p>
               <p class="font-bold" style="color: ${roiColor}">${roi >= 0 ? '+' : ''}${roi.toFixed(1)}%</p>
             </div>
             <div>
@@ -484,16 +490,16 @@ class UnifiedDashboard {
               <p><span class="confidence-badge ${confidenceClass}">${confidence.toFixed(0)}</span></p>
             </div>
             <div>
-              <p class="text-osrs-light tooltip-trigger" data-tooltip="Current weighted median price giving more weight to recent trades">Price</p>
-              <p class="font-bold text-osrs-gold">${this.formatPrice(windowData.weighted_median)} GP</p>
+              <p class="text-osrs-light tooltip-trigger" data-tooltip="Current weighted median price in bags, giving more weight to recent trades">Price</p>
+              <p class="font-bold text-osrs-gold">${this.formatPrice(windowData.weighted_median)} bags</p>
             </div>
             <div>
               <p class="text-osrs-light tooltip-trigger" data-tooltip="Recommended max purchase price for a good deal (75th percentile of historical trades in this time window)">Buy Below</p>
-              <p class="font-bold text-green-400">${this.formatPrice(zones.good)} GP</p>
+              <p class="font-bold text-green-400">${this.formatPrice(zones.good)} bags</p>
             </div>
             <div>
               <p class="text-osrs-light tooltip-trigger" data-tooltip="Price threshold indicating overpriced - wait for lower prices (90th percentile)">Avoid Above</p>
-              <p class="font-bold text-red-400">${this.formatPrice(zones.avoid)} GP</p>
+              <p class="font-bold text-red-400">${this.formatPrice(zones.avoid)} bags</p>
             </div>
             <div>
               <p class="text-osrs-light tooltip-trigger" data-tooltip="Number of observed trades in the selected time window">Trades</p>
