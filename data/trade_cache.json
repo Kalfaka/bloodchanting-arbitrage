@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-01-20T13:56:09.744060",
-    "total_trades": 38267,
+    "last_updated": "2026-01-20T14:41:25.068680",
+    "total_trades": 38275,
     "items_processed": 50,
     "items_with_trades": 50,
     "source": "GitHub Actions (Optimized - Top Items Only)",
@@ -1845,6 +1845,17 @@
       "currency": 1,
       "seller": "hostingbj",
       "buyer": "FSWspooning"
+    },
+    {
+      "id": 3312570,
+      "time": "2026-01-20 13:53:29.378452",
+      "item_id": 15019,
+      "item_name": "Archers' ring (i)",
+      "amount": 1,
+      "price": 7,
+      "currency": 1,
+      "seller": "dclevo",
+      "buyer": "Pkerg0d"
     },
     {
       "id": 3311769,
@@ -7763,6 +7774,17 @@
       "currency": 0,
       "seller": "imbue",
       "buyer": "arda96"
+    },
+    {
+      "id": 3312624,
+      "time": "2026-01-20 14:00:07.374460",
+      "item_id": 15020,
+      "item_name": "Warrior ring (i)",
+      "amount": 11,
+      "price": 5,
+      "currency": 1,
+      "seller": "th0ras",
+      "buyer": "Jerry"
     },
     {
       "id": 3305029,
@@ -14473,17 +14495,6 @@
       "currency": 0,
       "seller": "helel",
       "buyer": "charmin"
-    },
-    {
-      "id": 2528101,
-      "time": "2025-10-22 13:45:58.468302",
-      "item_id": 13045,
-      "item_name": "Abyssal bludgeon",
-      "amount": 1,
-      "price": 4,
-      "currency": 1,
-      "seller": "bm_keeper",
-      "buyer": "Sagumd"
     },
     {
       "id": 3311930,
@@ -25517,6 +25528,17 @@
       "currency": 0,
       "seller": "turbo123",
       "buyer": "tatata991"
+    },
+    {
+      "id": 3312738,
+      "time": "2026-01-20 14:12:03.636205",
+      "item_id": 11694,
+      "item_name": "Armadyl godsword",
+      "amount": 1,
+      "price": 2,
+      "currency": 1,
+      "seller": "money_talks",
+      "buyer": "nhme"
     },
     {
       "id": 3312315,
@@ -42008,17 +42030,6 @@
       "buyer": "hold up"
     },
     {
-      "id": 3093916,
-      "time": "2025-12-30 02:51:47.513439",
-      "item_id": 11694,
-      "item_name": "Armadyl godsword",
-      "amount": 85,
-      "price": 140000000,
-      "currency": 0,
-      "seller": "perry_pin",
-      "buyer": "hold up"
-    },
-    {
       "id": 3310106,
       "time": "2026-01-20 07:30:27.856332",
       "item_id": 11724,
@@ -49114,6 +49125,17 @@
       "buyer": "Loon"
     },
     {
+      "id": 3312788,
+      "time": "2026-01-20 14:17:24.694522",
+      "item_id": 11722,
+      "item_name": "Armadyl plateskirt",
+      "amount": 82,
+      "price": 4,
+      "currency": 1,
+      "seller": "cruyff",
+      "buyer": "Rivora"
+    },
+    {
       "id": 3312377,
       "time": "2026-01-20 13:28:24.602158",
       "item_id": 11722,
@@ -52995,6 +53017,17 @@
       "currency": 0,
       "seller": "turbo123",
       "buyer": "tatata991"
+    },
+    {
+      "id": 3312651,
+      "time": "2026-01-20 14:01:58.235368",
+      "item_id": 23180,
+      "item_name": "Abyssal dagger (i)",
+      "amount": 1,
+      "price": 1500,
+      "currency": 1,
+      "seller": "navis",
+      "buyer": "R Nothin G"
     },
     {
       "id": 3311960,
@@ -83280,6 +83313,116 @@
       "buyer": "Wailord"
     },
     {
+      "id": 3312883,
+      "time": "2026-01-20 14:27:29.778065",
+      "item_id": 12912,
+      "item_name": "Bounty cape",
+      "amount": 15,
+      "price": 255,
+      "currency": 1,
+      "seller": "oj_simpin",
+      "buyer": "pk2win1100"
+    },
+    {
+      "id": 3312789,
+      "time": "2026-01-20 14:17:36.985418",
+      "item_id": 25969,
+      "item_name": "Glorious bounty cape",
+      "amount": 1,
+      "price": 4150,
+      "currency": 1,
+      "seller": "vip3r",
+      "buyer": "Me Better"
+    },
+    {
+      "id": 3312787,
+      "time": "2026-01-20 14:17:21.693574",
+      "item_id": 12912,
+      "item_name": "Bounty cape",
+      "amount": 4,
+      "price": 255,
+      "currency": 1,
+      "seller": "oj_simpin",
+      "buyer": "Me Better"
+    },
+    {
+      "id": 3312786,
+      "time": "2026-01-20 14:17:18.357662",
+      "item_id": 12912,
+      "item_name": "Bounty cape",
+      "amount": 2,
+      "price": 252,
+      "currency": 1,
+      "seller": "chefs_knife",
+      "buyer": "Me Better"
+    },
+    {
+      "id": 3312784,
+      "time": "2026-01-20 14:17:15.688217",
+      "item_id": 12912,
+      "item_name": "Bounty cape",
+      "amount": 8,
+      "price": 254,
+      "currency": 1,
+      "seller": "marlam",
+      "buyer": "Me Better"
+    },
+    {
+      "id": 3312782,
+      "time": "2026-01-20 14:17:12.547807",
+      "item_id": 12912,
+      "item_name": "Bounty cape",
+      "amount": 1,
+      "price": 250,
+      "currency": 1,
+      "seller": "wasl0s",
+      "buyer": "Me Better"
+    },
+    {
+      "id": 3312745,
+      "time": "2026-01-20 14:12:55.710395",
+      "item_id": 12912,
+      "item_name": "Bounty cape",
+      "amount": 1,
+      "price": 230,
+      "currency": 1,
+      "seller": "cruyff",
+      "buyer": "Me Better"
+    },
+    {
+      "id": 3312743,
+      "time": "2026-01-20 14:12:52.714816",
+      "item_id": 12912,
+      "item_name": "Bounty cape",
+      "amount": 6,
+      "price": 220,
+      "currency": 1,
+      "seller": "gamblermann",
+      "buyer": "Me Better"
+    },
+    {
+      "id": 3312742,
+      "time": "2026-01-20 14:12:49.309708",
+      "item_id": 12912,
+      "item_name": "Bounty cape",
+      "amount": 4,
+      "price": 219,
+      "currency": 1,
+      "seller": "armagedom",
+      "buyer": "Me Better"
+    },
+    {
+      "id": 3312741,
+      "time": "2026-01-20 14:12:46.099083",
+      "item_id": 12912,
+      "item_name": "Bounty cape",
+      "amount": 3,
+      "price": 200,
+      "currency": 1,
+      "seller": "wr3cked_yt",
+      "buyer": "Me Better"
+    },
+    {
       "id": 3312401,
       "time": "2026-01-20 13:30:52.115072",
       "item_id": 12912,
@@ -99670,116 +99813,6 @@
       "buyer": "KingBoomy"
     },
     {
-      "id": 3034402,
-      "time": "2025-12-22 10:57:05.225429",
-      "item_id": 12912,
-      "item_name": "Bounty cape",
-      "amount": 6,
-      "price": 178,
-      "currency": 1,
-      "seller": "dinoman",
-      "buyer": "KingBoomy"
-    },
-    {
-      "id": 3034401,
-      "time": "2025-12-22 10:57:01.468892",
-      "item_id": 12912,
-      "item_name": "Bounty cape",
-      "amount": 3,
-      "price": 175,
-      "currency": 1,
-      "seller": "slayerman777",
-      "buyer": "KingBoomy"
-    },
-    {
-      "id": 3034400,
-      "time": "2025-12-22 10:56:57.859189",
-      "item_id": 12912,
-      "item_name": "Bounty cape",
-      "amount": 2,
-      "price": 170,
-      "currency": 1,
-      "seller": "sm4rt",
-      "buyer": "KingBoomy"
-    },
-    {
-      "id": 3034397,
-      "time": "2025-12-22 10:56:07.174041",
-      "item_id": 12912,
-      "item_name": "Bounty cape",
-      "amount": 2,
-      "price": 170,
-      "currency": 1,
-      "seller": "sm4rt",
-      "buyer": "KingBoomy"
-    },
-    {
-      "id": 3034396,
-      "time": "2025-12-22 10:56:00.767830",
-      "item_id": 12912,
-      "item_name": "Bounty cape",
-      "amount": 1,
-      "price": 150,
-      "currency": 1,
-      "seller": "ghettokala",
-      "buyer": "KingBoomy"
-    },
-    {
-      "id": 3034395,
-      "time": "2025-12-22 10:55:56.358317",
-      "item_id": 12912,
-      "item_name": "Bounty cape",
-      "amount": 10,
-      "price": 177,
-      "currency": 1,
-      "seller": "drop_a_tbag",
-      "buyer": "KingBoomy"
-    },
-    {
-      "id": 3034371,
-      "time": "2025-12-22 10:50:40.587835",
-      "item_id": 12912,
-      "item_name": "Bounty cape",
-      "amount": 1,
-      "price": 150,
-      "currency": 1,
-      "seller": "adamq",
-      "buyer": "im jawad"
-    },
-    {
-      "id": 3033992,
-      "time": "2025-12-22 09:08:24.219533",
-      "item_id": 12912,
-      "item_name": "Bounty cape",
-      "amount": 1,
-      "price": 150,
-      "currency": 1,
-      "seller": "flackster",
-      "buyer": "rsalex1"
-    },
-    {
-      "id": 3033509,
-      "time": "2025-12-22 06:47:04.265787",
-      "item_id": 12912,
-      "item_name": "Bounty cape",
-      "amount": 1,
-      "price": 130,
-      "currency": 1,
-      "seller": "oxfer",
-      "buyer": "MudHut Shack"
-    },
-    {
-      "id": 3032711,
-      "time": "2025-12-22 03:17:58.391467",
-      "item_id": 12912,
-      "item_name": "Bounty cape",
-      "amount": 1,
-      "price": 150,
-      "currency": 1,
-      "seller": "ty_4_coin",
-      "buyer": "5ftwhitemale"
-    },
-    {
       "id": 3278675,
       "time": "2026-01-17 18:55:14.663094",
       "item_id": 15039,
@@ -100900,6 +100933,17 @@
       "currency": 1,
       "seller": "123412",
       "buyer": "paper towel"
+    },
+    {
+      "id": 3312566,
+      "time": "2026-01-20 13:52:05.636382",
+      "item_id": 15220,
+      "item_name": "Berserker ring (i)",
+      "amount": 3,
+      "price": 998000000,
+      "currency": 0,
+      "seller": "ring_keeper",
+      "buyer": "thepkar99"
     },
     {
       "id": 3312465,
@@ -123067,6 +123111,72 @@
       "buyer": "lolbert"
     },
     {
+      "id": 3312889,
+      "time": "2026-01-20 14:28:35.679625",
+      "item_id": 12710,
+      "item_name": "Primordial boots",
+      "amount": 1,
+      "price": 14,
+      "currency": 1,
+      "seller": "coolgamer",
+      "buyer": "pk2win1100"
+    },
+    {
+      "id": 3312888,
+      "time": "2026-01-20 14:28:31.478305",
+      "item_id": 12710,
+      "item_name": "Primordial boots",
+      "amount": 59,
+      "price": 1574000000,
+      "currency": 0,
+      "seller": "girl_scout",
+      "buyer": "pk2win1100"
+    },
+    {
+      "id": 3312839,
+      "time": "2026-01-20 14:22:49.239015",
+      "item_id": 12710,
+      "item_name": "Primordial boots",
+      "amount": 53,
+      "price": 12,
+      "currency": 1,
+      "seller": "btcusd1",
+      "buyer": "a god"
+    },
+    {
+      "id": 3312658,
+      "time": "2026-01-20 14:02:38.820160",
+      "item_id": 12710,
+      "item_name": "Primordial boots",
+      "amount": 90,
+      "price": 1574000000,
+      "currency": 0,
+      "seller": "girl_scout",
+      "buyer": "dropzzx"
+    },
+    {
+      "id": 3312638,
+      "time": "2026-01-20 14:01:12.556467",
+      "item_id": 12710,
+      "item_name": "Primordial boots",
+      "amount": 1,
+      "price": 14,
+      "currency": 1,
+      "seller": "coolgamer",
+      "buyer": "dropzzx"
+    },
+    {
+      "id": 3312636,
+      "time": "2026-01-20 14:01:07.736554",
+      "item_id": 12710,
+      "item_name": "Primordial boots",
+      "amount": 89,
+      "price": 1574000000,
+      "currency": 0,
+      "seller": "girl_scout",
+      "buyer": "dropzzx"
+    },
+    {
       "id": 3312392,
       "time": "2026-01-20 13:30:19.058586",
       "item_id": 12710,
@@ -139495,72 +139605,6 @@
       "item_id": 12710,
       "item_name": "Primordial boots",
       "amount": 169,
-      "price": 15,
-      "currency": 1,
-      "seller": "tp_master",
-      "buyer": "milks"
-    },
-    {
-      "id": 3095150,
-      "time": "2025-12-30 07:50:58.924692",
-      "item_id": 12710,
-      "item_name": "Primordial boots",
-      "amount": 31,
-      "price": 14,
-      "currency": 1,
-      "seller": "bread_v2",
-      "buyer": "milks"
-    },
-    {
-      "id": 3094988,
-      "time": "2025-12-30 07:03:05.193552",
-      "item_id": 12710,
-      "item_name": "Primordial boots",
-      "amount": 15,
-      "price": 13,
-      "currency": 1,
-      "seller": "babausis",
-      "buyer": "sixseven67"
-    },
-    {
-      "id": 3094980,
-      "time": "2025-12-30 07:00:57.190549",
-      "item_id": 12710,
-      "item_name": "Primordial boots",
-      "amount": 1,
-      "price": 13,
-      "currency": 1,
-      "seller": "babausis",
-      "buyer": "tokens"
-    },
-    {
-      "id": 3094901,
-      "time": "2025-12-30 06:34:31.152422",
-      "item_id": 12710,
-      "item_name": "Primordial boots",
-      "amount": 1,
-      "price": 14,
-      "currency": 1,
-      "seller": "bread_v2",
-      "buyer": "tokens"
-    },
-    {
-      "id": 3094895,
-      "time": "2025-12-30 06:32:49.925426",
-      "item_id": 12710,
-      "item_name": "Primordial boots",
-      "amount": 20,
-      "price": 14,
-      "currency": 1,
-      "seller": "bread_v2",
-      "buyer": "sixseven67"
-    },
-    {
-      "id": 3094855,
-      "time": "2025-12-30 06:12:45.517076",
-      "item_id": 12710,
-      "item_name": "Primordial boots",
-      "amount": 1,
       "price": 15,
       "currency": 1,
       "seller": "tp_master",
@@ -163888,6 +163932,17 @@
       "buyer": "Squeezie"
     },
     {
+      "id": 3312846,
+      "time": "2026-01-20 14:23:32.506589",
+      "item_id": 22218,
+      "item_name": "Swift bow",
+      "amount": 1,
+      "price": 1650,
+      "currency": 1,
+      "seller": "simplyput",
+      "buyer": "cayavendette"
+    },
+    {
       "id": 3312499,
       "time": "2026-01-20 13:38:49.496240",
       "item_id": 22218,
@@ -180377,15 +180432,15 @@
       "buyer": "oldmage178"
     },
     {
-      "id": 3058409,
-      "time": "2025-12-25 17:36:26.877617",
-      "item_id": 22218,
-      "item_name": "Swift bow",
+      "id": 3312609,
+      "time": "2026-01-20 13:59:27.703727",
+      "item_id": 11675,
+      "item_name": "Void ranger helm (or)",
       "amount": 1,
-      "price": 1800,
+      "price": 650,
       "currency": 1,
-      "seller": "meteorite",
-      "buyer": "TsyPrance"
+      "seller": "dropzzx",
+      "buyer": "under pvmer"
     },
     {
       "id": 3311855,
@@ -196877,15 +196932,81 @@
       "buyer": "lttlil"
     },
     {
-      "id": 2906559,
-      "time": "2025-12-03 21:50:30.413803",
-      "item_id": 11675,
-      "item_name": "Void ranger helm (or)",
-      "amount": 1,
-      "price": 520,
+      "id": 3312897,
+      "time": "2026-01-20 14:29:11.744086",
+      "item_id": 12708,
+      "item_name": "Pegasian boots",
+      "amount": 2,
+      "price": 15,
       "currency": 1,
-      "seller": "g_a_s",
-      "buyer": "doyming"
+      "seller": "rob_da_grave",
+      "buyer": "pk2win1100"
+    },
+    {
+      "id": 3312896,
+      "time": "2026-01-20 14:29:08.469153",
+      "item_id": 12708,
+      "item_name": "Pegasian boots",
+      "amount": 1,
+      "price": 14,
+      "currency": 1,
+      "seller": "coolgamer",
+      "buyer": "pk2win1100"
+    },
+    {
+      "id": 3312894,
+      "time": "2026-01-20 14:29:04.556596",
+      "item_id": 12708,
+      "item_name": "Pegasian boots",
+      "amount": 57,
+      "price": 13,
+      "currency": 1,
+      "seller": "a_god",
+      "buyer": "pk2win1100"
+    },
+    {
+      "id": 3312840,
+      "time": "2026-01-20 14:22:51.639303",
+      "item_id": 12708,
+      "item_name": "Pegasian boots",
+      "amount": 48,
+      "price": 12,
+      "currency": 1,
+      "seller": "btcusd1",
+      "buyer": "a god"
+    },
+    {
+      "id": 3312655,
+      "time": "2026-01-20 14:02:25.873944",
+      "item_id": 12708,
+      "item_name": "Pegasian boots",
+      "amount": 60,
+      "price": 15,
+      "currency": 1,
+      "seller": "rob_da_grave",
+      "buyer": "dropzzx"
+    },
+    {
+      "id": 3312654,
+      "time": "2026-01-20 14:02:18.050964",
+      "item_id": 12708,
+      "item_name": "Pegasian boots",
+      "amount": 30,
+      "price": 15,
+      "currency": 1,
+      "seller": "rob_da_grave",
+      "buyer": "dropzzx"
+    },
+    {
+      "id": 3312630,
+      "time": "2026-01-20 14:00:54.848416",
+      "item_id": 12708,
+      "item_name": "Pegasian boots",
+      "amount": 90,
+      "price": 15,
+      "currency": 1,
+      "seller": "rob_da_grave",
+      "buyer": "dropzzx"
     },
     {
       "id": 3312400,
@@ -213311,81 +213432,92 @@
       "buyer": "mr random"
     },
     {
-      "id": 3051115,
-      "time": "2025-12-24 15:17:45.548109",
-      "item_id": 12708,
-      "item_name": "Pegasian boots",
-      "amount": 30,
-      "price": 14,
+      "id": 3312933,
+      "time": "2026-01-20 14:34:31.804026",
+      "item_id": 12712,
+      "item_name": "Eternal boots",
+      "amount": 60,
+      "price": 16,
       "currency": 1,
       "seller": "seaman_6",
-      "buyer": "yuko"
+      "buyer": "pk2win1100"
     },
     {
-      "id": 3051101,
-      "time": "2025-12-24 15:16:34.032323",
-      "item_id": 12708,
-      "item_name": "Pegasian boots",
-      "amount": 29,
-      "price": 14,
-      "currency": 1,
-      "seller": "seaman_6",
-      "buyer": "yuko"
-    },
-    {
-      "id": 3051100,
-      "time": "2025-12-24 15:16:29.951877",
-      "item_id": 12708,
-      "item_name": "Pegasian boots",
+      "id": 3312893,
+      "time": "2026-01-20 14:28:59.129680",
+      "item_id": 12712,
+      "item_name": "Eternal boots",
       "amount": 1,
-      "price": 10,
-      "currency": 1,
-      "seller": "onlygym",
-      "buyer": "yuko"
+      "price": 1540000000,
+      "currency": 0,
+      "seller": "hmong0lien",
+      "buyer": "pk2win1100"
     },
     {
-      "id": 3050776,
-      "time": "2025-12-24 13:59:53.665780",
-      "item_id": 12708,
-      "item_name": "Pegasian boots",
-      "amount": 60,
-      "price": 14,
-      "currency": 1,
-      "seller": "seaman_6",
-      "buyer": "vida loca br"
+      "id": 3312892,
+      "time": "2026-01-20 14:28:47.100172",
+      "item_id": 12712,
+      "item_name": "Eternal boots",
+      "amount": 11,
+      "price": 1540000000,
+      "currency": 0,
+      "seller": "hmong0lien",
+      "buyer": "pk2win1100"
     },
     {
-      "id": 3050765,
-      "time": "2025-12-24 13:58:29.713686",
-      "item_id": 12708,
-      "item_name": "Pegasian boots",
-      "amount": 60,
-      "price": 14,
+      "id": 3312891,
+      "time": "2026-01-20 14:28:42.622967",
+      "item_id": 12712,
+      "item_name": "Eternal boots",
+      "amount": 48,
+      "price": 13,
       "currency": 1,
-      "seller": "seaman_6",
-      "buyer": "vida loca br"
+      "seller": "a_god",
+      "buyer": "pk2win1100"
     },
     {
-      "id": 3050763,
-      "time": "2025-12-24 13:58:10.292719",
-      "item_id": 12708,
-      "item_name": "Pegasian boots",
-      "amount": 17,
-      "price": 14,
+      "id": 3312838,
+      "time": "2026-01-20 14:22:46.830565",
+      "item_id": 12712,
+      "item_name": "Eternal boots",
+      "amount": 39,
+      "price": 12,
       "currency": 1,
-      "seller": "seaman_6",
-      "buyer": "vida loca br"
+      "seller": "btcusd1",
+      "buyer": "a god"
     },
     {
-      "id": 3050762,
-      "time": "2025-12-24 13:58:04.286091",
-      "item_id": 12708,
-      "item_name": "Pegasian boots",
-      "amount": 13,
-      "price": 14,
+      "id": 3312656,
+      "time": "2026-01-20 14:02:32.477673",
+      "item_id": 12712,
+      "item_name": "Eternal boots",
+      "amount": 90,
+      "price": 1575000000,
+      "currency": 0,
+      "seller": "blossarrnn",
+      "buyer": "dropzzx"
+    },
+    {
+      "id": 3312639,
+      "time": "2026-01-20 14:01:15.746576",
+      "item_id": 12712,
+      "item_name": "Eternal boots",
+      "amount": 1,
+      "price": 15,
       "currency": 1,
-      "seller": "4th_try",
-      "buyer": "vida loca br"
+      "seller": "coolgamer",
+      "buyer": "dropzzx"
+    },
+    {
+      "id": 3312631,
+      "time": "2026-01-20 14:01:00.256328",
+      "item_id": 12712,
+      "item_name": "Eternal boots",
+      "amount": 89,
+      "price": 1548000000,
+      "currency": 0,
+      "seller": "girl_scout",
+      "buyer": "dropzzx"
     },
     {
       "id": 3312358,
@@ -229800,92 +229932,15 @@
       "buyer": "damit"
     },
     {
-      "id": 3038020,
-      "time": "2025-12-22 20:04:42.482583",
-      "item_id": 12712,
-      "item_name": "Eternal boots",
+      "id": 3312702,
+      "time": "2026-01-20 14:06:57.525805",
+      "item_id": 11674,
+      "item_name": "Void mage helm (or)",
       "amount": 1,
-      "price": 1499000000,
-      "currency": 0,
-      "seller": "girl_scout",
-      "buyer": "vida loca br"
-    },
-    {
-      "id": 3038019,
-      "time": "2025-12-22 20:04:28.322229",
-      "item_id": 12712,
-      "item_name": "Eternal boots",
-      "amount": 16,
-      "price": 1499000000,
-      "currency": 0,
-      "seller": "girl_scout",
-      "buyer": "vida loca br"
-    },
-    {
-      "id": 3037605,
-      "time": "2025-12-22 19:04:23.515667",
-      "item_id": 12712,
-      "item_name": "Eternal boots",
-      "amount": 30,
-      "price": 1499000000,
-      "currency": 0,
-      "seller": "girl_scout",
-      "buyer": "2k7 brid"
-    },
-    {
-      "id": 3036010,
-      "time": "2025-12-22 16:01:07.538131",
-      "item_id": 12712,
-      "item_name": "Eternal boots",
-      "amount": 30,
-      "price": 15,
+      "price": 525,
       "currency": 1,
-      "seller": "tp_master",
-      "buyer": "ded nan69"
-    },
-    {
-      "id": 3035928,
-      "time": "2025-12-22 15:52:43.083625",
-      "item_id": 12712,
-      "item_name": "Eternal boots",
-      "amount": 1,
-      "price": 15,
-      "currency": 1,
-      "seller": "hish_qu_ten",
-      "buyer": "ded nan69"
-    },
-    {
-      "id": 3035913,
-      "time": "2025-12-22 15:52:04.215123",
-      "item_id": 12712,
-      "item_name": "Eternal boots",
-      "amount": 12,
-      "price": 1499000000,
-      "currency": 0,
-      "seller": "girl_scout",
-      "buyer": "ded nan69"
-    },
-    {
-      "id": 3035910,
-      "time": "2025-12-22 15:52:00.142366",
-      "item_id": 12712,
-      "item_name": "Eternal boots",
-      "amount": 17,
-      "price": 14,
-      "currency": 1,
-      "seller": "drlifetaker",
-      "buyer": "ded nan69"
-    },
-    {
-      "id": 3035450,
-      "time": "2025-12-22 15:02:17.830038",
-      "item_id": 12712,
-      "item_name": "Eternal boots",
-      "amount": 1,
-      "price": 14,
-      "currency": 1,
-      "seller": "drlifetaker",
-      "buyer": "ded nan69"
+      "seller": "immortalqt",
+      "buyer": "gg n0 re"
     },
     {
       "id": 3310735,
@@ -279641,6 +279696,28 @@
       "buyer": "ziirox"
     },
     {
+      "id": 3312610,
+      "time": "2026-01-20 13:59:28.306816",
+      "item_id": 20558,
+      "item_name": "Fused slayer helmet",
+      "amount": 1,
+      "price": 21799,
+      "currency": 1,
+      "seller": "yellow_hat",
+      "buyer": "Jerry"
+    },
+    {
+      "id": 3312576,
+      "time": "2026-01-20 13:53:56.813487",
+      "item_id": 20558,
+      "item_name": "Fused slayer helmet",
+      "amount": 1,
+      "price": 21500,
+      "currency": 1,
+      "seller": "leesinq",
+      "buyer": "Sm4rt"
+    },
+    {
       "id": 3312554,
       "time": "2026-01-20 13:47:34.916255",
       "item_id": 20558,
@@ -296119,28 +296196,6 @@
       "buyer": "Gotsnomoneys"
     },
     {
-      "id": 2786956,
-      "time": "2025-11-19 03:19:11.786129",
-      "item_id": 20558,
-      "item_name": "Fused slayer helmet",
-      "amount": 1,
-      "price": 21000,
-      "currency": 1,
-      "seller": "lizwald",
-      "buyer": "nickdadick"
-    },
-    {
-      "id": 2785099,
-      "time": "2025-11-18 21:55:36.248541",
-      "item_id": 20558,
-      "item_name": "Fused slayer helmet",
-      "amount": 1,
-      "price": 21500,
-      "currency": 1,
-      "seller": "a_cunt",
-      "buyer": "JOBER"
-    },
-    {
       "id": 3305359,
       "time": "2026-01-19 21:27:27.345232",
       "item_id": 8839,
@@ -296744,6 +296799,17 @@
       "currency": 1,
       "seller": "fucked_ass",
       "buyer": "GCR"
+    },
+    {
+      "id": 3312623,
+      "time": "2026-01-20 14:00:02.565844",
+      "item_id": 23131,
+      "item_name": "Blade of saeldor",
+      "amount": 1,
+      "price": 532,
+      "currency": 1,
+      "seller": "heams",
+      "buyer": "galaaxy"
     },
     {
       "id": 3312516,
@@ -313233,17 +313299,6 @@
       "currency": 1,
       "seller": "new_wavy",
       "buyer": "michaels"
-    },
-    {
-      "id": 2930930,
-      "time": "2025-12-07 13:07:42.080468",
-      "item_id": 23131,
-      "item_name": "Blade of saeldor",
-      "amount": 1,
-      "price": 350,
-      "currency": 1,
-      "seller": "new_wavy",
-      "buyer": "pablitio"
     },
     {
       "id": 3298088,
@@ -361008,6 +361063,17 @@
       "buyer": "sonny"
     },
     {
+      "id": 3312640,
+      "time": "2026-01-20 14:01:15.752554",
+      "item_id": 12808,
+      "item_name": "Odium ward",
+      "amount": 43,
+      "price": 34,
+      "currency": 1,
+      "seller": "balu_brigada",
+      "buyer": "R Nothin G"
+    },
+    {
       "id": 3304472,
       "time": "2026-01-19 20:00:56.339689",
       "item_id": 12808,
@@ -363305,6 +363371,17 @@
       "currency": 1,
       "seller": "nika",
       "buyer": "Sjaak V2"
+    },
+    {
+      "id": 3312944,
+      "time": "2026-01-20 14:36:21.458777",
+      "item_id": 22135,
+      "item_name": "Dark toxic blowpipe",
+      "amount": 1,
+      "price": 20950,
+      "currency": 1,
+      "seller": "miitchboii",
+      "buyer": "cayavendette"
     },
     {
       "id": 3312409,
@@ -379796,17 +379873,6 @@
       "buyer": "son billy"
     },
     {
-      "id": 3013815,
-      "time": "2025-12-19 16:54:01.984956",
-      "item_id": 12926,
-      "item_name": "Toxic blowpipe",
-      "amount": 4,
-      "price": 18,
-      "currency": 1,
-      "seller": "goldhunter",
-      "buyer": "son billy"
-    },
-    {
       "id": 3288194,
       "time": "2026-01-18 14:16:08.471674",
       "item_id": 15040,
@@ -386911,6 +386977,17 @@
       "currency": 1,
       "seller": "nextleveltt",
       "buyer": "Mary Tobbins"
+    },
+    {
+      "id": 3312793,
+      "time": "2026-01-20 14:18:25.078402",
+      "item_id": 21574,
+      "item_name": "Grand ring (i)",
+      "amount": 1,
+      "price": 14900,
+      "currency": 1,
+      "seller": "fox_mulder",
+      "buyer": "29th"
     },
     {
       "id": 3312135,
@@ -398736,6 +398813,17 @@
       "currency": 1,
       "seller": "bigmattxox",
       "buyer": "Solo Eco"
+    },
+    {
+      "id": 3312948,
+      "time": "2026-01-20 14:36:43.711286",
+      "item_id": 22114,
+      "item_name": "Dragon hunter lance (i)",
+      "amount": 1,
+      "price": 5800,
+      "currency": 1,
+      "seller": "aidanator",
+      "buyer": "cayavendette"
     },
     {
       "id": 3312008,
