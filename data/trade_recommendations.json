@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-01-21T10:37:07.117858",
+    "generated_at": "2026-01-21T11:34:16.658808",
     "analysis_period_days": 90,
     "total_items": 218,
     "active_items": 52,
@@ -22,44 +22,44 @@
           "name": "Ring of vigour",
           "shop_cost": 16,
           "has_trades": true,
-          "performance_score": 559.28,
+          "performance_score": 559.21,
           "overall_stats": {
             "roi_median": -420.83,
-            "volatility": 15.05,
+            "volatility": 15.03,
             "liquidity": 136.36,
-            "trend": 5.07,
+            "trend": 4.37,
             "reliability": 100.0,
             "total_trades": 1500
           },
           "time_windows": {
             "1h": {
               "has_data": true,
-              "trades": 912,
-              "median_price": 790.0,
+              "trades": 917,
+              "median_price": 785.0,
               "weighted_median": 700.0,
               "roi": 4275.0,
-              "recommendation": "BUY NOW - Excellent price (< 720)",
+              "recommendation": "BUY NOW - Excellent price (< 710)",
               "confidence": 92.7,
               "zones": {
-                "excellent": 720.0,
-                "good": 757.5,
-                "fair": 822.5,
+                "excellent": 710.0,
+                "good": 750.0,
+                "fair": 820.0,
                 "overpriced": 850.0,
-                "avoid": 915.0
+                "avoid": 920.0
               }
             },
             "24h": {
               "has_data": true,
-              "trades": 1019,
-              "median_price": 780.0,
+              "trades": 1024,
+              "median_price": 779.0,
               "weighted_median": 700.0,
               "roi": 4275.0,
               "recommendation": "BUY NOW - Excellent price (< 700)",
               "confidence": 92.6,
               "zones": {
                 "excellent": 700.0,
-                "good": 742.5,
-                "fair": 817.5,
+                "good": 741.5,
+                "fair": 816.5,
                 "overpriced": 850.0,
                 "avoid": 925.0
               }
@@ -122,36 +122,36 @@
           "performance_score": 443.12,
           "overall_stats": {
             "roi_median": 56.67,
-            "volatility": 22.17,
+            "volatility": 22.18,
             "liquidity": 78.95,
-            "trend": 46.78,
+            "trend": 46.8,
             "reliability": 99.93,
             "total_trades": 3000
           },
           "time_windows": {
             "1h": {
               "has_data": true,
-              "trades": 468,
-              "median_price": 487.0,
-              "weighted_median": 500.0,
-              "roi": 400.0,
-              "recommendation": "FAIR if < 512",
+              "trades": 470,
+              "median_price": 489.0,
+              "weighted_median": 535.0,
+              "roi": 435.0,
+              "recommendation": "WAIT - Overpriced (fair < 514)",
               "confidence": 91.0,
               "zones": {
                 "excellent": 449.0,
-                "good": 461.75,
-                "fair": 512.25,
+                "good": 463.75,
+                "fair": 514.25,
                 "overpriced": 550.0,
                 "avoid": 600.5
               }
             },
             "24h": {
               "has_data": true,
-              "trades": 540,
+              "trades": 542,
               "median_price": 495.0,
-              "weighted_median": 500.0,
-              "roi": 400.0,
-              "recommendation": "FAIR if < 522",
+              "weighted_median": 535.0,
+              "roi": 435.0,
+              "recommendation": "WAIT - Overpriced (fair < 522)",
               "confidence": 91.2,
               "zones": {
                 "excellent": 449.0,
@@ -163,26 +163,26 @@
             },
             "7d": {
               "has_data": true,
-              "trades": 1126,
+              "trades": 1128,
               "median_price": 475.0,
-              "weighted_median": 500.0,
-              "roi": 400.0,
-              "recommendation": "FAIR if < 505",
-              "confidence": 90.6,
+              "weighted_median": 535.0,
+              "roi": 435.0,
+              "recommendation": "WAIT - Overpriced (fair < 504)",
+              "confidence": 90.7,
               "zones": {
                 "excellent": 430.0,
-                "good": 445.0,
-                "fair": 505.0,
-                "overpriced": 550.0,
-                "avoid": 610.0
+                "good": 446.25,
+                "fair": 503.75,
+                "overpriced": 545.0,
+                "avoid": 602.5
               }
             },
             "30d": {
               "has_data": true,
-              "trades": 2908,
+              "trades": 2910,
               "median_price": 390.0,
-              "weighted_median": 500.0,
-              "roi": 400.0,
+              "weighted_median": 535.0,
+              "roi": 435.0,
               "recommendation": "WAIT - Overpriced (fair < 415)",
               "confidence": 89.2,
               "zones": {
@@ -197,8 +197,8 @@
               "has_data": true,
               "trades": 3000,
               "median_price": 390.0,
-              "weighted_median": 500.0,
-              "roi": 400.0,
+              "weighted_median": 535.0,
+              "roi": 435.0,
               "recommendation": "WAIT - Overpriced (fair < 414)",
               "confidence": 89.4,
               "zones": {
@@ -216,40 +216,40 @@
           "name": "Primordial boots",
           "shop_cost": 8,
           "has_trades": true,
-          "performance_score": 363.22,
+          "performance_score": 363.2,
           "overall_stats": {
             "roi_median": 81.94,
-            "volatility": 23.47,
+            "volatility": 23.48,
             "liquidity": 61.86,
-            "trend": 17.11,
+            "trend": 16.9,
             "reliability": 98.86,
             "total_trades": 1299
           },
           "time_windows": {
             "1h": {
               "has_data": true,
-              "trades": 391,
+              "trades": 398,
               "median_price": 14.0,
-              "weighted_median": 11.0,
-              "roi": 37.5,
-              "recommendation": "BUY NOW - Excellent price (< 13)",
-              "confidence": 88.8,
+              "weighted_median": 15.0,
+              "roi": 87.5,
+              "recommendation": "WAIT - Overpriced (fair < 14)",
+              "confidence": 88.9,
               "zones": {
                 "excellent": 13.0,
-                "good": 13.44,
-                "fair": 14.56,
-                "overpriced": 15.25,
-                "avoid": 16.38
+                "good": 13.5,
+                "fair": 14.5,
+                "overpriced": 15.0,
+                "avoid": 16.0
               }
             },
             "24h": {
               "has_data": true,
-              "trades": 431,
+              "trades": 438,
               "median_price": 14.0,
-              "weighted_median": 11.0,
-              "roi": 37.5,
-              "recommendation": "BUY NOW - Excellent price (< 13)",
-              "confidence": 88.6,
+              "weighted_median": 15.0,
+              "roi": 87.5,
+              "recommendation": "WAIT - Overpriced (fair < 15)",
+              "confidence": 88.7,
               "zones": {
                 "excellent": 13.0,
                 "good": 13.25,
@@ -260,11 +260,11 @@
             },
             "7d": {
               "has_data": true,
-              "trades": 881,
+              "trades": 888,
               "median_price": 14.0,
-              "weighted_median": 11.0,
-              "roi": 37.5,
-              "recommendation": "BUY NOW - Excellent price (< 12)",
+              "weighted_median": 15.0,
+              "roi": 87.5,
+              "recommendation": "WAIT - Overpriced (fair < 15)",
               "confidence": 89.7,
               "zones": {
                 "excellent": 12.0,
@@ -278,9 +278,9 @@
               "has_data": true,
               "trades": 1299,
               "median_price": 13.0,
-              "weighted_median": 11.0,
-              "roi": 37.5,
-              "recommendation": "BUY NOW - Excellent price (< 11)",
+              "weighted_median": 15.0,
+              "roi": 87.5,
+              "recommendation": "WAIT - Overpriced (fair < 14)",
               "confidence": 88.8,
               "zones": {
                 "excellent": 11.0,
@@ -294,9 +294,9 @@
               "has_data": true,
               "trades": 1299,
               "median_price": 13.0,
-              "weighted_median": 11.0,
-              "roi": 37.5,
-              "recommendation": "BUY NOW - Excellent price (< 11)",
+              "weighted_median": 15.0,
+              "roi": 87.5,
+              "recommendation": "WAIT - Overpriced (fair < 14)",
               "confidence": 88.8,
               "zones": {
                 "excellent": 11.0,
@@ -313,40 +313,40 @@
           "name": "Pegasian boots",
           "shop_cost": 9,
           "has_trades": true,
-          "performance_score": 318.24,
+          "performance_score": 318.15,
           "overall_stats": {
             "roi_median": 83.95,
-            "volatility": 22.94,
+            "volatility": 22.9,
             "liquidity": 52.92,
-            "trend": 13.87,
+            "trend": 12.94,
             "reliability": 96.02,
             "total_trades": 1376
           },
           "time_windows": {
             "1h": {
               "has_data": true,
-              "trades": 363,
+              "trades": 371,
               "median_price": 14.0,
-              "weighted_median": 14.0,
-              "roi": 55.56,
-              "recommendation": "FAIR if < 15",
-              "confidence": 88.8,
+              "weighted_median": 15.0,
+              "roi": 66.67,
+              "recommendation": "WAIT - Overpriced (fair < 14)",
+              "confidence": 88.9,
               "zones": {
                 "excellent": 13.0,
-                "good": 13.38,
-                "fair": 14.62,
-                "overpriced": 15.5,
-                "avoid": 16.75
+                "good": 13.5,
+                "fair": 14.5,
+                "overpriced": 15.0,
+                "avoid": 16.0
               }
             },
             "24h": {
               "has_data": true,
-              "trades": 398,
+              "trades": 406,
               "median_price": 14.0,
-              "weighted_median": 14.0,
-              "roi": 55.56,
-              "recommendation": "FAIR if < 14",
-              "confidence": 89.0,
+              "weighted_median": 15.0,
+              "roi": 66.67,
+              "recommendation": "WAIT - Overpriced (fair < 14)",
+              "confidence": 89.1,
               "zones": {
                 "excellent": 13.0,
                 "good": 13.5,
@@ -357,12 +357,12 @@
             },
             "7d": {
               "has_data": true,
-              "trades": 812,
+              "trades": 820,
               "median_price": 14.0,
-              "weighted_median": 14.0,
-              "roi": 55.56,
-              "recommendation": "FAIR if < 15",
-              "confidence": 89.3,
+              "weighted_median": 15.0,
+              "roi": 66.67,
+              "recommendation": "WAIT - Overpriced (fair < 15)",
+              "confidence": 89.4,
               "zones": {
                 "excellent": 13.0,
                 "good": 13.25,
@@ -375,8 +375,8 @@
               "has_data": true,
               "trades": 1376,
               "median_price": 13.0,
-              "weighted_median": 14.0,
-              "roi": 55.56,
+              "weighted_median": 15.0,
+              "roi": 66.67,
               "recommendation": "WAIT - Overpriced (fair < 14)",
               "confidence": 89.3,
               "zones": {
@@ -391,8 +391,8 @@
               "has_data": true,
               "trades": 1376,
               "median_price": 13.0,
-              "weighted_median": 14.0,
-              "roi": 55.56,
+              "weighted_median": 15.0,
+              "roi": 66.67,
               "recommendation": "WAIT - Overpriced (fair < 14)",
               "confidence": 89.3,
               "zones": {
@@ -410,23 +410,23 @@
           "name": "Eternal boots",
           "shop_cost": 10,
           "has_trades": true,
-          "performance_score": 308.24,
+          "performance_score": 309.35,
           "overall_stats": {
             "roi_median": 84.44,
-            "volatility": 21.97,
-            "liquidity": 51.25,
-            "trend": 19.84,
-            "reliability": 86.21,
-            "total_trades": 1435
+            "volatility": 21.92,
+            "liquidity": 51.46,
+            "trend": 19.58,
+            "reliability": 86.45,
+            "total_trades": 1441
           },
           "time_windows": {
             "1h": {
               "has_data": true,
-              "trades": 366,
+              "trades": 376,
               "median_price": 15.0,
-              "weighted_median": 12.0,
-              "roi": 20.0,
-              "recommendation": "BUY NOW - Excellent price (< 13)",
+              "weighted_median": 14.0,
+              "roi": 40.0,
+              "recommendation": "BUY if < 14",
               "confidence": 89.4,
               "zones": {
                 "excellent": 13.0,
@@ -438,12 +438,12 @@
             },
             "24h": {
               "has_data": true,
-              "trades": 411,
+              "trades": 421,
               "median_price": 15.0,
-              "weighted_median": 12.0,
-              "roi": 20.0,
-              "recommendation": "BUY NOW - Excellent price (< 13)",
-              "confidence": 89.7,
+              "weighted_median": 14.0,
+              "roi": 40.0,
+              "recommendation": "BUY if < 14",
+              "confidence": 89.8,
               "zones": {
                 "excellent": 13.0,
                 "good": 14.25,
@@ -454,11 +454,11 @@
             },
             "7d": {
               "has_data": true,
-              "trades": 828,
+              "trades": 838,
               "median_price": 15.0,
-              "weighted_median": 12.0,
-              "roi": 20.0,
-              "recommendation": "BUY NOW - Excellent price (< 13)",
+              "weighted_median": 14.0,
+              "roi": 40.0,
+              "recommendation": "BUY if < 14",
               "confidence": 90.3,
               "zones": {
                 "excellent": 13.0,
@@ -470,12 +470,12 @@
             },
             "30d": {
               "has_data": true,
-              "trades": 1435,
+              "trades": 1441,
               "median_price": 14.0,
-              "weighted_median": 12.0,
-              "roi": 20.0,
-              "recommendation": "BUY NOW - Excellent price (< 12)",
-              "confidence": 89.9,
+              "weighted_median": 14.0,
+              "roi": 40.0,
+              "recommendation": "FAIR if < 15",
+              "confidence": 90.0,
               "zones": {
                 "excellent": 12.0,
                 "good": 13.25,
@@ -486,12 +486,12 @@
             },
             "all": {
               "has_data": true,
-              "trades": 1435,
+              "trades": 1441,
               "median_price": 14.0,
-              "weighted_median": 12.0,
-              "roi": 20.0,
-              "recommendation": "BUY NOW - Excellent price (< 12)",
-              "confidence": 89.9,
+              "weighted_median": 14.0,
+              "roi": 40.0,
+              "recommendation": "FAIR if < 15",
+              "confidence": 90.0,
               "zones": {
                 "excellent": 12.0,
                 "good": 13.25,
@@ -604,14 +604,14 @@
           "name": "Toxic blowpipe",
           "shop_cost": 35,
           "has_trades": true,
-          "performance_score": 204.07,
+          "performance_score": 203.84,
           "overall_stats": {
             "roi_median": 92.06,
-            "volatility": 63.29,
-            "liquidity": 30.03,
-            "trend": 150.26,
-            "reliability": 39.29,
-            "total_trades": 931
+            "volatility": 63.24,
+            "liquidity": 30.0,
+            "trend": 149.43,
+            "reliability": 39.33,
+            "total_trades": 930
           },
           "time_windows": {
             "1h": {
@@ -664,7 +664,7 @@
             },
             "30d": {
               "has_data": true,
-              "trades": 931,
+              "trades": 930,
               "median_price": 25.0,
               "weighted_median": 40.0,
               "roi": 14.29,
@@ -680,7 +680,7 @@
             },
             "all": {
               "has_data": true,
-              "trades": 931,
+              "trades": 930,
               "median_price": 25.0,
               "weighted_median": 40.0,
               "roi": 14.29,
@@ -798,14 +798,14 @@
           "name": "Berserker ring (i)",
           "shop_cost": 1,
           "has_trades": true,
-          "performance_score": 82.58,
+          "performance_score": 82.48,
           "overall_stats": {
             "roi_median": 0.0,
-            "volatility": 136.14,
-            "liquidity": 13.73,
-            "trend": -42.69,
+            "volatility": 136.45,
+            "liquidity": 13.71,
+            "trend": -42.34,
             "reliability": 100.0,
-            "total_trades": 1222
+            "total_trades": 1220
           },
           "time_windows": {
             "1h": {
@@ -874,7 +874,7 @@
             },
             "all": {
               "has_data": true,
-              "trades": 1222,
+              "trades": 1220,
               "median_price": 9.0,
               "weighted_median": 7.0,
               "roi": 600.0,
@@ -895,70 +895,70 @@
           "name": "Marauders gloves",
           "shop_cost": 45,
           "has_trades": true,
-          "performance_score": 82.24,
+          "performance_score": 82.29,
           "overall_stats": {
             "roi_median": 72.84,
-            "volatility": 43.18,
-            "liquidity": 7.02,
-            "trend": -10.85,
-            "reliability": 99.51,
-            "total_trades": 625
+            "volatility": 43.15,
+            "liquidity": 7.03,
+            "trend": -10.9,
+            "reliability": 99.52,
+            "total_trades": 626
           },
           "time_windows": {
             "1h": {
               "has_data": true,
-              "trades": 51,
+              "trades": 52,
               "median_price": 110.0,
-              "weighted_median": 90.0,
-              "roi": 100.0,
+              "weighted_median": 100.0,
+              "roi": 122.22,
               "recommendation": "BUY NOW - Excellent price (< 100)",
-              "confidence": 74.4,
+              "confidence": 74.8,
               "zones": {
                 "excellent": 100.0,
-                "good": 105.25,
-                "fair": 114.75,
-                "overpriced": 119.0,
-                "avoid": 128.5
+                "good": 105.19,
+                "fair": 114.81,
+                "overpriced": 119.25,
+                "avoid": 128.88
               }
             },
             "24h": {
               "has_data": true,
-              "trades": 60,
-              "median_price": 113.5,
-              "weighted_median": 90.0,
-              "roi": 100.0,
+              "trades": 61,
+              "median_price": 114.0,
+              "weighted_median": 100.0,
+              "roi": 122.22,
               "recommendation": "BUY NOW - Excellent price (< 100)",
-              "confidence": 77.2,
+              "confidence": 77.6,
               "zones": {
                 "excellent": 100.0,
-                "good": 104.44,
-                "fair": 122.56,
-                "overpriced": 136.25,
-                "avoid": 154.38
+                "good": 105.25,
+                "fair": 122.75,
+                "overpriced": 135.0,
+                "avoid": 152.5
               }
             },
             "7d": {
               "has_data": true,
-              "trades": 102,
+              "trades": 103,
               "median_price": 120.0,
-              "weighted_median": 90.0,
-              "roi": 100.0,
+              "weighted_median": 100.0,
+              "roi": 122.22,
               "recommendation": "BUY NOW - Excellent price (< 100)",
-              "confidence": 83.2,
+              "confidence": 83.3,
               "zones": {
                 "excellent": 100.0,
-                "good": 108.75,
-                "fair": 131.25,
-                "overpriced": 145.0,
-                "avoid": 167.5
+                "good": 109.06,
+                "fair": 130.94,
+                "overpriced": 143.75,
+                "avoid": 165.62
               }
             },
             "30d": {
               "has_data": true,
-              "trades": 262,
+              "trades": 263,
               "median_price": 120.0,
-              "weighted_median": 90.0,
-              "roi": 100.0,
+              "weighted_median": 100.0,
+              "roi": 122.22,
               "recommendation": "BUY NOW - Excellent price (< 100)",
               "confidence": 85.2,
               "zones": {
@@ -971,11 +971,11 @@
             },
             "all": {
               "has_data": true,
-              "trades": 625,
+              "trades": 626,
               "median_price": 110.0,
-              "weighted_median": 90.0,
-              "roi": 100.0,
-              "recommendation": "BUY NOW - Excellent price (< 90)",
+              "weighted_median": 100.0,
+              "roi": 122.22,
+              "recommendation": "FAIR if < 128",
               "confidence": 81.7,
               "zones": {
                 "excellent": 90.0,
@@ -1186,14 +1186,14 @@
           "name": "Abyssal tentacle",
           "shop_cost": 1,
           "has_trades": true,
-          "performance_score": 52.54,
+          "performance_score": 52.53,
           "overall_stats": {
             "roi_median": -11.11,
-            "volatility": 133.23,
-            "liquidity": 8.79,
-            "trend": -58.42,
+            "volatility": 133.34,
+            "liquidity": 8.78,
+            "trend": -57.93,
             "reliability": 100.0,
-            "total_trades": 782
+            "total_trades": 781
           },
           "time_windows": {
             "1h": {
@@ -1262,7 +1262,7 @@
             },
             "all": {
               "has_data": true,
-              "trades": 782,
+              "trades": 781,
               "median_price": 10.0,
               "weighted_median": 11.0,
               "roi": 1000.0,
@@ -7200,14 +7200,14 @@
           "name": "Armadyl godsword",
           "shop_cost": 2,
           "has_trades": true,
-          "performance_score": -281944190.63,
+          "performance_score": -281944190.93,
           "overall_stats": {
             "roi_median": -805555455.56,
-            "volatility": 82.74,
-            "liquidity": 40.9,
-            "trend": -12.15,
-            "reliability": 78.58,
-            "total_trades": 859
+            "volatility": 82.78,
+            "liquidity": 40.86,
+            "trend": -12.75,
+            "reliability": 78.55,
+            "total_trades": 858
           },
           "time_windows": {
             "1h": {
@@ -7260,7 +7260,7 @@
             },
             "30d": {
               "has_data": true,
-              "trades": 859,
+              "trades": 858,
               "median_price": 145000000.0,
               "weighted_median": 175000000.0,
               "roi": 8749999900.0,
@@ -7276,7 +7276,7 @@
             },
             "all": {
               "has_data": true,
-              "trades": 859,
+              "trades": 858,
               "median_price": 145000000.0,
               "weighted_median": 175000000.0,
               "roi": 8749999900.0,
@@ -7491,24 +7491,24 @@
           "name": "Abyssal bludgeon",
           "shop_cost": 1,
           "has_trades": true,
-          "performance_score": -384999939.66,
+          "performance_score": -384999939.39,
           "overall_stats": {
             "roi_median": -1099999900.0,
-            "volatility": 87.83,
-            "liquidity": 2.1,
-            "trend": -32.22,
-            "reliability": 89.78,
-            "total_trades": 187
+            "volatility": 87.41,
+            "liquidity": 2.11,
+            "trend": -30.43,
+            "reliability": 89.84,
+            "total_trades": 188
           },
           "time_windows": {
             "1h": {
               "has_data": true,
-              "trades": 28,
+              "trades": 29,
               "median_price": 89000000.0,
-              "weighted_median": 130000000.0,
-              "roi": 12999999900.0,
+              "weighted_median": 175000000.0,
+              "roi": 17499999900.0,
               "recommendation": "WAIT - Overpriced (fair < 121500000)",
-              "confidence": 51.3,
+              "confidence": 52.1,
               "zones": {
                 "excellent": 2.0,
                 "good": 56500000.5,
@@ -7519,12 +7519,12 @@
             },
             "24h": {
               "has_data": true,
-              "trades": 30,
+              "trades": 31,
               "median_price": 89000000.0,
-              "weighted_median": 130000000.0,
-              "roi": 12999999900.0,
+              "weighted_median": 175000000.0,
+              "roi": 17499999900.0,
               "recommendation": "WAIT - Overpriced (fair < 121500000)",
-              "confidence": 50.8,
+              "confidence": 51.6,
               "zones": {
                 "excellent": 2.0,
                 "good": 56500000.5,
@@ -7535,50 +7535,50 @@
             },
             "7d": {
               "has_data": true,
-              "trades": 44,
-              "median_price": 80000000.0,
-              "weighted_median": 130000000.0,
-              "roi": 12999999900.0,
-              "recommendation": "WAIT - Overpriced (fair < 115000000)",
-              "confidence": 51.5,
+              "trades": 45,
+              "median_price": 84500000.0,
+              "weighted_median": 175000000.0,
+              "roi": 17499999900.0,
+              "recommendation": "WAIT - Overpriced (fair < 123250000)",
+              "confidence": 52.2,
               "zones": {
                 "excellent": 2.0,
-                "good": 45000000.5,
-                "fair": 114999999.5,
-                "overpriced": 140000000.0,
-                "avoid": 209999999.0
+                "good": 45750000.5,
+                "fair": 123249999.5,
+                "overpriced": 155000000.0,
+                "avoid": 232499999.0
               }
             },
             "30d": {
               "has_data": true,
-              "trades": 78,
+              "trades": 79,
               "median_price": 130000000.0,
-              "weighted_median": 130000000.0,
-              "roi": 12999999900.0,
-              "recommendation": "FAIR if < 173499998",
-              "confidence": 57.4,
+              "weighted_median": 175000000.0,
+              "roi": 17499999900.0,
+              "recommendation": "WAIT - Overpriced (fair < 173687498)",
+              "confidence": 57.8,
               "zones": {
                 "excellent": 9.0,
-                "good": 86500002.25,
-                "fair": 173499997.75,
-                "overpriced": 174000000.0,
-                "avoid": 260999995.5
+                "good": 86312502.25,
+                "fair": 173687497.75,
+                "overpriced": 174750000.0,
+                "avoid": 262124995.5
               }
             },
             "all": {
               "has_data": true,
-              "trades": 187,
+              "trades": 188,
               "median_price": 99000000.0,
-              "weighted_median": 130000000.0,
-              "roi": 12999999900.0,
-              "recommendation": "FAIR if < 140250000",
-              "confidence": 63.7,
+              "weighted_median": 175000000.0,
+              "roi": 17499999900.0,
+              "recommendation": "WAIT - Overpriced (fair < 142000000)",
+              "confidence": 63.8,
               "zones": {
                 "excellent": 2.0,
-                "good": 57750000.5,
-                "fair": 140249999.5,
-                "overpriced": 165000000.0,
-                "avoid": 247499999.0
+                "good": 56000000.5,
+                "fair": 141999999.5,
+                "overpriced": 172000000.0,
+                "avoid": 257999999.0
               }
             }
           }
@@ -7982,39 +7982,39 @@
           "name": "Bloodfire shield",
           "shop_cost": 400,
           "has_trades": true,
-          "performance_score": 410.87,
+          "performance_score": 410.89,
           "overall_stats": {
             "roi_median": 10.34,
-            "volatility": 22.17,
+            "volatility": 22.18,
             "liquidity": 78.95,
-            "trend": 46.78,
-            "reliability": 35.78,
+            "trend": 46.8,
+            "reliability": 35.85,
             "total_trades": 3000
           },
           "time_windows": {
             "1h": {
               "has_data": true,
-              "trades": 468,
-              "median_price": 487.0,
-              "weighted_median": 500.0,
-              "roi": 25.0,
-              "recommendation": "FAIR if < 512",
+              "trades": 470,
+              "median_price": 489.0,
+              "weighted_median": 535.0,
+              "roi": 33.75,
+              "recommendation": "WAIT - Overpriced (fair < 514)",
               "confidence": 91.0,
               "zones": {
                 "excellent": 449.0,
-                "good": 461.75,
-                "fair": 512.25,
+                "good": 463.75,
+                "fair": 514.25,
                 "overpriced": 550.0,
                 "avoid": 600.5
               }
             },
             "24h": {
               "has_data": true,
-              "trades": 540,
+              "trades": 542,
               "median_price": 495.0,
-              "weighted_median": 500.0,
-              "roi": 25.0,
-              "recommendation": "FAIR if < 522",
+              "weighted_median": 535.0,
+              "roi": 33.75,
+              "recommendation": "WAIT - Overpriced (fair < 522)",
               "confidence": 91.2,
               "zones": {
                 "excellent": 449.0,
@@ -8026,26 +8026,26 @@
             },
             "7d": {
               "has_data": true,
-              "trades": 1126,
+              "trades": 1128,
               "median_price": 475.0,
-              "weighted_median": 500.0,
-              "roi": 25.0,
-              "recommendation": "FAIR if < 505",
-              "confidence": 90.6,
+              "weighted_median": 535.0,
+              "roi": 33.75,
+              "recommendation": "WAIT - Overpriced (fair < 504)",
+              "confidence": 90.7,
               "zones": {
                 "excellent": 430.0,
-                "good": 445.0,
-                "fair": 505.0,
-                "overpriced": 550.0,
-                "avoid": 610.0
+                "good": 446.25,
+                "fair": 503.75,
+                "overpriced": 545.0,
+                "avoid": 602.5
               }
             },
             "30d": {
               "has_data": true,
-              "trades": 2908,
+              "trades": 2910,
               "median_price": 390.0,
-              "weighted_median": 500.0,
-              "roi": 25.0,
+              "weighted_median": 535.0,
+              "roi": 33.75,
               "recommendation": "WAIT - Overpriced (fair < 415)",
               "confidence": 89.2,
               "zones": {
@@ -8060,8 +8060,8 @@
               "has_data": true,
               "trades": 3000,
               "median_price": 390.0,
-              "weighted_median": 500.0,
-              "roi": 25.0,
+              "weighted_median": 535.0,
+              "roi": 33.75,
               "recommendation": "WAIT - Overpriced (fair < 414)",
               "confidence": 89.4,
               "zones": {
@@ -8079,70 +8079,70 @@
           "name": "Swift bow",
           "shop_cost": 1500,
           "has_trades": true,
-          "performance_score": 313.98,
+          "performance_score": 313.93,
           "overall_stats": {
             "roi_median": -10.34,
-            "volatility": 13.79,
+            "volatility": 13.81,
             "liquidity": 59.5,
-            "trend": -2.94,
-            "reliability": 84.32,
+            "trend": -3.06,
+            "reliability": 84.18,
             "total_trades": 1428
           },
           "time_windows": {
             "1h": {
               "has_data": true,
-              "trades": 392,
-              "median_price": 1700.0,
-              "weighted_median": 1550.0,
-              "roi": 3.33,
+              "trades": 396,
+              "median_price": 1699.5,
+              "weighted_median": 1590.0,
+              "roi": 6.0,
               "recommendation": "BUY if < 1620",
-              "confidence": 93.1,
+              "confidence": 93.4,
               "zones": {
                 "excellent": 1500.0,
-                "good": 1620.0,
-                "fair": 1780.0,
-                "overpriced": 1820.0,
-                "avoid": 1980.0
+                "good": 1619.5,
+                "fair": 1769.5,
+                "overpriced": 1800.0,
+                "avoid": 1950.0
               }
             },
             "24h": {
               "has_data": true,
-              "trades": 437,
+              "trades": 441,
               "median_price": 1700.0,
-              "weighted_median": 1550.0,
-              "roi": 3.33,
-              "recommendation": "BUY if < 1603",
+              "weighted_median": 1590.0,
+              "roi": 6.0,
+              "recommendation": "BUY if < 1605",
               "confidence": 92.7,
               "zones": {
                 "excellent": 1500.0,
-                "good": 1602.75,
-                "fair": 1797.25,
-                "overpriced": 1889.0,
-                "avoid": 2083.5
+                "good": 1605.25,
+                "fair": 1794.75,
+                "overpriced": 1879.0,
+                "avoid": 2068.5
               }
             },
             "7d": {
               "has_data": true,
-              "trades": 773,
+              "trades": 777,
               "median_price": 1800.0,
-              "weighted_median": 1550.0,
-              "roi": 3.33,
-              "recommendation": "BUY NOW - Excellent price (< 1636)",
+              "weighted_median": 1590.0,
+              "roi": 6.0,
+              "recommendation": "BUY NOW - Excellent price (< 1600)",
               "confidence": 92.4,
               "zones": {
-                "excellent": 1636.25,
-                "good": 1710.31,
-                "fair": 1889.69,
+                "excellent": 1600.0,
+                "good": 1701.25,
+                "fair": 1898.75,
                 "overpriced": 1995.0,
-                "avoid": 2174.38
+                "avoid": 2192.5
               }
             },
             "30d": {
               "has_data": true,
               "trades": 1428,
               "median_price": 1800.0,
-              "weighted_median": 1550.0,
-              "roi": 3.33,
+              "weighted_median": 1590.0,
+              "roi": 6.0,
               "recommendation": "BUY NOW - Excellent price (< 1650)",
               "confidence": 92.8,
               "zones": {
@@ -8157,8 +8157,8 @@
               "has_data": true,
               "trades": 1428,
               "median_price": 1800.0,
-              "weighted_median": 1550.0,
-              "roi": 3.33,
+              "weighted_median": 1590.0,
+              "roi": 6.0,
               "recommendation": "BUY NOW - Excellent price (< 1650)",
               "confidence": 92.8,
               "zones": {
@@ -8176,87 +8176,87 @@
           "name": "Armadyl godsword (or)",
           "shop_cost": 1000,
           "has_trades": true,
-          "performance_score": 218.72,
+          "performance_score": 218.82,
           "overall_stats": {
             "roi_median": 13.1,
-            "volatility": 25.25,
-            "liquidity": 40.4,
-            "trend": 51.14,
-            "reliability": 33.19,
-            "total_trades": 2141
+            "volatility": 25.24,
+            "liquidity": 40.42,
+            "trend": 51.05,
+            "reliability": 33.27,
+            "total_trades": 2142
           },
           "time_windows": {
             "1h": {
               "has_data": true,
-              "trades": 384,
+              "trades": 386,
               "median_price": 1179.0,
-              "weighted_median": 800.0,
-              "roi": -20.0,
-              "recommendation": "AVOID - Loss -20.0%",
+              "weighted_median": 1200.0,
+              "roi": 20.0,
+              "recommendation": "FAIR if < 1231",
               "confidence": 91.5,
               "zones": {
-                "excellent": 1083.75,
-                "good": 1125.25,
-                "fair": 1232.75,
-                "overpriced": 1298.75,
-                "avoid": 1406.25
+                "excellent": 1091.25,
+                "good": 1127.25,
+                "fair": 1230.75,
+                "overpriced": 1298.25,
+                "avoid": 1401.75
               }
             },
             "24h": {
               "has_data": true,
-              "trades": 440,
-              "median_price": 1199.0,
-              "weighted_median": 800.0,
-              "roi": -20.0,
-              "recommendation": "AVOID - Loss -20.0%",
+              "trades": 442,
+              "median_price": 1199.5,
+              "weighted_median": 1200.0,
+              "roi": 20.0,
+              "recommendation": "FAIR if < 1262",
               "confidence": 91.3,
               "zones": {
                 "excellent": 1100.0,
-                "good": 1136.25,
-                "fair": 1261.75,
+                "good": 1136.75,
+                "fair": 1262.25,
                 "overpriced": 1351.0,
                 "avoid": 1476.5
               }
             },
             "7d": {
               "has_data": true,
-              "trades": 844,
-              "median_price": 1179.0,
-              "weighted_median": 800.0,
-              "roi": -20.0,
-              "recommendation": "AVOID - Loss -20.0%",
+              "trades": 846,
+              "median_price": 1179.5,
+              "weighted_median": 1200.0,
+              "roi": 20.0,
+              "recommendation": "FAIR if < 1254",
               "confidence": 90.8,
               "zones": {
                 "excellent": 1000.0,
-                "good": 1104.0,
-                "fair": 1254.0,
+                "good": 1104.5,
+                "fair": 1254.5,
                 "overpriced": 1300.0,
                 "avoid": 1450.0
               }
             },
             "30d": {
               "has_data": true,
-              "trades": 1732,
-              "median_price": 969.0,
-              "weighted_median": 800.0,
-              "roi": -20.0,
-              "recommendation": "AVOID - Loss -20.0%",
+              "trades": 1734,
+              "median_price": 969.5,
+              "weighted_median": 1200.0,
+              "roi": 20.0,
+              "recommendation": "WAIT - Overpriced (fair < 1070)",
               "confidence": 87.9,
               "zones": {
                 "excellent": 800.0,
-                "good": 869.0,
-                "fair": 1069.0,
+                "good": 869.5,
+                "fair": 1069.5,
                 "overpriced": 1200.0,
                 "avoid": 1400.0
               }
             },
             "all": {
               "has_data": true,
-              "trades": 2141,
+              "trades": 2142,
               "median_price": 945.0,
-              "weighted_median": 800.0,
-              "roi": -20.0,
-              "recommendation": "AVOID - Loss -20.0%",
+              "weighted_median": 1200.0,
+              "roi": 20.0,
+              "recommendation": "WAIT - Overpriced (fair < 1032)",
               "confidence": 88.1,
               "zones": {
                 "excellent": 800.0,
@@ -8370,35 +8370,35 @@
           "name": "Crystal platebody",
           "shop_cost": 600,
           "has_trades": true,
-          "performance_score": 155.47,
+          "performance_score": 155.46,
           "overall_stats": {
             "roi_median": 15.71,
             "volatility": 26.29,
             "liquidity": 28.3,
-            "trend": 19.97,
+            "trend": 19.89,
             "reliability": 31.11,
             "total_trades": 1500
           },
           "time_windows": {
             "1h": {
               "has_data": true,
-              "trades": 218,
+              "trades": 219,
               "median_price": 600.0,
               "weighted_median": 650.0,
               "roi": 8.33,
               "recommendation": "WAIT - Overpriced (fair < 620)",
               "confidence": 92.2,
               "zones": {
-                "excellent": 580.0,
-                "good": 580.0,
-                "fair": 620.0,
+                "excellent": 578.75,
+                "good": 579.69,
+                "fair": 620.31,
                 "overpriced": 660.0,
-                "avoid": 700.0
+                "avoid": 700.62
               }
             },
             "24h": {
               "has_data": true,
-              "trades": 244,
+              "trades": 245,
               "median_price": 600.0,
               "weighted_median": 650.0,
               "roi": 8.33,
@@ -8414,7 +8414,7 @@
             },
             "7d": {
               "has_data": true,
-              "trades": 452,
+              "trades": 453,
               "median_price": 650.0,
               "weighted_median": 650.0,
               "roi": 8.33,
@@ -8430,7 +8430,7 @@
             },
             "30d": {
               "has_data": true,
-              "trades": 1029,
+              "trades": 1030,
               "median_price": 575.0,
               "weighted_median": 650.0,
               "roi": 8.33,
@@ -8467,40 +8467,40 @@
           "name": "Crystal platelegs",
           "shop_cost": 600,
           "has_trades": true,
-          "performance_score": 154.95,
+          "performance_score": 154.96,
           "overall_stats": {
             "roi_median": 23.37,
             "volatility": 27.52,
             "liquidity": 27.78,
-            "trend": 25.74,
-            "reliability": 26.73,
+            "trend": 25.65,
+            "reliability": 26.8,
             "total_trades": 1500
           },
           "time_windows": {
             "1h": {
               "has_data": true,
-              "trades": 179,
+              "trades": 180,
               "median_price": 600.0,
-              "weighted_median": 550.0,
-              "roi": -8.33,
-              "recommendation": "MARGINAL - Break even difficult",
-              "confidence": 90.5,
+              "weighted_median": 690.0,
+              "roi": 15.0,
+              "recommendation": "WAIT - Overpriced (fair < 635)",
+              "confidence": 90.6,
               "zones": {
                 "excellent": 550.0,
-                "good": 566.25,
-                "fair": 633.75,
-                "overpriced": 685.0,
-                "avoid": 752.5
+                "good": 565.0,
+                "fair": 635.0,
+                "overpriced": 690.0,
+                "avoid": 760.0
               }
             },
             "24h": {
               "has_data": true,
-              "trades": 201,
+              "trades": 202,
               "median_price": 600.0,
-              "weighted_median": 550.0,
-              "roi": -8.33,
-              "recommendation": "MARGINAL - Break even difficult",
-              "confidence": 91.1,
+              "weighted_median": 690.0,
+              "roi": 15.0,
+              "recommendation": "WAIT - Overpriced (fair < 632)",
+              "confidence": 91.2,
               "zones": {
                 "excellent": 550.0,
                 "good": 567.5,
@@ -8511,11 +8511,11 @@
             },
             "7d": {
               "has_data": true,
-              "trades": 412,
+              "trades": 413,
               "median_price": 600.0,
-              "weighted_median": 550.0,
-              "roi": -8.33,
-              "recommendation": "MARGINAL - Break even difficult",
+              "weighted_median": 690.0,
+              "roi": 15.0,
+              "recommendation": "WAIT - Overpriced (fair < 638)",
               "confidence": 91.1,
               "zones": {
                 "excellent": 550.0,
@@ -8527,11 +8527,11 @@
             },
             "30d": {
               "has_data": true,
-              "trades": 978,
+              "trades": 979,
               "median_price": 570.0,
-              "weighted_median": 550.0,
-              "roi": -8.33,
-              "recommendation": "MARGINAL - Break even difficult",
+              "weighted_median": 690.0,
+              "roi": 15.0,
+              "recommendation": "WAIT - Overpriced (fair < 620)",
               "confidence": 87.5,
               "zones": {
                 "excellent": 450.0,
@@ -8545,9 +8545,9 @@
               "has_data": true,
               "trades": 1500,
               "median_price": 500.0,
-              "weighted_median": 550.0,
-              "roi": -8.33,
-              "recommendation": "MARGINAL - Break even difficult",
+              "weighted_median": 690.0,
+              "roi": 15.0,
+              "recommendation": "WAIT - Overpriced (fair < 548)",
               "confidence": 87.3,
               "zones": {
                 "excellent": 440.0,
@@ -8758,24 +8758,24 @@
           "name": "Grand ring (i)",
           "shop_cost": 15000,
           "has_trades": true,
-          "performance_score": 73.84,
+          "performance_score": 73.97,
           "overall_stats": {
             "roi_median": 14.79,
-            "volatility": 15.57,
-            "liquidity": 12.12,
-            "trend": 20.74,
-            "reliability": 26.99,
-            "total_trades": 1079
+            "volatility": 15.56,
+            "liquidity": 12.15,
+            "trend": 21.05,
+            "reliability": 26.94,
+            "total_trades": 1081
           },
           "time_windows": {
             "1h": {
               "has_data": true,
-              "trades": 105,
+              "trades": 107,
               "median_price": 16000.0,
               "weighted_median": 14999.0,
               "roi": -0.01,
               "recommendation": "MARGINAL - Break even difficult",
-              "confidence": 90.6,
+              "confidence": 90.7,
               "zones": {
                 "excellent": 15000.0,
                 "good": 15500.0,
@@ -8786,12 +8786,12 @@
             },
             "24h": {
               "has_data": true,
-              "trades": 117,
+              "trades": 119,
               "median_price": 16000.0,
               "weighted_median": 14999.0,
               "roi": -0.01,
               "recommendation": "MARGINAL - Break even difficult",
-              "confidence": 91.7,
+              "confidence": 91.8,
               "zones": {
                 "excellent": 15000.0,
                 "good": 15500.0,
@@ -8802,7 +8802,7 @@
             },
             "7d": {
               "has_data": true,
-              "trades": 189,
+              "trades": 191,
               "median_price": 16000.0,
               "weighted_median": 14999.0,
               "roi": -0.01,
@@ -8810,15 +8810,15 @@
               "confidence": 94.2,
               "zones": {
                 "excellent": 15000.0,
-                "good": 15440.0,
-                "fair": 16560.0,
-                "overpriced": 17240.0,
-                "avoid": 18360.0
+                "good": 15445.0,
+                "fair": 16555.0,
+                "overpriced": 17220.0,
+                "avoid": 18330.0
               }
             },
             "30d": {
               "has_data": true,
-              "trades": 425,
+              "trades": 427,
               "median_price": 14995.0,
               "weighted_median": 14999.0,
               "roi": -0.01,
@@ -8834,18 +8834,18 @@
             },
             "all": {
               "has_data": true,
-              "trades": 1079,
+              "trades": 1081,
               "median_price": 13900.0,
               "weighted_median": 14999.0,
               "roi": -0.01,
               "recommendation": "MARGINAL - Break even difficult",
               "confidence": 91.9,
               "zones": {
-                "excellent": 12496.25,
-                "good": 13149.06,
-                "fair": 14650.94,
+                "excellent": 12498.75,
+                "good": 13149.69,
+                "fair": 14650.31,
                 "overpriced": 15500.0,
-                "avoid": 17001.88
+                "avoid": 17000.62
               }
             }
           }
@@ -21187,8 +21187,8 @@
         "name": "Bloodfire shield",
         "shop_cost": 100,
         "roi": 56.67,
-        "confidence_7d": 90.6,
-        "recommendation_7d": "FAIR if < 505"
+        "confidence_7d": 90.7,
+        "recommendation_7d": "WAIT - Overpriced (fair < 504)"
       },
       {
         "item_id": 12710,
@@ -21196,15 +21196,15 @@
         "shop_cost": 8,
         "roi": 81.94,
         "confidence_7d": 89.7,
-        "recommendation_7d": "BUY NOW - Excellent price (< 12)"
+        "recommendation_7d": "WAIT - Overpriced (fair < 15)"
       },
       {
         "item_id": 12708,
         "name": "Pegasian boots",
         "shop_cost": 9,
         "roi": 83.95,
-        "confidence_7d": 89.3,
-        "recommendation_7d": "FAIR if < 15"
+        "confidence_7d": 89.4,
+        "recommendation_7d": "WAIT - Overpriced (fair < 15)"
       },
       {
         "item_id": 12712,
@@ -21212,7 +21212,7 @@
         "shop_cost": 10,
         "roi": 84.44,
         "confidence_7d": 90.3,
-        "recommendation_7d": "BUY NOW - Excellent price (< 13)"
+        "recommendation_7d": "BUY if < 14"
       },
       {
         "item_id": 12912,
@@ -21251,7 +21251,7 @@
         "name": "Marauders gloves",
         "shop_cost": 45,
         "roi": 72.84,
-        "confidence_7d": 83.2,
+        "confidence_7d": 83.3,
         "recommendation_7d": "BUY NOW - Excellent price (< 100)"
       },
       {
@@ -21341,8 +21341,8 @@
         "name": "Bloodfire shield",
         "shop_cost": 400,
         "roi": 10.34,
-        "confidence_7d": 90.6,
-        "recommendation_7d": "FAIR if < 505"
+        "confidence_7d": 90.7,
+        "recommendation_7d": "WAIT - Overpriced (fair < 504)"
       },
       {
         "item_id": 22218,
@@ -21350,7 +21350,7 @@
         "shop_cost": 1500,
         "roi": -10.34,
         "confidence_7d": 92.4,
-        "recommendation_7d": "BUY NOW - Excellent price (< 1636)"
+        "recommendation_7d": "BUY NOW - Excellent price (< 1600)"
       },
       {
         "item_id": 21089,
@@ -21358,7 +21358,7 @@
         "shop_cost": 1000,
         "roi": 13.1,
         "confidence_7d": 90.8,
-        "recommendation_7d": "AVOID - Loss -20.0%"
+        "recommendation_7d": "FAIR if < 1254"
       },
       {
         "item_id": 23131,
@@ -21382,7 +21382,7 @@
         "shop_cost": 600,
         "roi": 23.37,
         "confidence_7d": 91.1,
-        "recommendation_7d": "MARGINAL - Break even difficult"
+        "recommendation_7d": "WAIT - Overpriced (fair < 638)"
       },
       {
         "item_id": 20558,
