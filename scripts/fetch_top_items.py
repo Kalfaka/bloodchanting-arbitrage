@@ -118,7 +118,16 @@ class OptimizedTradeDataFetcher:
 
         with open(TOP_ITEMS_FILE, 'r') as f:
             data = json.load(f)
-            return data['top_items']
+            top_items = data['top_items']
+
+        # Always fetch Blood diamonds and Bloodchanting stone for the calculator
+        # These are critical for the Bloodchanting Stone Calculator feature
+        critical_items = ['Blood diamonds', 'Bloodchanting stone']
+        for item in critical_items:
+            if item not in top_items:
+                top_items.append(item)
+
+        return top_items
 
     def fetch_all_trades(self):
         """
