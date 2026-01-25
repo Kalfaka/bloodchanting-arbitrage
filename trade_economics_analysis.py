@@ -435,6 +435,11 @@ class TradeEconomicsAnalyzer:
 
         df_results = pd.DataFrame(results)
 
+        # Convert ROI columns to float to avoid dtype errors when assigning calculated values
+        roi_columns = ['roi_avg', 'roi_median', 'roi_min', 'roi_max']
+        for col in roi_columns:
+            df_results[col] = df_results[col].astype(float)
+
         # Calculate ROI based on median cost per unit for each currency
         # ROI = how much cheaper/expensive compared to the median
         # Positive ROI = better deal than median (paying less GP per shard/token)
@@ -1106,7 +1111,7 @@ def main():
     print("  • trade_economics_report.txt - Comprehensive analysis report")
     print("  • trade_economics_detailed.csv - Detailed data with all metrics")
     print("  • data/trade_recommendations.json - Frontend JSON with time-window analysis")
-    print("\n📊 Key Findings:")
+    print("\nKey Findings:")
     print(f"  • Total items analyzed: {len(roi_df)}")
     print(f"  • Items with active trading: {len(roi_df[roi_df['has_trades']==True])}")
     print(f"  • Items never worth buying: {len(never_worth)}")
@@ -1114,11 +1119,7 @@ def main():
     print(f"  • Safe bet recommendations: {len(recommendations['safe_bets'])}")
     print(f"  • High risk/reward opportunities: {len(recommendations['high_risk_high_reward'])}")
     print(f"  • Trending undervalued items: {len(recommendations['undervalued_trending'])}")
-    print("\n✨ New Features:")
-    print("  • Time-window analysis (1h, 24h, 7d, 30d, all-time)")
-    print("  • EWMA-weighted price recommendations")
-    print("  • Purchase zone indicators (excellent/good/fair/avoid)")
-    print("  • Confidence scoring (0-100) for each recommendation")
+
 
 
 if __name__ == "__main__":
