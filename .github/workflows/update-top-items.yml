@@ -1,11 +1,8 @@
 name: Update Top Items (Optimized)
 
 on:
-  # Allow manual triggering
+  # Allow manual triggering only
   workflow_dispatch:
-  # Auto-run every hour for top items only (faster)
-  schedule:
-    - cron: '0 * * * *'  # Every hour
 
 # Prevent conflicts with Pages deployment
 concurrency:
