@@ -388,9 +388,25 @@ class UnifiedDashboard {
 
   renderRecommendations() {
     const container = document.getElementById('recommendations-list');
-    const items = this.recommendationsData.currencies[this.currentCurrency].items
-      .filter(item => item.has_trades)
-      .slice(0, 20);
+    const allItems = this.recommendationsData.currencies[this.currentCurrency].items
+      .filter(item => item.has_trades);
+
+    // Dynamically sort items by ROI for the selected time window
+    // Items with no data in the current window should appear at the bottom
+    const sortedItems = allItems.sort((a, b) => {
+      const aData = a.time_windows[this.currentWindow];
+      const bData = b.time_windows[this.currentWindow];
+
+      // Items without data go to the bottom
+      if (!aData.has_data && !bData.has_data) return 0;
+      if (!aData.has_data) return 1;
+      if (!bData.has_data) return -1;
+
+      // Sort by ROI (descending - higher ROI is better)
+      return bData.roi - aData.roi;
+    });
+
+    const items = sortedItems.slice(0, 20);
 
     if (items.length === 0) {
       container.innerHTML = '<div class="text-center text-osrs-light py-8">No data available</div>';
