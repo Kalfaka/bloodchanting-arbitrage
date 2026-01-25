@@ -1,55 +1,373 @@
 {
   "top_items": [
-    "Seers' ring (i)",
-    "Archers' ring (i)",
-    "Warrior ring (i)",
-    "Armadyl helmet",
-    "Abyssal bludgeon",
-    "Bandos tassets",
-    "Armadyl chestplate",
-    "Armadyl godsword",
-    "Bandos chestplate",
-    "Armadyl plateskirt",
-    "Abyssal dagger",
-    "Dread bow",
-    "Ring of vigour",
-    "Sarachnis cudgel",
-    "Skeleton bow",
-    "Amulet of fury (or)",
-    "Bounty cape",
-    "Chaotic maul",
-    "Berserker ring (i)",
-    "Abyssal tentacle",
-    "Primordial boots",
-    "Inquisitor maul",
-    "Bloodfire shield",
-    "Void melee helm",
-    "Swift bow",
-    "Void ranger helm",
-    "Pegasian boots",
+    "Zuriel's hood",
+    "Morrigan's coif",
+    "Vesta's spear",
     "Eternal boots",
-    "Void mage helm",
-    "Armadyl godsword (or)",
-    "Bloodfire shield",
-    "Void knight gloves",
-    "Fused slayer helmet",
-    "Void knight top",
+    "Pegasian boots",
+    "3rd age longsword",
+    "Primordial boots",
+    "Statius's warhammer",
+    "3rd age bow",
+    "Devout boots",
+    "Statius's platebody",
+    "Warrior ring (i)",
+    "Barrelchest maul",
+    "Statius's platelegs",
+    "Barrelchest war axe",
+    "Vesta's plateskirt",
+    "Barrelchest sword",
+    "Vesta's chainbody",
+    "Serpentine helm",
+    "Zuriel's robe bottom",
+    "Zuriel's robe top",
+    "Statius's full helm",
+    "Dragon scimitar (or)",
+    "Barrelchest cannon",
+    "Ancient mace",
+    "Anguish ornament kit",
+    "Ring of malevolence",
+    "Justiciar faceguard",
     "Blade of saeldor",
-    "Chaotic rapier",
-    "Void knight robe",
-    "Chaotic crossbow",
-    "Wanderer's amulet",
-    "Crystal platelegs",
+    "Dark brimstone ring",
+    "Ghommal's hilt",
+    "Virtus robe legs",
+    "Virtus robe top",
+    "Infernal butterfly net",
+    "Torture ornament kit",
+    "Blood butterfly net",
+    "Verdant partyhat",
+    "Pernix chaps",
+    "Ghrazi blood rapier",
+    "Pernix body",
+    "Bloodfire shield",
+    "Verdant pendant",
     "Crystal platebody",
-    "Odium ward",
-    "Toxic blowpipe",
-    "Chaotic staff",
-    "Trident of the seas",
-    "Dragon hasta",
-    "Elysian spirit shield",
-    "Grand ring (i)",
-    "Dragon hunter lance (i)",
-    "Marauders gloves"
+    "Crystal platelegs",
+    "Dark korasi's sword",
+    "Inquisitor faceguard",
+    "Torva platebody",
+    "Torva platelegs",
+    "Occult ornament kit",
+    "Sanguinesti staff (e)",
+    "Blood diamonds",
+    "Bloodchanting stone"
   ],
-  "count": 50
+  "count": 52,
+  "metadata": {
+    "generated_at": "2026-01-25T22:43:44.308433",
+    "analysis_window_days": 30,
+    "selection_criteria": "30d conversion rate (ascending) + volatility (secondary)",
+    "blood_shards_items": 25,
+    "blood_tokens_items": 25,
+    "always_included": 2,
+    "min_trades_required": 3,
+    "note": "Lower conversion rate = cheaper to acquire shards/tokens = better arbitrage"
+  },
+  "details": {
+    "blood_shards": [
+      {
+        "name": "Zuriel's hood",
+        "conversion_rate": 0.03,
+        "volatility": 454.9,
+        "trades": 120
+      },
+      {
+        "name": "Morrigan's coif",
+        "conversion_rate": 0.05,
+        "volatility": 475.7,
+        "trades": 79
+      },
+      {
+        "name": "Vesta's spear",
+        "conversion_rate": 0.08,
+        "volatility": 542.7,
+        "trades": 100
+      },
+      {
+        "name": "Eternal boots",
+        "conversion_rate": 0.08,
+        "volatility": 608.7,
+        "trades": 1443
+      },
+      {
+        "name": "Pegasian boots",
+        "conversion_rate": 0.09,
+        "volatility": 624.2,
+        "trades": 1373
+      },
+      {
+        "name": "3rd age longsword",
+        "conversion_rate": 0.1,
+        "volatility": 211.0,
+        "trades": 91
+      },
+      {
+        "name": "Primordial boots",
+        "conversion_rate": 0.12,
+        "volatility": 598.6,
+        "trades": 1299
+      },
+      {
+        "name": "Statius's warhammer",
+        "conversion_rate": 0.12,
+        "volatility": 1536.2,
+        "trades": 236
+      },
+      {
+        "name": "3rd age bow",
+        "conversion_rate": 0.12,
+        "volatility": 148.0,
+        "trades": 227
+      },
+      {
+        "name": "Devout boots",
+        "conversion_rate": 0.14,
+        "volatility": 130.0,
+        "trades": 909
+      },
+      {
+        "name": "Statius's platebody",
+        "conversion_rate": 0.14,
+        "volatility": 1043.6,
+        "trades": 484
+      },
+      {
+        "name": "Warrior ring (i)",
+        "conversion_rate": 0.15,
+        "volatility": 502.7,
+        "trades": 27
+      },
+      {
+        "name": "Barrelchest maul",
+        "conversion_rate": 0.16,
+        "volatility": 128.3,
+        "trades": 765
+      },
+      {
+        "name": "Statius's platelegs",
+        "conversion_rate": 0.16,
+        "volatility": 1087.2,
+        "trades": 486
+      },
+      {
+        "name": "Barrelchest war axe",
+        "conversion_rate": 0.16,
+        "volatility": 128.0,
+        "trades": 984
+      },
+      {
+        "name": "Vesta's plateskirt",
+        "conversion_rate": 0.16,
+        "volatility": 505.6,
+        "trades": 832
+      },
+      {
+        "name": "Barrelchest sword",
+        "conversion_rate": 0.16,
+        "volatility": 130.0,
+        "trades": 704
+      },
+      {
+        "name": "Vesta's chainbody",
+        "conversion_rate": 0.17,
+        "volatility": 483.2,
+        "trades": 694
+      },
+      {
+        "name": "Serpentine helm",
+        "conversion_rate": 0.17,
+        "volatility": 868.7,
+        "trades": 547
+      },
+      {
+        "name": "Zuriel's robe bottom",
+        "conversion_rate": 0.2,
+        "volatility": 1097.9,
+        "trades": 465
+      },
+      {
+        "name": "Zuriel's robe top",
+        "conversion_rate": 0.2,
+        "volatility": 1464.1,
+        "trades": 449
+      },
+      {
+        "name": "Statius's full helm",
+        "conversion_rate": 0.21,
+        "volatility": 1570.8,
+        "trades": 301
+      },
+      {
+        "name": "Dragon scimitar (or)",
+        "conversion_rate": 0.24,
+        "volatility": 97.7,
+        "trades": 107
+      },
+      {
+        "name": "Barrelchest cannon",
+        "conversion_rate": 0.24,
+        "volatility": 108.5,
+        "trades": 573
+      },
+      {
+        "name": "Ancient mace",
+        "conversion_rate": 0.25,
+        "volatility": 117.1,
+        "trades": 25
+      }
+    ],
+    "blood_tokens": [
+      {
+        "name": "Anguish ornament kit",
+        "conversion_rate": 0.67,
+        "volatility": 55.6,
+        "trades": 334
+      },
+      {
+        "name": "Ring of malevolence",
+        "conversion_rate": 0.74,
+        "volatility": 51.0,
+        "trades": 6
+      },
+      {
+        "name": "Justiciar faceguard",
+        "conversion_rate": 0.74,
+        "volatility": 54.9,
+        "trades": 29
+      },
+      {
+        "name": "Blade of saeldor",
+        "conversion_rate": 0.75,
+        "volatility": 42.6,
+        "trades": 1085
+      },
+      {
+        "name": "Dark brimstone ring",
+        "conversion_rate": 0.8,
+        "volatility": 1.0,
+        "trades": 10
+      },
+      {
+        "name": "Ghommal's hilt",
+        "conversion_rate": 0.8,
+        "volatility": 44.7,
+        "trades": 18
+      },
+      {
+        "name": "Virtus robe legs",
+        "conversion_rate": 0.81,
+        "volatility": 36.1,
+        "trades": 293
+      },
+      {
+        "name": "Virtus robe top",
+        "conversion_rate": 0.82,
+        "volatility": 36.2,
+        "trades": 286
+      },
+      {
+        "name": "Infernal butterfly net",
+        "conversion_rate": 0.83,
+        "volatility": 33.7,
+        "trades": 763
+      },
+      {
+        "name": "Torture ornament kit",
+        "conversion_rate": 0.83,
+        "volatility": 38.6,
+        "trades": 605
+      },
+      {
+        "name": "Blood butterfly net",
+        "conversion_rate": 0.84,
+        "volatility": 69.8,
+        "trades": 663
+      },
+      {
+        "name": "Verdant partyhat",
+        "conversion_rate": 0.86,
+        "volatility": 24.2,
+        "trades": 12
+      },
+      {
+        "name": "Pernix chaps",
+        "conversion_rate": 0.86,
+        "volatility": 37.5,
+        "trades": 331
+      },
+      {
+        "name": "Ghrazi blood rapier",
+        "conversion_rate": 0.91,
+        "volatility": 23.8,
+        "trades": 66
+      },
+      {
+        "name": "Pernix body",
+        "conversion_rate": 0.91,
+        "volatility": 33.8,
+        "trades": 320
+      },
+      {
+        "name": "Bloodfire shield",
+        "conversion_rate": 0.94,
+        "volatility": 45.2,
+        "trades": 1172
+      },
+      {
+        "name": "Verdant pendant",
+        "conversion_rate": 0.96,
+        "volatility": 23.8,
+        "trades": 354
+      },
+      {
+        "name": "Crystal platebody",
+        "conversion_rate": 0.97,
+        "volatility": 35.3,
+        "trades": 918
+      },
+      {
+        "name": "Crystal platelegs",
+        "conversion_rate": 0.97,
+        "volatility": 35.8,
+        "trades": 870
+      },
+      {
+        "name": "Dark korasi's sword",
+        "conversion_rate": 0.97,
+        "volatility": 21.7,
+        "trades": 36
+      },
+      {
+        "name": "Inquisitor faceguard",
+        "conversion_rate": 0.98,
+        "volatility": 27.9,
+        "trades": 184
+      },
+      {
+        "name": "Torva platebody",
+        "conversion_rate": 0.98,
+        "volatility": 31.1,
+        "trades": 420
+      },
+      {
+        "name": "Torva platelegs",
+        "conversion_rate": 0.98,
+        "volatility": 31.5,
+        "trades": 406
+      },
+      {
+        "name": "Occult ornament kit",
+        "conversion_rate": 0.99,
+        "volatility": 39.6,
+        "trades": 554
+      },
+      {
+        "name": "Sanguinesti staff (e)",
+        "conversion_rate": 0.99,
+        "volatility": 29.8,
+        "trades": 80
+      }
+    ]
+  }
 }
