@@ -32,6 +32,13 @@ class UnifiedDashboard {
         document.querySelectorAll('.time-tab[data-window]').forEach(t => t.classList.remove('active'));
         e.target.classList.add('active');
         this.currentWindow = e.target.dataset.window;
+
+        // Update current window display
+        const windowDisplay = document.getElementById('current-window-display');
+        if (windowDisplay) {
+          windowDisplay.textContent = this.currentWindow;
+        }
+
         this.render();
       });
     });
@@ -86,6 +93,12 @@ class UnifiedDashboard {
           `Data: ${date.toLocaleString()}`;
       }
 
+      // Set initial window display
+      const windowDisplay = document.getElementById('current-window-display');
+      if (windowDisplay) {
+        windowDisplay.textContent = this.currentWindow;
+      }
+
       this.render();
       this.updateStatus(`Loaded ${this.recommendationsData.metadata.active_items} active items`);
       this.showLoading(false);
@@ -103,6 +116,94 @@ class UnifiedDashboard {
     this.renderBloodchanting();
     this.renderRecommendations();
     this.renderCharts();
+    this.renderQuickStats();
+  }
+
+  renderQuickStats() {
+    // Get best shard item
+    const shardItems = this.recommendationsData.currencies['Blood Shards'].items
+      .filter(item => item.has_trades && item.time_windows[this.currentWindow].has_data);
+
+    let bestShardItem = null;
+    let bestShardRate = Infinity;
+
+    for (const item of shardItems) {
+      const windowData = item.time_windows[this.currentWindow];
+      const rate = windowData.median_price / item.shop_cost;
+      if (rate < bestShardRate) {
+        bestShardRate = rate;
+        bestShardItem = { item, windowData };
+      }
+    }
+
+    // Get best token item
+    const tokenItems = this.recommendationsData.currencies['Blood Synthesis Tokens'].items
+      .filter(item => item.has_trades && item.time_windows[this.currentWindow].has_data);
+
+    let bestTokenItem = null;
+    let bestTokenRate = Infinity;
+
+    for (const item of tokenItems) {
+      const windowData = item.time_windows[this.currentWindow];
+      const rate = windowData.median_price / item.shop_cost;
+      if (rate < bestTokenRate) {
+        bestTokenRate = rate;
+        bestTokenItem = { item, windowData };
+      }
+    }
+
+    // Calculate bloodchanting profitability
+    const bloodDiamondTrades = this.filterTradesByTimeWindow(
+      this.tradeCacheData.trades.filter(t => t.item_name === 'Blood diamonds'),
+      this.currentWindow
+    );
+
+    const bloodchantingStoneTrades = this.filterTradesByTimeWindow(
+      this.tradeCacheData.trades.filter(t => t.item_name === 'Bloodchanting stone'),
+      this.currentWindow
+    );
+
+    let profitInfo = { profit: 0, totalCost: 0, stonePrice: 0, canCalculate: false };
+
+    if (bestShardItem && bestTokenItem && bloodDiamondTrades.length > 0 && bloodchantingStoneTrades.length > 0) {
+      const diamondPrice = bloodDiamondTrades.map(t => t.price / t.amount).reduce((a, b) => a + b) / bloodDiamondTrades.length;
+      const stonePrice = bloodchantingStoneTrades.map(t => t.price / t.amount).reduce((a, b) => a + b) / bloodchantingStoneTrades.length;
+
+      const shardCost = 250 * bestShardRate;
+      const tokenCost = 500 * bestTokenRate;
+      const diamondCost = 10 * diamondPrice;
+      const totalCost = shardCost + tokenCost + diamondCost;
+      const profit = stonePrice - totalCost;
+
+      profitInfo = { profit, totalCost, stonePrice, canCalculate: true };
+    }
+
+    // Update UI
+    if (bestShardItem) {
+      document.getElementById('best-shard-name').textContent = bestShardItem.item.name;
+      document.getElementById('best-shard-rate').textContent = `${bestShardRate.toFixed(2)} bags/shard`;
+      document.getElementById('best-shard-roi').textContent = `${bestShardItem.windowData.roi >= 0 ? '+' : ''}${bestShardItem.windowData.roi.toFixed(1)}% ROI`;
+    }
+
+    if (bestTokenItem) {
+      document.getElementById('best-token-name').textContent = bestTokenItem.item.name;
+      document.getElementById('best-token-rate').textContent = `${bestTokenRate.toFixed(2)} bags/token`;
+      document.getElementById('best-token-roi').textContent = `${bestTokenItem.windowData.roi >= 0 ? '+' : ''}${bestTokenItem.windowData.roi.toFixed(1)}% ROI`;
+    }
+
+    if (profitInfo.canCalculate) {
+      const profitEl = document.getElementById('bloodchanting-profit-amount');
+      const detailEl = document.getElementById('bloodchanting-cost-detail');
+      const recEl = document.getElementById('bloodchanting-recommendation');
+
+      profitEl.textContent = `${profitInfo.profit >= 0 ? '+' : ''}${this.formatPrice(profitInfo.profit)} bags`;
+      profitEl.style.color = profitInfo.profit >= 0 ? '#10b981' : '#ef4444';
+
+      detailEl.textContent = `Cost: ${this.formatPrice(profitInfo.totalCost)} | Market: ${this.formatPrice(profitInfo.stonePrice)} bags`;
+
+      recEl.textContent = profitInfo.profit >= 0 ? '✅ Craft & Sell' : '❌ Buy from Market';
+      recEl.style.color = profitInfo.profit >= 0 ? '#10b981' : '#ef4444';
+    }
   }
 
   renderBloodchanting() {
@@ -245,13 +346,16 @@ class UnifiedDashboard {
     const tokensNeeded = 500;
     const diamondsNeeded = 10;
 
-    const shardItemsNeeded = Math.ceil(shardsNeeded / bestShardItem.shardsPerItem);
-    const tokenItemsNeeded = Math.ceil(tokensNeeded / bestTokenItem.tokensPerItem);
-
-    const shardCostGP = shardItemsNeeded * bestShardItem.pricePerItem;
-    const tokenCostGP = tokenItemsNeeded * bestTokenItem.pricePerItem;
+    // RATIO-BASED CALCULATION (ignores overflow - extra shards/tokens are free bonus)
+    // Cost = needed_amount × (bags per unit ratio)
+    const shardCostGP = shardsNeeded * bestShardItem.costPerShard;
+    const tokenCostGP = tokensNeeded * bestTokenItem.costPerToken;
     const diamondCostGP = diamondsNeeded * diamondPrice;
     const totalCostGP = shardCostGP + tokenCostGP + diamondCostGP;
+
+    // Also calculate actual items needed (for display purposes)
+    const shardItemsNeeded = Math.ceil(shardsNeeded / bestShardItem.shardsPerItem);
+    const tokenItemsNeeded = Math.ceil(tokensNeeded / bestTokenItem.tokensPerItem);
 
     // Calculate market price for bloodchanting stone
     let marketPrice = null;
@@ -358,19 +462,21 @@ class UnifiedDashboard {
           <!-- Shards -->
           <div class="component-box">
             <h4 class="text-osrs-gold font-bold mb-2">Blood Shards (250 needed)</h4>
-            <p class="text-sm"><strong>Buy:</strong> ${shard.itemsToBuy}x ${shard.itemName}</p>
-            <p class="text-sm"><strong>Receive:</strong> ${shard.totalShards} shards (${shard.shardsPerItem} each)</p>
-            <p class="text-sm"><strong>Price:</strong> ${this.formatPrice(shard.pricePerItem)} bags/item</p>
-            <p class="text-sm component-total"><strong>Cost:</strong> ${this.formatPrice(shard.totalCostGP)} bags</p>
+            <p class="text-sm"><strong>Best Item:</strong> ${shard.itemName}</p>
+            <p class="text-sm"><strong>Gives:</strong> ${shard.shardsPerItem} shards @ ${this.formatPrice(shard.pricePerItem)} bags</p>
+            <p class="text-sm text-osrs-orange"><strong>Ratio:</strong> ${this.formatPrice(shard.costPerShard)} bags/shard</p>
+            <p class="text-xs text-osrs-light mt-1">(Buy ${shard.itemsToBuy}x to get ${shard.totalShards} shards)</p>
+            <p class="text-sm component-total mt-2"><strong>Cost for 250:</strong> ${this.formatPrice(shard.totalCostGP)} bags</p>
           </div>
 
           <!-- Tokens -->
           <div class="component-box">
             <h4 class="text-osrs-gold font-bold mb-2">Tokens (500 needed)</h4>
-            <p class="text-sm"><strong>Buy:</strong> ${token.itemsToBuy}x ${token.itemName}</p>
-            <p class="text-sm"><strong>Receive:</strong> ${token.totalTokens} tokens (${token.tokensPerItem} each)</p>
-            <p class="text-sm"><strong>Price:</strong> ${this.formatPrice(token.pricePerItem)} bags/item</p>
-            <p class="text-sm component-total"><strong>Cost:</strong> ${this.formatPrice(token.totalCostGP)} bags</p>
+            <p class="text-sm"><strong>Best Item:</strong> ${token.itemName}</p>
+            <p class="text-sm"><strong>Gives:</strong> ${token.tokensPerItem} tokens @ ${this.formatPrice(token.pricePerItem)} bags</p>
+            <p class="text-sm text-osrs-orange"><strong>Ratio:</strong> ${this.formatPrice(token.costPerToken)} bags/token</p>
+            <p class="text-xs text-osrs-light mt-1">(Buy ${token.itemsToBuy}x to get ${token.totalTokens} tokens)</p>
+            <p class="text-sm component-total mt-2"><strong>Cost for 500:</strong> ${this.formatPrice(token.totalCostGP)} bags</p>
           </div>
 
           <!-- Diamonds -->
@@ -384,6 +490,80 @@ class UnifiedDashboard {
         </div>
       </div>
     `;
+  }
+
+  calculateItemBloodchantingProfit(item, windowData) {
+    // Get bloodchanting stone market price
+    const bloodchantingStoneTrades = this.filterTradesByTimeWindow(
+      this.tradeCacheData.trades.filter(t => t.item_name === 'Bloodchanting stone'),
+      this.currentWindow
+    );
+
+    if (bloodchantingStoneTrades.length === 0) {
+      return { profitable: null, profit: 0, message: 'No stone data' };
+    }
+
+    const stonePrices = bloodchantingStoneTrades.map(t => t.price / t.amount);
+    const stoneMarketPrice = stonePrices.reduce((a, b) => a + b) / stonePrices.length;
+
+    // Get best conversion rates for opposite currency
+    const oppositeData = this.currentCurrency === 'Blood Shards'
+      ? this.recommendationsData.currencies['Blood Synthesis Tokens']
+      : this.recommendationsData.currencies['Blood Shards'];
+
+    const oppositeItems = oppositeData.items.filter(i => i.has_trades);
+    if (oppositeItems.length === 0) {
+      return { profitable: null, profit: 0, message: 'No opposite currency data' };
+    }
+
+    // Find cheapest opposite currency rate
+    let bestOppositeBagsPerUnit = Infinity;
+    for (const oppItem of oppositeItems) {
+      const oppWindow = oppItem.time_windows[this.currentWindow];
+      if (oppWindow.has_data && oppItem.shop_cost > 0) {
+        const oppBagsPerUnit = oppWindow.median_price / oppItem.shop_cost;
+        if (oppBagsPerUnit < bestOppositeBagsPerUnit) {
+          bestOppositeBagsPerUnit = oppBagsPerUnit;
+        }
+      }
+    }
+
+    // Get blood diamond price
+    const bloodDiamondTrades = this.filterTradesByTimeWindow(
+      this.tradeCacheData.trades.filter(t => t.item_name === 'Blood diamonds'),
+      this.currentWindow
+    );
+
+    const diamondPrice = bloodDiamondTrades.length > 0
+      ? bloodDiamondTrades.map(t => t.price / t.amount).reduce((a, b) => a + b) / bloodDiamondTrades.length
+      : 0;
+
+    // Calculate cost using ratio-based method
+    const thisBagsPerUnit = windowData.median_price / item.shop_cost;
+    let shardCost, tokenCost;
+
+    if (this.currentCurrency === 'Blood Shards') {
+      shardCost = 250 * thisBagsPerUnit;
+      tokenCost = 500 * bestOppositeBagsPerUnit;
+    } else {
+      shardCost = 250 * bestOppositeBagsPerUnit;
+      tokenCost = 500 * thisBagsPerUnit;
+    }
+
+    const diamondCost = 10 * diamondPrice;
+    const totalCost = shardCost + tokenCost + diamondCost;
+    const profit = stoneMarketPrice - totalCost;
+    const profitable = profit > 0;
+
+    return {
+      profitable: profitable,
+      profit: profit,
+      totalCost: totalCost,
+      stonePrice: stoneMarketPrice,
+      message: profitable
+        ? `+${this.formatPrice(profit)} bags profit`
+        : `${this.formatPrice(profit)} bags loss`
+    };
   }
 
   renderRecommendations() {
@@ -452,6 +632,13 @@ class UnifiedDashboard {
     const roi = windowData.roi;
     const roiColor = roi > 100 ? '#10b981' : roi > 0 ? '#fbbf24' : '#ef4444';
 
+    // Calculate bags per unit (conversion rate)
+    const bagsPerUnit = windowData.median_price / item.shop_cost;
+    const currencyUnit = this.currentCurrency === 'Blood Shards' ? 'shard' : 'token';
+
+    // Calculate bloodchanting profitability for this item
+    const bloodchantingInfo = this.calculateItemBloodchantingProfit(item, windowData);
+
     // Calculate zone marker position
     const currentPrice = windowData.weighted_median;
     const zones = windowData.zones;
@@ -472,7 +659,7 @@ class UnifiedDashboard {
               <span class="text-xl font-bold text-osrs-gold">#${index + 1}</span>
               <div class="flex-1">
                 <h3 class="text-base font-bold text-osrs-gold leading-tight">${item.name}</h3>
-                <p class="text-xs text-osrs-light">Shop: ${item.shop_cost.toLocaleString()}</p>
+                <p class="text-xs text-osrs-light">Shop: ${item.shop_cost.toLocaleString()} ${currencyUnit}s</p>
 
                 <!-- Purchase Zone -->
                 <div class="mt-2">
@@ -496,31 +683,53 @@ class UnifiedDashboard {
           </div>
 
           <!-- Right: Stats -->
-          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs sm:w-80">
-            <div>
-              <p class="text-osrs-light tooltip-trigger" data-tooltip="Return on Investment: How much cheaper this item's bags-per-${this.currentCurrency === 'Blood Shards' ? 'shard' : 'token'} is vs median. Positive = better deal!">ROI</p>
-              <p class="font-bold" style="color: ${roiColor}">${roi >= 0 ? '+' : ''}${roi.toFixed(1)}%</p>
+          <div class="flex flex-col gap-3 sm:w-96">
+            <!-- Conversion Rate (Most Important!) -->
+            <div class="text-center p-3 rounded" style="background: rgba(212, 175, 55, 0.15); border: 2px solid #d4af37;">
+              <p class="text-xs text-osrs-light tooltip-trigger" data-tooltip="Cost to acquire each ${currencyUnit} by buying this item from trade post and turning it into the shop. LOWER IS BETTER!">Conversion Rate</p>
+              <p class="text-2xl font-bold text-osrs-orange">${bagsPerUnit.toFixed(2)} <span class="text-sm">bags/${currencyUnit}</span></p>
+              <p class="text-xs ${roi > 0 ? 'text-green-400' : 'text-red-400'}">${roi > 0 ? '↓ Cheaper than median!' : '↑ More expensive than median'}</p>
             </div>
-            <div>
-              <p class="text-osrs-light tooltip-trigger" data-tooltip="Confidence Score Formula: (30 × sample_reliability) + (40 × price_stability) + (30 × liquidity). Sample reliability based on trade count (>20=high), price stability from coefficient of variation (<20%=stable), liquidity from trades per day">Confidence</p>
-              <p><span class="confidence-badge ${confidenceClass}">${confidence.toFixed(0)}</span></p>
+
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-3 gap-2 text-xs">
+              <div>
+                <p class="text-osrs-light tooltip-trigger" data-tooltip="Return on Investment: How much cheaper this item's bags-per-${currencyUnit} is vs median. Positive = better deal!">ROI</p>
+                <p class="font-bold" style="color: ${roiColor}">${roi >= 0 ? '+' : ''}${roi.toFixed(1)}%</p>
+              </div>
+              <div>
+                <p class="text-osrs-light tooltip-trigger" data-tooltip="Confidence score (0-100) based on trade volume, price stability, and data quality">Confidence</p>
+                <p><span class="confidence-badge ${confidenceClass}">${confidence.toFixed(0)}</span></p>
+              </div>
+              <div>
+                <p class="text-osrs-light tooltip-trigger" data-tooltip="Current weighted median price in bags (1 bag = 100m GP)">Price</p>
+                <p class="font-bold text-osrs-gold">${this.formatPrice(windowData.weighted_median)} bags</p>
+              </div>
+              <div>
+                <p class="text-osrs-light tooltip-trigger" data-tooltip="Recommended max purchase price for a good deal">Buy Below</p>
+                <p class="font-bold text-green-400">${this.formatPrice(zones.good)} bags</p>
+              </div>
+              <div>
+                <p class="text-osrs-light tooltip-trigger" data-tooltip="Price threshold - avoid buying above this">Avoid Above</p>
+                <p class="font-bold text-red-400">${this.formatPrice(zones.avoid)} bags</p>
+              </div>
+              <div>
+                <p class="text-osrs-light tooltip-trigger" data-tooltip="Number of trades in ${this.currentWindow} window">Trades</p>
+                <p class="font-bold text-osrs-gold">${windowData.trades}</p>
+              </div>
             </div>
-            <div>
-              <p class="text-osrs-light tooltip-trigger" data-tooltip="Current weighted median price in bags, giving more weight to recent trades">Price</p>
-              <p class="font-bold text-osrs-gold">${this.formatPrice(windowData.weighted_median)} bags</p>
-            </div>
-            <div>
-              <p class="text-osrs-light tooltip-trigger" data-tooltip="Recommended max purchase price for a good deal (75th percentile of historical trades in this time window)">Buy Below</p>
-              <p class="font-bold text-green-400">${this.formatPrice(zones.good)} bags</p>
-            </div>
-            <div>
-              <p class="text-osrs-light tooltip-trigger" data-tooltip="Price threshold indicating overpriced - wait for lower prices (90th percentile)">Avoid Above</p>
-              <p class="font-bold text-red-400">${this.formatPrice(zones.avoid)} bags</p>
-            </div>
-            <div>
-              <p class="text-osrs-light tooltip-trigger" data-tooltip="Number of observed trades in the selected time window">Trades</p>
-              <p class="font-bold text-osrs-gold">${windowData.trades}</p>
-            </div>
+
+            <!-- Bloodchanting Profitability -->
+            ${bloodchantingInfo.profitable !== null ? `
+              <div class="p-2 rounded text-center" style="background: ${bloodchantingInfo.profitable ? 'rgba(16, 185, 129, 0.2)' : 'rgba(239, 68, 68, 0.2)'}; border: 1px solid ${bloodchantingInfo.profitable ? '#10b981' : '#ef4444'};">
+                <p class="text-xs font-bold" style="color: ${bloodchantingInfo.profitable ? '#10b981' : '#ef4444'}">
+                  ${bloodchantingInfo.profitable ? '✅' : '❌'} Bloodchanting: ${bloodchantingInfo.message}
+                </p>
+                <p class="text-xs text-osrs-light mt-1">
+                  ${bloodchantingInfo.profitable ? 'Use for crafting stones!' : 'Not ideal for bloodchanting'}
+                </p>
+              </div>
+            ` : ''}
           </div>
         </div>
       </div>
