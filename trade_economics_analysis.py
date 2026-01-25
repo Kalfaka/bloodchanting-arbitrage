@@ -241,7 +241,15 @@ class TradeEconomicsAnalyzer:
         # Calculate metrics
         median_price = clean_trades['price'].median()
         ewma_median = self.calculate_ewma_median(clean_trades)
-        roi = ((ewma_median - shop_cost) / shop_cost * 100) if shop_cost > 0 else -100
+
+        # Calculate bags per unit (bags/shard or bags/token)
+        # Lower is better - means you're paying fewer bags to get each shard/token
+        bags_per_unit = ewma_median / shop_cost if shop_cost > 0 else float('inf')
+
+        # ROI will be calculated later in post-processing by comparing to median bags_per_unit
+        # For now, set to 0 as placeholder
+        roi = 0  # Will be calculated in generate_time_window_recommendations
+
         zones = self.calculate_purchase_zones(clean_trades, shop_cost)
         confidence = self.calculate_confidence_score(clean_trades, shop_cost)
 
@@ -264,7 +272,8 @@ class TradeEconomicsAnalyzer:
             'trade_count': len(trades),
             'median_price': median_price,
             'ewma_median': ewma_median,
-            'roi': roi,
+            'bags_per_unit': bags_per_unit,  # bags/shard or bags/token (lower is better)
+            'roi': roi,  # Will be calculated in post-processing
             'recommendation': recommendation,
             'confidence': confidence,
             'zones': zones,
@@ -311,8 +320,11 @@ class TradeEconomicsAnalyzer:
                 outliers_removed = len(group) - len(clean_group)
                 total_volume = clean_group['amount'].sum()
 
-                # Calculate cost per currency unit (GP per shard/token)
-                # Lower is better - means you're paying less GP per shard/token
+                # Calculate bags per currency unit (bags/shard or bags/token)
+                # This represents the cost to acquire each shard/token via this item
+                # Lower is better - means fewer bags spent to get each shard/token
+                # Example: 500 bags / 500 tokens = 1 bag/token (cheap!)
+                #          240,000 bags / 30,000 tokens = 8 bags/token (expensive!)
                 cost_per_unit_avg = avg_price / shop_cost if shop_cost > 0 else float('inf')
                 cost_per_unit_median = median_price / shop_cost if shop_cost > 0 else float('inf')
                 cost_per_unit_min = min_price / shop_cost if shop_cost > 0 else float('inf')
@@ -440,10 +452,15 @@ class TradeEconomicsAnalyzer:
         for col in roi_columns:
             df_results[col] = df_results[col].astype(float)
 
-        # Calculate ROI based on median cost per unit for each currency
-        # ROI = how much cheaper/expensive compared to the median
-        # Positive ROI = better deal than median (paying less GP per shard/token)
-        # Negative ROI = worse deal than median (paying more GP per shard/token)
+        # Calculate ROI based on median bags_per_unit for each currency
+        # ROI compares each item's bags/shard (or bags/token) to the median
+        # Formula: (median - this_item) / median × 100
+        #
+        # Positive ROI = GOOD DEAL (item costs fewer bags/unit than median)
+        #   Example: Median is 5 bags/token, this item is 3 bags/token → +40% ROI
+        #
+        # Negative ROI = BAD DEAL (item costs more bags/unit than median)
+        #   Example: Median is 5 bags/token, this item is 8 bags/token → -60% ROI
         for currency in ['Blood Shards', 'Blood Synthesis Tokens']:
             currency_mask = (df_results['currency'] == currency) & (df_results['has_trades'] == True)
             currency_items = df_results[currency_mask]
@@ -1045,6 +1062,35 @@ class TradeEconomicsAnalyzer:
                 # Add to appropriate currency
                 frontend_data['currencies'][currency]['items'].append(item_data)
 
+        # POST-PROCESSING: Calculate ROI for each time window based on median bags_per_unit
+        print("\n  Post-processing: Calculating time-window-specific ROI...")
+        for currency_name in ['Blood Shards', 'Blood Synthesis Tokens']:
+            items = frontend_data['currencies'][currency_name]['items']
+
+            for window_name in TIME_WINDOWS.keys():
+                # Collect bags_per_unit for all items with data in this window
+                bags_per_unit_values = []
+                for item in items:
+                    window_data = item['time_windows'][window_name]
+                    if window_data['has_data'] and item['shop_cost'] > 0:
+                        bags_per_unit = window_data['median_price'] / item['shop_cost']
+                        bags_per_unit_values.append(bags_per_unit)
+
+                # Calculate median bags_per_unit for this currency/window
+                if len(bags_per_unit_values) > 0:
+                    median_bags_per_unit = np.median(bags_per_unit_values)
+
+                    # Update ROI for each item in this window
+                    # ROI = (median - this_item) / median × 100
+                    # Positive ROI = item is cheaper than median (good deal!)
+                    # Negative ROI = item is more expensive than median (bad deal)
+                    for item in items:
+                        window_data = item['time_windows'][window_name]
+                        if window_data['has_data'] and item['shop_cost'] > 0:
+                            item_bags_per_unit = window_data['median_price'] / item['shop_cost']
+                            roi = ((median_bags_per_unit - item_bags_per_unit) / median_bags_per_unit * 100)
+                            window_data['roi'] = float(round(roi, 2))
+
         # Sort items by performance score within each currency
         for currency in frontend_data['currencies'].values():
             currency['items'].sort(key=lambda x: x['performance_score'], reverse=True)
@@ -1111,7 +1157,7 @@ def main():
     print("  • trade_economics_report.txt - Comprehensive analysis report")
     print("  • trade_economics_detailed.csv - Detailed data with all metrics")
     print("  • data/trade_recommendations.json - Frontend JSON with time-window analysis")
-    print("\nKey Findings:")
+    print("\n📊 Key Findings:")
     print(f"  • Total items analyzed: {len(roi_df)}")
     print(f"  • Items with active trading: {len(roi_df[roi_df['has_trades']==True])}")
     print(f"  • Items never worth buying: {len(never_worth)}")
@@ -1119,7 +1165,11 @@ def main():
     print(f"  • Safe bet recommendations: {len(recommendations['safe_bets'])}")
     print(f"  • High risk/reward opportunities: {len(recommendations['high_risk_high_reward'])}")
     print(f"  • Trending undervalued items: {len(recommendations['undervalued_trending'])}")
-
+    print("\n✨ New Features:")
+    print("  • Time-window analysis (1h, 24h, 7d, 30d, all-time)")
+    print("  • EWMA-weighted price recommendations")
+    print("  • Purchase zone indicators (excellent/good/fair/avoid)")
+    print("  • Confidence scoring (0-100) for each recommendation")
 
 
 if __name__ == "__main__":
