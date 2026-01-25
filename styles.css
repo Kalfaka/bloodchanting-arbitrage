@@ -5,7 +5,11 @@ body {
     font-family: 'Verdana', 'Geneva', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: #2c1810 url('background.jpg') center center fixed;
+    background-color: #2c1810;
+    background-image: url('background.jpg');
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
 }
@@ -206,6 +210,10 @@ body {
 
 .text-osrs-green {
     color: #90ee90;
+}
+
+.text-osrs-orange {
+    color: #fb923c;
 }
 
 /* Badge styling */
