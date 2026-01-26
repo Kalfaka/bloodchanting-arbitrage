@@ -250,10 +250,15 @@ class UnifiedDashboard {
       for (const itemName in this.recommendationsData.items) {
         const item = this.recommendationsData.items[itemName];
         const recWindow = item.recommended_window;
-        const ratios = item.ratios[this.currentCurrency][recWindow];
-        
-        if (ratios.available) {
-          itemSet.add(itemName);
+
+        // Check if currency and window exist before accessing
+        if (item.ratios &&
+            item.ratios[this.currentCurrency] &&
+            item.ratios[this.currentCurrency][recWindow]) {
+          const ratios = item.ratios[this.currentCurrency][recWindow];
+          if (ratios.available) {
+            itemSet.add(itemName);
+          }
         }
       }
 
