@@ -146,19 +146,22 @@ class VolatilityAwareAnalyzer:
         for trade in trades:
             try:
                 trade_time = datetime.strptime(trade['time'], "%Y-%m-%d %H:%M:%S.%f")
-                amount = trade['amount']
                 price = trade['price']
-                
-                if amount <= 0:
-                    continue
-                
-                price_per_unit = price / amount
-                
+                currency = trade.get('currency', 1)  # Default to bags if missing
+
+                # Convert price to bags if needed
+                # currency: 0 = GP, 1 = Bags (1 bag = 100M GP)
+                # NOTE: price is per-unit, not total!
+                if currency == 0:
+                    price_in_bags = price / 100_000_000  # Convert GP to bags
+                else:
+                    price_in_bags = price  # Already in bags
+
                 if trade_time >= cutoff_24h:
-                    prices_24h.append(price_per_unit)
+                    prices_24h.append(price_in_bags)
                 if trade_time >= cutoff_7d:
-                    prices_7d.append(price_per_unit)
-                prices_all.append(price_per_unit)
+                    prices_7d.append(price_in_bags)
+                prices_all.append(price_in_bags)
             
             except (ValueError, KeyError, ZeroDivisionError):
                 continue
