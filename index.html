@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SpawnPK Trade Economics</title>
+  <title>Bloodchanting Stones</title>
 
   <link rel="icon" type="image/png" href="favicon.png">
 
@@ -29,39 +29,6 @@
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
     }
-
-    .zone-indicator {
-      height: 8px;
-      border-radius: 4px;
-      background: linear-gradient(to right,
-        #10b981 0%, #10b981 25%,
-        #fbbf24 25%, #fbbf24 50%,
-        #fb923c 50%, #fb923c 75%,
-        #ef4444 75%, #ef4444 100%);
-      position: relative;
-      margin: 8px 0;
-    }
-
-    .zone-marker {
-      position: absolute;
-      width: 3px;
-      height: 16px;
-      background: white;
-      top: -4px;
-      box-shadow: 0 0 4px rgba(0,0,0,0.8);
-    }
-
-    .confidence-badge {
-      display: inline-block;
-      padding: 2px 8px;
-      border-radius: 12px;
-      font-size: 0.75rem;
-      font-weight: bold;
-    }
-
-    .confidence-high { background: #10b981; color: white; }
-    .confidence-medium { background: #fbbf24; color: #1a0f08; }
-    .confidence-low { background: #ef4444; color: white; }
 
     .time-tab {
       padding: 8px 16px;
@@ -147,9 +114,8 @@
       <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
         <div>
           <h1 class="text-3xl font-bold text-osrs-dark" style="font-family: 'Cinzel', serif">
-            SpawnPK Trade Economics
+            Bloodchanting Stones
           </h1>
-          <p class="text-sm text-gray-600 mt-1">Smart recommendations with statistical analysis</p>
         </div>
       </div>
     </div>
@@ -159,78 +125,12 @@
       <span id="last-updated" class="text-osrs-light text-sm"></span>
     </div>
 
-    <div class="osrs-panel rounded-lg p-6 border-2" style="border-color: #d4af37;">
-      <h2 class="text-2xl font-bold text-osrs-gold mb-4" style="font-family: 'Cinzel', serif">How Bloodchanting Arbitrage Works</h2>
-
-      <div class="grid md:grid-cols-3 gap-4 text-sm mb-4">
-        <div class="osrs-stat-box p-4">
-          <div class="text-3xl mb-2">1</div>
-          <h3 class="font-bold text-osrs-gold mb-2">Buy Items from Trade Post</h3>
-          <p class="text-osrs-light">Purchase items using bags (1 bag = 100m GP). Look for items with LOW bags/token or bags/shard conversion rates.</p>
-        </div>
-
-        <div class="osrs-stat-box p-4">
-          <div class="text-3xl mb-2">2</div>
-          <h3 class="font-bold text-osrs-gold mb-2">Convert to Shop Currency</h3>
-          <p class="text-osrs-light">Turn items into Blood Shard or Token shops to receive currency. Craft Bloodchanting Stones (250 shards + 500 tokens + 10 diamonds).</p>
-        </div>
-
-        <div class="osrs-stat-box p-4">
-          <div class="text-3xl mb-2">3</div>
-          <h3 class="font-bold text-osrs-gold mb-2">Sell for Profit</h3>
-          <p class="text-osrs-light">Sell Bloodchanting Stones on trade post. If craft cost < market price = profit! Calculator shows optimal strategy.</p>
-        </div>
-      </div>
-
-      <div class="p-3 rounded" style="background: rgba(251, 191, 36, 0.2); border: 2px solid #fbbf24;">
-        <p class="text-sm text-yellow-200 mb-2">
-          <strong>Key Insight:</strong> Lower bags/token or bags/shard = cheaper materials = higher profit margins! Positive ROI means better than average deal.
-        </p>
-        <p class="text-xs text-yellow-100">
-          <strong>Units:</strong> 1 bag = 100m GP | Shop items cost shards or tokens | Trade post uses bags
-        </p>
-      </div>
-    </div>
-
-    <div id="quick-stats" class="grid grid-cols-1 md:grid-cols-3 gap-4">
-      <div class="osrs-stat-box text-center p-4">
-        <div class="text-sm text-osrs-light">Best Shard Source (Current Window)</div>
-        <div class="text-xl font-bold text-osrs-gold mt-2" id="best-shard-name">-</div>
-        <div class="text-lg text-osrs-orange mt-1" id="best-shard-rate">- bags/shard</div>
-        <div class="text-sm text-green-400 mt-1" id="best-shard-roi">-</div>
-      </div>
-
-      <div class="osrs-stat-box text-center p-4">
-        <div class="text-sm text-osrs-light">Best Token Source (Current Window)</div>
-        <div class="text-xl font-bold text-osrs-gold mt-2" id="best-token-name">-</div>
-        <div class="text-lg text-osrs-orange mt-1" id="best-token-rate">- bags/token</div>
-        <div class="text-sm text-green-400 mt-1" id="best-token-roi">-</div>
-      </div>
-
-      <div class="osrs-stat-box text-center p-4">
-        <div class="text-sm text-osrs-light">Bloodchanting Profit (Avg, Current Window)</div>
-        <div class="text-2xl font-bold mt-2" id="bloodchanting-profit-amount">-</div>
-        <div class="text-sm text-osrs-light mt-1">
-          <span id="bloodchanting-cost-detail">-</span>
-        </div>
-        <div class="text-sm font-bold mt-1" id="bloodchanting-recommendation">-</div>
-      </div>
-    </div>
-
     <div class="osrs-recommend rounded-lg p-6">
       <h2 class="text-2xl font-bold text-osrs-gold mb-4" style="font-family: 'Cinzel', serif">
-        <span class="tooltip-trigger" data-tooltip="Calculates the most cost-effective way to craft bloodchanting stones by buying items from shops for Blood Shards/Tokens. Requires: 250 Blood Shards + 500 Blood Synthesis Tokens + 10 Blood Diamonds.">
+        <span class="tooltip-trigger" data-tooltip="Calculates the most cost-effective way to craft bloodchanting stones by buying items from the Trade Post and selling them to shops for Blood Shards/Tokens. Requires: 250 Blood Shards + 500 Blood Synthesis Tokens + 10 Blood Diamonds.">
           Bloodchanting Stone Calculator
         </span>
       </h2>
-
-      <div class="flex flex-wrap gap-2 mb-4">
-        <button class="scenario-tab time-tab active" data-scenario="recommended" title="Uses volatility-aware best window prices for most reliable profitability calculation" style="border-color: #10b981; color: #10b981; font-weight: bold;">Recommended</button>
-        <button class="scenario-tab time-tab" data-scenario="1h" title="Last hour prices - most current but may be volatile">1h</button>
-        <button class="scenario-tab time-tab" data-scenario="7d" title="Last 7 days prices - balanced view">7d</button>
-        <button class="scenario-tab time-tab" data-scenario="30d" title="Last 30 days prices - stable long-term">30d</button>
-        <button class="scenario-tab time-tab" data-scenario="90d" title="Last 90 days prices - maximum historical data">90d</button>
-      </div>
 
       <div id="bloodchanting-display">
         <p class="text-osrs-light text-center py-8">Loading calculator...</p>
@@ -298,15 +198,14 @@
 
       <div class="osrs-panel rounded-lg p-4">
         <h3 class="text-lg font-bold text-osrs-gold mb-3">
-          <span class="tooltip-trigger" data-tooltip="Confidence Score (0-100) combines trade volume, price stability, and data quality. Higher confidence means more reliable recommendations. This chart shows the relationship between confidence and potential ROI.">
-            Confidence vs ROI (Current Window)
+          <span class="tooltip-trigger" data-tooltip="This chart shows the relationship between reliability and potential ROI for different items.">
+            Trade Volume vs ROI (Current Window)
           </span>
         </h3>
         <div class="text-xs bg-osrs-dark p-2 rounded mb-2">
-          <p class="font-bold text-osrs-gold mb-1">Confidence Levels:</p>
-          <p><span class="confidence-badge confidence-high">70+</span> High reliability</p>
-          <p><span class="confidence-badge confidence-medium">40-69</span> Medium reliability</p>
-          <p><span class="confidence-badge confidence-low">&lt;40</span> Low reliability - use caution</p>
+          <p class="font-bold text-osrs-gold mb-1">Trade Volume:</p>
+          <p>More trades = more reliable price data</p>
+          <p>Fewer trades = use caution, price may be volatile</p>
         </div>
         <div class="chart-container">
           <canvas id="confidence-chart"></canvas>
@@ -324,7 +223,7 @@
         </div>
         <p class="text-sm text-osrs-light mt-2">
           Ranked by <strong class="text-osrs-orange">ROI (efficiency vs median)</strong> for the <strong class="text-osrs-orange" id="current-window-display">current</strong> time window.
-          Positive ROI = lower bags/unit = better arbitrage opportunity. Each item also shows bloodchanting profitability.
+          Positive ROI = lower bags/unit = better arbitrage opportunity.
         </p>
       </div>
 
