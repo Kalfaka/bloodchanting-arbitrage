@@ -5,25 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SpawnPK Trade Economics</title>
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 
-  <!-- Custom OSRS Styling -->
   <link rel="stylesheet" href="styles.css">
 
   <style>
-    /* Purchase Zone Styles */
     .recommendation-card {
       background: linear-gradient(135deg, #2a1810 0%, #1a0f08 100%);
       border: 2px solid #8b7355;
@@ -105,7 +99,6 @@
       }
     }
 
-    /* Tooltip Styles */
     .tooltip-trigger {
       position: relative;
       cursor: help;
@@ -150,7 +143,6 @@
 <body>
   <div class="max-w-7xl mx-auto p-4 sm:p-6 space-y-6 min-h-screen">
 
-    <!-- Header -->
     <div class="osrs-header rounded-lg p-6">
       <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
         <div>
@@ -162,31 +154,29 @@
       </div>
     </div>
 
-    <!-- Status Bar -->
     <div class="osrs-status-bar flex justify-between items-center flex-wrap gap-2">
       <span id="status-text" class="status-text">Loading market data...</span>
       <span id="last-updated" class="text-osrs-light text-sm"></span>
     </div>
 
-    <!-- How It Works Section -->
     <div class="osrs-panel rounded-lg p-6 border-2" style="border-color: #d4af37;">
-      <h2 class="text-2xl font-bold text-osrs-gold mb-4" style="font-family: 'Cinzel', serif">📖 How Bloodchanting Arbitrage Works</h2>
+      <h2 class="text-2xl font-bold text-osrs-gold mb-4" style="font-family: 'Cinzel', serif">How Bloodchanting Arbitrage Works</h2>
 
       <div class="grid md:grid-cols-3 gap-4 text-sm mb-4">
         <div class="osrs-stat-box p-4">
-          <div class="text-3xl mb-2">1️⃣</div>
+          <div class="text-3xl mb-2">1</div>
           <h3 class="font-bold text-osrs-gold mb-2">Buy Items from Trade Post</h3>
           <p class="text-osrs-light">Purchase items using bags (1 bag = 100m GP). Look for items with LOW bags/token or bags/shard conversion rates.</p>
         </div>
 
         <div class="osrs-stat-box p-4">
-          <div class="text-3xl mb-2">2️⃣</div>
+          <div class="text-3xl mb-2">2</div>
           <h3 class="font-bold text-osrs-gold mb-2">Convert to Shop Currency</h3>
           <p class="text-osrs-light">Turn items into Blood Shard or Token shops to receive currency. Craft Bloodchanting Stones (250 shards + 500 tokens + 10 diamonds).</p>
         </div>
 
         <div class="osrs-stat-box p-4">
-          <div class="text-3xl mb-2">3️⃣</div>
+          <div class="text-3xl mb-2">3</div>
           <h3 class="font-bold text-osrs-gold mb-2">Sell for Profit</h3>
           <p class="text-osrs-light">Sell Bloodchanting Stones on trade post. If craft cost < market price = profit! Calculator shows optimal strategy.</p>
         </div>
@@ -194,7 +184,7 @@
 
       <div class="p-3 rounded" style="background: rgba(251, 191, 36, 0.2); border: 2px solid #fbbf24;">
         <p class="text-sm text-yellow-200 mb-2">
-          <strong>💡 Key Insight:</strong> Lower bags/token or bags/shard = cheaper materials = higher profit margins! Positive ROI means better than average deal.
+          <strong>Key Insight:</strong> Lower bags/token or bags/shard = cheaper materials = higher profit margins! Positive ROI means better than average deal.
         </p>
         <p class="text-xs text-yellow-100">
           <strong>Units:</strong> 1 bag = 100m GP | Shop items cost shards or tokens | Trade post uses bags
@@ -202,7 +192,6 @@
       </div>
     </div>
 
-    <!-- Quick Stats Summary -->
     <div id="quick-stats" class="grid grid-cols-1 md:grid-cols-3 gap-4">
       <div class="osrs-stat-box text-center p-4">
         <div class="text-sm text-osrs-light">Best Shard Source (Current Window)</div>
@@ -228,7 +217,6 @@
       </div>
     </div>
 
-    <!-- Bloodchanting Stone Calculator -->
     <div class="osrs-recommend rounded-lg p-6">
       <h2 class="text-2xl font-bold text-osrs-gold mb-4" style="font-family: 'Cinzel', serif">
         <span class="tooltip-trigger" data-tooltip="Calculates the most cost-effective way to craft bloodchanting stones by buying items from shops for Blood Shards/Tokens. Requires: 250 Blood Shards + 500 Blood Synthesis Tokens + 10 Blood Diamonds.">
@@ -236,19 +224,19 @@
         </span>
       </h2>
 
-      <!-- Scenario Tabs -->
       <div class="flex flex-wrap gap-2 mb-4">
-        <button class="scenario-tab time-tab active" data-scenario="min" title="Shows the absolute lowest cost possible by buying items at their minimum observed prices">Best Case (Min)</button>
-        <button class="scenario-tab time-tab" data-scenario="avg" title="Shows typical cost using average market prices - more realistic for planning">Average Case</button>
+        <button class="scenario-tab time-tab active" data-scenario="recommended" title="Uses volatility-aware best window prices for most reliable profitability calculation" style="border-color: #10b981; color: #10b981; font-weight: bold;">Recommended</button>
+        <button class="scenario-tab time-tab" data-scenario="1h" title="Last hour prices - most current but may be volatile">1h</button>
+        <button class="scenario-tab time-tab" data-scenario="7d" title="Last 7 days prices - balanced view">7d</button>
+        <button class="scenario-tab time-tab" data-scenario="30d" title="Last 30 days prices - stable long-term">30d</button>
+        <button class="scenario-tab time-tab" data-scenario="90d" title="Last 90 days prices - maximum historical data">90d</button>
       </div>
 
-      <!-- Bloodchanting Display -->
       <div id="bloodchanting-display">
         <p class="text-osrs-light text-center py-8">Loading calculator...</p>
       </div>
     </div>
 
-    <!-- Time Window & Currency Selector -->
     <div class="osrs-panel rounded-lg p-6">
       <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
         <div>
@@ -261,23 +249,21 @@
         </div>
 
         <div class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
-          <!-- Time Window -->
           <div>
             <label class="block text-xs text-osrs-light mb-1">
-              <span class="tooltip-trigger" data-tooltip="Filter recommendations by trade recency. Shorter windows show current prices but have less data. Longer windows are more reliable but may not reflect recent market changes.">
+              <span class="tooltip-trigger" data-tooltip="Choose a time window or use 'Recommended' to let our volatility-aware algorithm pick the most reliable window for each item. Shorter windows show current prices but have less data. Longer windows are more stable but may lag behind market changes.">
                 Time Window
               </span>
             </label>
             <div class="flex flex-wrap gap-2">
+              <button class="time-tab active" data-window="recommended" title="Use volatility-aware best window per item (smart default)" style="border-color: #10b981; color: #10b981; font-weight: bold;">Best</button>
               <button class="time-tab" data-window="1h" title="Last hour only - most current but volatile">1h</button>
-              <button class="time-tab" data-window="24h" title="Last 24 hours - recent trends">24h</button>
-              <button class="time-tab active" data-window="7d" title="Last 7 days - balanced view (recommended)">7d</button>
+              <button class="time-tab" data-window="7d" title="Last 7 days - balanced view">7d</button>
               <button class="time-tab" data-window="30d" title="Last 30 days - stable, long-term trends">30d</button>
-              <button class="time-tab" data-window="all" title="All available data - most reliable statistics">All</button>
+              <button class="time-tab" data-window="90d" title="Last 90 days - maximum historical data">90d</button>
             </div>
           </div>
 
-          <!-- Currency -->
           <div>
             <label class="block text-xs text-osrs-light mb-1">
               <span class="tooltip-trigger" data-tooltip="Choose which shop currency to analyze. Blood Shards are generally easier to obtain. Blood Synthesis Tokens require more gameplay.">
@@ -293,9 +279,7 @@
       </div>
     </div>
 
-    <!-- Market Overview Charts -->
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-      <!-- ROI Distribution -->
       <div class="osrs-panel rounded-lg p-4">
         <h3 class="text-lg font-bold text-osrs-gold mb-3">
           <span class="tooltip-trigger" data-tooltip="ROI (Return on Investment) shows how efficient each item is vs median. Positive ROI = item has lower bags/unit than median (cheaper to acquire currency). Example: +50% ROI means this item costs 50% less per shard/token than average!">
@@ -312,7 +296,6 @@
         </div>
       </div>
 
-      <!-- Confidence vs ROI -->
       <div class="osrs-panel rounded-lg p-4">
         <h3 class="text-lg font-bold text-osrs-gold mb-3">
           <span class="tooltip-trigger" data-tooltip="Confidence Score (0-100) combines trade volume, price stability, and data quality. Higher confidence means more reliable recommendations. This chart shows the relationship between confidence and potential ROI.">
@@ -331,7 +314,6 @@
       </div>
     </div>
 
-    <!-- Top Performers -->
     <div class="osrs-recommend rounded-lg p-6">
       <div class="mb-4">
         <div class="flex items-center justify-between">
@@ -347,19 +329,16 @@
       </div>
 
       <div id="recommendations-list" class="grid grid-cols-1 gap-3">
-        <!-- Will be populated by JavaScript -->
         <div class="text-center text-osrs-light py-8">Loading recommendations...</div>
       </div>
     </div>
 
-    <!-- Loading Indicator -->
     <div id="loading" class="osrs-loading hidden">
       Loading market data...
     </div>
 
   </div>
 
-  <!-- JavaScript -->
   <script type="module" src="js/unified.js"></script>
 </body>
 </html>
