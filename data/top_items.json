@@ -1,0 +1,484 @@
+{
+  "top_items": [
+    "Brimstone ring",
+    "Dragon scimitar (or)",
+    "Barrelchest cannon",
+    "Frozen scimitar",
+    "3rd age bow",
+    "Ancient mace",
+    "Barrelchest war axe",
+    "Barrelchest maul",
+    "Devout boots",
+    "Vesta's chainbody",
+    "Vesta's plateskirt",
+    "Bloodfire shield",
+    "Viper helmet",
+    "Zuriel's hood",
+    "Basilisk rapier",
+    "Barrelchest sword",
+    "Vesta's longsword",
+    "Statius's warhammer",
+    "Morrigan's coif",
+    "Serpentine helm",
+    "Abyssal bludgeon",
+    "Zuriel's robe top",
+    "Eternal boots",
+    "Blood cape",
+    "Morrigan's leather body",
+    "Ring of malevolence",
+    "Dark brimstone ring",
+    "Ghommal's hilt",
+    "Torture ornament kit",
+    "Virtus robe legs",
+    "Blade of saeldor",
+    "Justiciar faceguard",
+    "Virtus robe top",
+    "Pernix chaps",
+    "Pernix body",
+    "Inquisitor faceguard",
+    "Verdant pendant",
+    "Verdant partyhat",
+    "Holy alien pet",
+    "Verdant ring",
+    "Torva platebody",
+    "Torva platelegs",
+    "Crystal platebody",
+    "Crystal platelegs",
+    "Occult ornament kit",
+    "Orb of terror",
+    "Crystal helmet",
+    "Shadow pet",
+    "Grand ring (i)",
+    "Zaryte bow",
+    "Blood diamonds",
+    "Bloodchanting stone"
+  ],
+  "count": 52,
+  "metadata": {
+    "generated_at": "2026-01-25T23:18:43.281205",
+    "analysis_window_days": 30,
+    "fallback_window_days": 90,
+    "selection_criteria": "Volatility-aware conversion rate (ascending)",
+    "volatility_threshold_pct": 30.0,
+    "min_trades_required": 5,
+    "blood_shards_items": 25,
+    "blood_tokens_items": 25,
+    "always_included": 2,
+    "note": "Lower conversion rate = cheaper to acquire shards/tokens = better arbitrage"
+  },
+  "details": {
+    "blood_shards": [
+      {
+        "name": "Brimstone ring",
+        "conversion_rate": 0.625,
+        "window_used": "24h (volatile spike)",
+        "trades": 126,
+        "best_price": 5.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Dragon scimitar (or)",
+        "conversion_rate": 0.8,
+        "window_used": "7d (no recent)",
+        "trades": 105,
+        "best_price": 60.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Barrelchest cannon",
+        "conversion_rate": 1.0667,
+        "window_used": "30d (stable)",
+        "trades": 555,
+        "best_price": 80.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Frozen scimitar",
+        "conversion_rate": 1.0667,
+        "window_used": "7d (no recent)",
+        "trades": 120,
+        "best_price": 80.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "3rd age bow",
+        "conversion_rate": 1.0889,
+        "window_used": "30d (stable)",
+        "trades": 229,
+        "best_price": 49.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Ancient mace",
+        "conversion_rate": 1.1,
+        "window_used": "7d (no recent)",
+        "trades": 25,
+        "best_price": 55.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Barrelchest war axe",
+        "conversion_rate": 1.1111,
+        "window_used": "30d (stable)",
+        "trades": 992,
+        "best_price": 50.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Barrelchest maul",
+        "conversion_rate": 1.1111,
+        "window_used": "30d (stable)",
+        "trades": 769,
+        "best_price": 50.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Devout boots",
+        "conversion_rate": 1.1143,
+        "window_used": "30d (stable)",
+        "trades": 924,
+        "best_price": 39.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Vesta's chainbody",
+        "conversion_rate": 1.1538,
+        "window_used": "30d (stable)",
+        "trades": 703,
+        "best_price": 15.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Vesta's plateskirt",
+        "conversion_rate": 1.1538,
+        "window_used": "30d (stable)",
+        "trades": 841,
+        "best_price": 15.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Bloodfire shield",
+        "conversion_rate": 1.1625,
+        "window_used": "7d (volatile stable)",
+        "trades": 1179,
+        "best_price": 465.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Viper helmet",
+        "conversion_rate": 1.18,
+        "window_used": "30d (stable)",
+        "trades": 205,
+        "best_price": 59.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Zuriel's hood",
+        "conversion_rate": 1.1875,
+        "window_used": "7d (no recent)",
+        "trades": 120,
+        "best_price": 9.5,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Basilisk rapier",
+        "conversion_rate": 1.2,
+        "window_used": "7d (volatile stable)",
+        "trades": 284,
+        "best_price": 30.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Barrelchest sword",
+        "conversion_rate": 1.2,
+        "window_used": "30d (stable)",
+        "trades": 709,
+        "best_price": 48.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Vesta's longsword",
+        "conversion_rate": 1.2667,
+        "window_used": "30d (stable)",
+        "trades": 837,
+        "best_price": 19.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Statius's warhammer",
+        "conversion_rate": 1.3333,
+        "window_used": "30d (stable)",
+        "trades": 240,
+        "best_price": 12.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Morrigan's coif",
+        "conversion_rate": 1.3333,
+        "window_used": "7d (no recent)",
+        "trades": 60,
+        "best_price": 8.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Serpentine helm",
+        "conversion_rate": 1.3333,
+        "window_used": "30d (stable)",
+        "trades": 570,
+        "best_price": 12.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Abyssal bludgeon",
+        "conversion_rate": 1.35,
+        "window_used": "30d (stable)",
+        "trades": 104,
+        "best_price": 1.35,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Zuriel's robe top",
+        "conversion_rate": 1.4,
+        "window_used": "7d (volatile stable)",
+        "trades": 452,
+        "best_price": 14.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Eternal boots",
+        "conversion_rate": 1.4,
+        "window_used": "30d (stable)",
+        "trades": 1500,
+        "best_price": 14.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Blood cape",
+        "conversion_rate": 1.4,
+        "window_used": "30d (stable)",
+        "trades": 270,
+        "best_price": 35.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Morrigan's leather body",
+        "conversion_rate": 1.4286,
+        "window_used": "30d (stable)",
+        "trades": 450,
+        "best_price": 10.0,
+        "fetch_window": "30d"
+      }
+    ],
+    "blood_tokens": [
+      {
+        "name": "Ring of malevolence",
+        "conversion_rate": 0.75,
+        "window_used": "30d (fallback)",
+        "trades": 6,
+        "best_price": 1500.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Dark brimstone ring",
+        "conversion_rate": 0.8,
+        "window_used": "30d (fallback)",
+        "trades": 5,
+        "best_price": 20000.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Ghommal's hilt",
+        "conversion_rate": 0.8,
+        "window_used": "30d (fallback)",
+        "trades": 19,
+        "best_price": 4000.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Torture ornament kit",
+        "conversion_rate": 0.9167,
+        "window_used": "30d (stable)",
+        "trades": 618,
+        "best_price": 550.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Virtus robe legs",
+        "conversion_rate": 0.9471,
+        "window_used": "30d (stable)",
+        "trades": 296,
+        "best_price": 3315.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Blade of saeldor",
+        "conversion_rate": 0.95,
+        "window_used": "30d (stable)",
+        "trades": 1111,
+        "best_price": 475.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Justiciar faceguard",
+        "conversion_rate": 0.9703,
+        "window_used": "30d (fallback)",
+        "trades": 29,
+        "best_price": 849.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Virtus robe top",
+        "conversion_rate": 0.9714,
+        "window_used": "30d (stable)",
+        "trades": 280,
+        "best_price": 3400.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Pernix chaps",
+        "conversion_rate": 0.9714,
+        "window_used": "30d (stable)",
+        "trades": 331,
+        "best_price": 3400.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Pernix body",
+        "conversion_rate": 0.9786,
+        "window_used": "30d (stable)",
+        "trades": 326,
+        "best_price": 3425.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Inquisitor faceguard",
+        "conversion_rate": 0.9999,
+        "window_used": "30d (stable)",
+        "trades": 165,
+        "best_price": 9999.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Verdant pendant",
+        "conversion_rate": 1.0,
+        "window_used": "30d (stable)",
+        "trades": 357,
+        "best_price": 19999.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Verdant partyhat",
+        "conversion_rate": 1.0,
+        "window_used": "30d (fallback)",
+        "trades": 13,
+        "best_price": 45000.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Holy alien pet",
+        "conversion_rate": 1.0,
+        "window_used": "30d (fallback)",
+        "trades": 9,
+        "best_price": 10000.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Verdant ring",
+        "conversion_rate": 1.0,
+        "window_used": "30d (stable)",
+        "trades": 326,
+        "best_price": 10000.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Torva platebody",
+        "conversion_rate": 1.0,
+        "window_used": "30d (stable)",
+        "trades": 417,
+        "best_price": 4500.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Torva platelegs",
+        "conversion_rate": 1.0,
+        "window_used": "30d (stable)",
+        "trades": 411,
+        "best_price": 4500.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Crystal platebody",
+        "conversion_rate": 1.0,
+        "window_used": "30d (stable)",
+        "trades": 927,
+        "best_price": 600.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Crystal platelegs",
+        "conversion_rate": 1.0,
+        "window_used": "30d (stable)",
+        "trades": 873,
+        "best_price": 600.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Occult ornament kit",
+        "conversion_rate": 1.0,
+        "window_used": "30d (stable)",
+        "trades": 558,
+        "best_price": 400.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Orb of terror",
+        "conversion_rate": 1.0333,
+        "window_used": "30d (fallback)",
+        "trades": 10,
+        "best_price": 15500.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Crystal helmet",
+        "conversion_rate": 1.04,
+        "window_used": "30d (stable)",
+        "trades": 654,
+        "best_price": 520.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Shadow pet",
+        "conversion_rate": 1.05,
+        "window_used": "7d (no recent)",
+        "trades": 34,
+        "best_price": 10500.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Grand ring (i)",
+        "conversion_rate": 1.06,
+        "window_used": "30d (stable)",
+        "trades": 384,
+        "best_price": 15900.0,
+        "fetch_window": "30d"
+      },
+      {
+        "name": "Zaryte bow",
+        "conversion_rate": 1.0667,
+        "window_used": "30d (stable)",
+        "trades": 297,
+        "best_price": 1600.0,
+        "fetch_window": "30d"
+      }
+    ]
+  },
+  "analysis_stats": {
+    "total_analyzed": 187,
+    "insufficient_data": 31,
+    "window_usage": {
+      "24h": 9,
+      "7d": 71,
+      "30d": 107
+    }
+  }
+}
