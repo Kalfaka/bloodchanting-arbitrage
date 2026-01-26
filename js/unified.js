@@ -1,6 +1,5 @@
 /**
  * Unified Trade Economics Dashboard - Volatility-Aware Edition
- * Aligned with the intelligent window selection from Scripts 1, 2, and 3
  */
 
 import { formatGP, formatMillions } from './calculator.js';
@@ -11,7 +10,6 @@ class UnifiedDashboard {
     this.tradeCacheData = null;
     this.currentWindow = 'recommended';
     this.currentCurrency = 'Blood Shards';
-    this.currentScenario = 'recommended';
     this.charts = {};
   }
 
@@ -44,15 +42,6 @@ class UnifiedDashboard {
         e.target.classList.add('active');
         this.currentCurrency = e.target.dataset.currency;
         this.render();
-      });
-    });
-
-    document.querySelectorAll('.scenario-tab').forEach(tab => {
-      tab.addEventListener('click', (e) => {
-        document.querySelectorAll('.scenario-tab').forEach(t => t.classList.remove('active'));
-        e.target.classList.add('active');
-        this.currentScenario = e.target.dataset.scenario;
-        this.renderBloodchanting();
       });
     });
   }
@@ -95,7 +84,7 @@ class UnifiedDashboard {
 
     } catch (error) {
       console.error('Error loading data:', error);
-      this.updateStatus('Error loading data - Please run the analysis pipeline');
+      this.updateStatus('Error loading data');
       this.showLoading(false);
     }
   }
@@ -125,126 +114,6 @@ class UnifiedDashboard {
     this.renderBloodchanting();
     this.renderRecommendations();
     this.renderCharts();
-    this.renderQuickStats();
-  }
-
-  renderQuickStats() {
-    const activeWindow = this.currentWindow === 'recommended' ? null : this.currentWindow;
-    
-    const shardRankings = this.recommendationsData.rankings['Blood Shards'];
-    const tokenRankings = this.recommendationsData.rankings['Blood Synthesis Tokens'];
-
-    let bestShardItem = null;
-    let bestShardWindow = null;
-
-    if (activeWindow && activeWindow !== 'recommended') {
-      const rankings = shardRankings[activeWindow];
-      if (rankings && rankings.items.length > 0) {
-        bestShardItem = rankings.items[0];
-        bestShardWindow = activeWindow;
-      }
-    } else {
-      for (const itemName in this.recommendationsData.items) {
-        const item = this.recommendationsData.items[itemName];
-        const recWindow = item.recommended_window;
-        const ratios = item.ratios['Blood Shards'][recWindow];
-        
-        if (ratios.available) {
-          if (!bestShardItem || ratios.bags_per_unit < bestShardItem.bags_per_unit) {
-            bestShardItem = {
-              name: itemName,
-              bags_per_unit: ratios.bags_per_unit,
-              confidence: item.windows[recWindow].confidence,
-              roi: 0
-            };
-            bestShardWindow = recWindow;
-          }
-        }
-      }
-      
-      if (bestShardItem && bestShardWindow) {
-        const windowRankings = shardRankings[bestShardWindow];
-        if (windowRankings) {
-          const itemInRanking = windowRankings.items.find(i => i.name === bestShardItem.name);
-          if (itemInRanking) {
-            bestShardItem.roi = itemInRanking.roi;
-          }
-        }
-      }
-    }
-
-    let bestTokenItem = null;
-    let bestTokenWindow = null;
-
-    if (activeWindow && activeWindow !== 'recommended') {
-      const rankings = tokenRankings[activeWindow];
-      if (rankings && rankings.items.length > 0) {
-        bestTokenItem = rankings.items[0];
-        bestTokenWindow = activeWindow;
-      }
-    } else {
-      for (const itemName in this.recommendationsData.items) {
-        const item = this.recommendationsData.items[itemName];
-        const recWindow = item.recommended_window;
-        const ratios = item.ratios['Blood Synthesis Tokens'][recWindow];
-        
-        if (ratios.available) {
-          if (!bestTokenItem || ratios.bags_per_unit < bestTokenItem.bags_per_unit) {
-            bestTokenItem = {
-              name: itemName,
-              bags_per_unit: ratios.bags_per_unit,
-              confidence: item.windows[recWindow].confidence,
-              roi: 0
-            };
-            bestTokenWindow = recWindow;
-          }
-        }
-      }
-      
-      if (bestTokenItem && bestTokenWindow) {
-        const windowRankings = tokenRankings[bestTokenWindow];
-        if (windowRankings) {
-          const itemInRanking = windowRankings.items.find(i => i.name === bestTokenItem.name);
-          if (itemInRanking) {
-            bestTokenItem.roi = itemInRanking.roi;
-          }
-        }
-      }
-    }
-
-    const bloodchantingWindow = activeWindow === 'recommended' ? '7d' : activeWindow;
-    const bloodchantingData = this.recommendationsData.bloodchanting[bloodchantingWindow];
-
-    if (bestShardItem) {
-      document.getElementById('best-shard-name').textContent = bestShardItem.name;
-      document.getElementById('best-shard-rate').textContent = 
-        `${bestShardItem.bags_per_unit.toFixed(4)} bags/shard`;
-      document.getElementById('best-shard-roi').textContent = 
-        `${bestShardItem.roi >= 0 ? '+' : ''}${bestShardItem.roi.toFixed(1)}% ROI`;
-    }
-
-    if (bestTokenItem) {
-      document.getElementById('best-token-name').textContent = bestTokenItem.name;
-      document.getElementById('best-token-rate').textContent = 
-        `${bestTokenItem.bags_per_unit.toFixed(4)} bags/token`;
-      document.getElementById('best-token-roi').textContent = 
-        `${bestTokenItem.roi >= 0 ? '+' : ''}${bestTokenItem.roi.toFixed(1)}% ROI`;
-    }
-
-    if (bloodchantingData && bloodchantingData.can_calculate) {
-      const profitEl = document.getElementById('bloodchanting-profit-amount');
-      const detailEl = document.getElementById('bloodchanting-cost-detail');
-      const recEl = document.getElementById('bloodchanting-recommendation');
-
-      profitEl.textContent = `${bloodchantingData.profit >= 0 ? '+' : ''}${this.formatPrice(bloodchantingData.profit)} bags`;
-      profitEl.style.color = bloodchantingData.profitable ? '#10b981' : '#ef4444';
-
-      detailEl.textContent = 
-        `Cost: ${this.formatPrice(bloodchantingData.costs.total)} | Market: ${this.formatPrice(bloodchantingData.stone_market_price)} bags`;
-
-      recEl.textContent = bloodchantingData.recommendation;
-      recEl.style.color = bloodchantingData.profitable ? '#10b981' : '#ef4444';
-    }
   }
 
   renderBloodchanting() {
@@ -252,8 +121,7 @@ class UnifiedDashboard {
 
     const display = document.getElementById('bloodchanting-display');
 
-    const actualWindow = this.currentScenario === 'recommended' ? '7d' : 
-                        (this.currentWindow === 'recommended' ? '7d' : this.currentWindow);
+    const actualWindow = this.currentWindow === 'recommended' ? '7d' : this.currentWindow;
 
     const bloodchantingData = this.recommendationsData.bloodchanting[actualWindow];
 
@@ -268,23 +136,20 @@ class UnifiedDashboard {
 
     const { best_shard_source, best_token_source, costs, stone_market_price, profit, roi_percent, profitable } = bloodchantingData;
 
-    const scenarioLabel = this.currentScenario === 'recommended' 
+    const scenarioLabel = this.currentWindow === 'recommended' 
       ? `Recommended (${actualWindow})` 
       : actualWindow;
 
     display.innerHTML = `
       <div class="space-y-4">
-        <!-- Scenario Info -->
         <div class="p-3 rounded" style="background: rgba(212, 175, 55, 0.15); border: 2px solid #8b7355;">
           <p class="text-sm text-osrs-gold">
             <strong>Using:</strong> ${scenarioLabel} window prices
-            ${this.currentScenario === 'recommended' ? ' (Most reliable based on volatility analysis)' : ''}
+            ${this.currentWindow === 'recommended' ? ' (Most reliable based on volatility analysis)' : ''}
           </p>
         </div>
 
-        <!-- Recipe Requirements -->
         <div class="grid md:grid-cols-3 gap-3">
-          <!-- Blood Shards -->
           <div class="osrs-stat-box p-4">
             <div class="text-xs text-osrs-light mb-1">250 Blood Shards</div>
             <div class="font-bold text-osrs-gold mb-2">${best_shard_source.name}</div>
@@ -297,14 +162,9 @@ class UnifiedDashboard {
                 <span class="text-osrs-light">Cost:</span>
                 <span class="text-osrs-gold">${this.formatPrice(costs.shards)} bags</span>
               </div>
-              <div class="flex justify-between">
-                <span class="text-osrs-light">Confidence:</span>
-                <span class="${this.getConfidenceClass(best_shard_source.confidence)}">${best_shard_source.confidence.toFixed(0)}%</span>
-              </div>
             </div>
           </div>
 
-          <!-- Blood Tokens -->
           <div class="osrs-stat-box p-4">
             <div class="text-xs text-osrs-light mb-1">500 Blood Tokens</div>
             <div class="font-bold text-osrs-gold mb-2">${best_token_source.name}</div>
@@ -317,14 +177,9 @@ class UnifiedDashboard {
                 <span class="text-osrs-light">Cost:</span>
                 <span class="text-osrs-gold">${this.formatPrice(costs.tokens)} bags</span>
               </div>
-              <div class="flex justify-between">
-                <span class="text-osrs-light">Confidence:</span>
-                <span class="${this.getConfidenceClass(best_token_source.confidence)}">${best_token_source.confidence.toFixed(0)}%</span>
-              </div>
             </div>
           </div>
 
-          <!-- Blood Diamonds -->
           <div class="osrs-stat-box p-4">
             <div class="text-xs text-osrs-light mb-1">10 Blood Diamonds</div>
             <div class="font-bold text-osrs-gold mb-2">Trade Post</div>
@@ -341,7 +196,6 @@ class UnifiedDashboard {
           </div>
         </div>
 
-        <!-- Profitability Analysis -->
         <div class="osrs-stat-box p-4" style="border: 3px solid ${profitable ? '#10b981' : '#ef4444'};">
           <div class="grid md:grid-cols-2 gap-4 mb-3">
             <div>
@@ -367,7 +221,7 @@ class UnifiedDashboard {
               ${profit >= 0 ? '+' : ''}${this.formatPrice(profit)} bags
             </div>
             <div class="text-sm" style="color: ${profitable ? '#10b981' : '#ef4444'};">
-              ${profitable ? '✅' : '❌'} ${roi_percent >= 0 ? '+' : ''}${roi_percent.toFixed(1)}% ROI
+              ${roi_percent >= 0 ? '+' : ''}${roi_percent.toFixed(1)}% ROI
             </div>
             <div class="text-sm font-bold mt-2 text-osrs-gold">
               ${bloodchantingData.recommendation}
@@ -412,7 +266,6 @@ class UnifiedDashboard {
         return {
           name: itemName,
           bags_per_unit: ratios.bags_per_unit,
-          confidence: windowData.confidence,
           recommended_window: recWindow,
           roi: 0
         };
@@ -447,8 +300,6 @@ class UnifiedDashboard {
 
   renderRecommendationCard(itemName, window, windowData, ratios, roi, rank) {
     const isRecommended = windowData.is_recommended;
-    const confidence = windowData.confidence;
-    const confidenceClass = this.getConfidenceClass(confidence);
 
     const bloodchantingWindow = this.currentWindow === 'recommended' ? '7d' : 
                                 (this.currentWindow || '7d');
@@ -473,15 +324,12 @@ class UnifiedDashboard {
         <div class="flex items-start justify-between mb-3">
           <div class="flex-1">
             <div class="flex items-center gap-2 mb-1">
-              <span class="text-2xl font-bold text-osrs-light">#{rank}</span>
+              <span class="text-2xl font-bold text-osrs-light">#${rank}</span>
               <h3 class="text-lg font-bold text-osrs-gold">${itemName}</h3>
-              ${isRecommended ? '<span class="text-xs px-2 py-1 rounded" style="background: #10b981; color: white;">★ RECOMMENDED</span>' : ''}
+              ${isRecommended ? '<span class="text-xs px-2 py-1 rounded" style="background: #10b981; color: white;">RECOMMENDED</span>' : ''}
             </div>
             <div class="flex items-center gap-3 text-sm">
               <span class="text-osrs-light">Window: <span class="text-osrs-orange">${window}</span></span>
-              <span class="confidence-badge ${confidenceClass}">
-                ${confidence.toFixed(0)}% Confidence
-              </span>
             </div>
           </div>
           <div class="text-right">
@@ -494,7 +342,7 @@ class UnifiedDashboard {
 
         <div class="grid grid-cols-2 md:grid-cols-5 gap-3 text-sm">
           <div>
-            <p class="text-osrs-light">Shop Cost</p>
+            <p class="text-osrs-light">Shop Value</p>
             <p class="font-bold text-osrs-gold">${ratios.shop_cost} ${this.currentCurrency === 'Blood Shards' ? 'shards' : 'tokens'}</p>
           </div>
           <div>
@@ -520,7 +368,7 @@ class UnifiedDashboard {
         ${bloodchantingInfo.profitable !== null ? `
           <div class="mt-3 p-2 rounded text-center" style="background: ${bloodchantingInfo.profitable ? 'rgba(16, 185, 129, 0.2)' : 'rgba(239, 68, 68, 0.2)'}; border: 1px solid ${bloodchantingInfo.profitable ? '#10b981' : '#ef4444'};">
             <p class="text-xs font-bold" style="color: ${bloodchantingInfo.profitable ? '#10b981' : '#ef4444'}">
-              ${bloodchantingInfo.profitable ? '✅' : '❌'} ${bloodchantingInfo.message}
+              ${bloodchantingInfo.message}
             </p>
           </div>
         ` : ''}
@@ -642,7 +490,7 @@ class UnifiedDashboard {
             callbacks: {
               label: (context) => {
                 const item = context.raw;
-                return `${item.name}: ROI ${item.y.toFixed(1)}%, Conf ${item.x.toFixed(0)}`;
+                return `${item.name}: ROI ${item.y.toFixed(1)}%, Trades ${item.x.toFixed(0)}`;
               }
             }
           }
@@ -665,12 +513,11 @@ class UnifiedDashboard {
           x: {
             title: {
               display: true,
-              text: 'Confidence',
+              text: 'Trade Volume',
               color: '#d4af37',
               font: { size: 11 }
             },
             min: 0,
-            max: 100,
             ticks: {
               color: '#d4af37',
               font: { size: 10 }
@@ -687,12 +534,6 @@ class UnifiedDashboard {
     const sorted = [...values].sort((a, b) => a - b);
     const mid = Math.floor(sorted.length / 2);
     return sorted.length % 2 !== 0 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2;
-  }
-
-  getConfidenceClass(confidence) {
-    if (confidence >= 70) return 'confidence-high';
-    if (confidence >= 40) return 'confidence-medium';
-    return 'confidence-low';
   }
 
   formatPrice(price) {
