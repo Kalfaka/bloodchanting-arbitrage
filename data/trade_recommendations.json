@@ -1,0 +1,6746 @@
+{
+  "metadata": {
+    "generated_at": "2026-01-25T21:48:58.197840",
+    "source": "Volatility-Aware Analysis (Scripts 1+2+3)",
+    "total_items": 52,
+    "time_windows": [
+      "1h",
+      "7d",
+      "30d",
+      "90d"
+    ],
+    "min_trades_threshold": 5
+  },
+  "items": {
+    "Bandos chestplate": {
+      "recommended_window": "24h",
+      "windows": {
+        "1h": {
+          "has_data": false,
+          "trades": 2,
+          "median_price": 0.0,
+          "mean_price": 0.0,
+          "min_price": 0.0,
+          "max_price": 0.0,
+          "std_dev": 0.0,
+          "coefficient_of_variation": 0.0,
+          "confidence": 0.0,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 26,
+          "median_price": 0.2078,
+          "mean_price": 11063730.8535,
+          "min_price": 0.005,
+          "max_price": 250000000.0,
+          "std_dev": 47925524.4033,
+          "coefficient_of_variation": 433.18,
+          "confidence": 50.8,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 105,
+          "median_price": 1.0,
+          "mean_price": 20623465.2763,
+          "min_price": 0.0028,
+          "max_price": 550000000.0,
+          "std_dev": 70869711.9751,
+          "coefficient_of_variation": 343.64,
+          "confidence": 68.5,
+          "is_recommended": false
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 156,
+          "median_price": 1.0,
+          "mean_price": 22362834.554,
+          "min_price": 0.0028,
+          "max_price": 550000000.0,
+          "std_dev": 71589902.4754,
+          "coefficient_of_variation": 320.13,
+          "confidence": 67.0,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 2,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 2,
+            "bags_per_unit": 0.1039,
+            "total_cost_per_unit": 0.2078
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 2,
+            "bags_per_unit": 0.5,
+            "total_cost_per_unit": 1.0
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 2,
+            "bags_per_unit": 0.5,
+            "total_cost_per_unit": 1.0
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        }
+      }
+    },
+    "Zuriel's hood": {
+      "recommended_window": "7d",
+      "windows": {
+        "1h": {
+          "has_data": false,
+          "trades": 0,
+          "median_price": 0.0,
+          "mean_price": 0.0,
+          "min_price": 0.0,
+          "max_price": 0.0,
+          "std_dev": 0.0,
+          "coefficient_of_variation": 0.0,
+          "confidence": 0.0,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 43,
+          "median_price": 0.3214,
+          "mean_price": 1.4814,
+          "min_price": 0.009,
+          "max_price": 10.0,
+          "std_dev": 2.5205,
+          "coefficient_of_variation": 170.15,
+          "confidence": 64.4,
+          "is_recommended": true
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 120,
+          "median_price": 0.2688,
+          "mean_price": 7664805.6379,
+          "min_price": 0.0009,
+          "max_price": 195000000.0,
+          "std_dev": 34720468.0771,
+          "coefficient_of_variation": 452.99,
+          "confidence": 68.5,
+          "is_recommended": false
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 250,
+          "median_price": 0.2657,
+          "mean_price": 7532819.1185,
+          "min_price": 0.0009,
+          "max_price": 350000000.0,
+          "std_dev": 39091054.8737,
+          "coefficient_of_variation": 518.94,
+          "confidence": 67.0,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 8,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 8,
+            "bags_per_unit": 0.040175,
+            "total_cost_per_unit": 0.3214
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 8,
+            "bags_per_unit": 0.0336,
+            "total_cost_per_unit": 0.2688
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 8,
+            "bags_per_unit": 0.033212,
+            "total_cost_per_unit": 0.2657
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        }
+      }
+    },
+    "Vesta's spear": {
+      "recommended_window": "30d",
+      "windows": {
+        "1h": {
+          "has_data": true,
+          "trades": 7,
+          "median_price": 0.5806,
+          "mean_price": 0.5475,
+          "min_price": 0.092,
+          "max_price": 1.2778,
+          "std_dev": 0.4298,
+          "coefficient_of_variation": 78.5,
+          "confidence": 40.9,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 35,
+          "median_price": 0.6667,
+          "mean_price": 2.8998,
+          "min_price": 0.0416,
+          "max_price": 17.0,
+          "std_dev": 5.2535,
+          "coefficient_of_variation": 181.17,
+          "confidence": 58.0,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 106,
+          "median_price": 0.7583,
+          "mean_price": 5859321.3271,
+          "min_price": 0.0109,
+          "max_price": 199000000.0,
+          "std_dev": 32605782.891,
+          "coefficient_of_variation": 556.48,
+          "confidence": 68.5,
+          "is_recommended": true
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 150,
+          "median_price": 0.8,
+          "mean_price": 15196868.1057,
+          "min_price": 0.0017,
+          "max_price": 499000000.0,
+          "std_dev": 60952690.5139,
+          "coefficient_of_variation": 401.09,
+          "confidence": 67.0,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": true,
+            "shop_cost": 10,
+            "bags_per_unit": 0.05806,
+            "total_cost_per_unit": 0.5806
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 10,
+            "bags_per_unit": 0.06667,
+            "total_cost_per_unit": 0.6667
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 10,
+            "bags_per_unit": 0.07583,
+            "total_cost_per_unit": 0.7583
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 10,
+            "bags_per_unit": 0.08,
+            "total_cost_per_unit": 0.8
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        }
+      }
+    },
+    "Vesta's plateskirt": {
+      "recommended_window": "24h",
+      "windows": {
+        "1h": {
+          "has_data": true,
+          "trades": 13,
+          "median_price": 1.0,
+          "mean_price": 6.1782,
+          "min_price": 0.0386,
+          "max_price": 22.0,
+          "std_dev": 8.5496,
+          "coefficient_of_variation": 138.38,
+          "confidence": 33.7,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 202,
+          "median_price": 1.8,
+          "mean_price": 5.221,
+          "min_price": 0.025,
+          "max_price": 28.0,
+          "std_dev": 6.7576,
+          "coefficient_of_variation": 129.43,
+          "confidence": 74.1,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 843,
+          "median_price": 2.1667,
+          "mean_price": 13724423.9288,
+          "min_price": 0.0048,
+          "max_price": 875000000.0,
+          "std_dev": 69820457.7764,
+          "coefficient_of_variation": 508.73,
+          "confidence": 68.5,
+          "is_recommended": false
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 1500,
+          "median_price": 2.0,
+          "mean_price": 15121869.9846,
+          "min_price": 0.0037,
+          "max_price": 875000000.0,
+          "std_dev": 75056024.8831,
+          "coefficient_of_variation": 496.34,
+          "confidence": 67.0,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": true,
+            "shop_cost": 13,
+            "bags_per_unit": 0.076923,
+            "total_cost_per_unit": 1.0
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 13,
+            "bags_per_unit": 0.138462,
+            "total_cost_per_unit": 1.8
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 13,
+            "bags_per_unit": 0.166669,
+            "total_cost_per_unit": 2.1667
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 13,
+            "bags_per_unit": 0.153846,
+            "total_cost_per_unit": 2.0
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        }
+      }
+    },
+    "Eternal boots": {
+      "recommended_window": "30d",
+      "windows": {
+        "1h": {
+          "has_data": true,
+          "trades": 7,
+          "median_price": 1.9231,
+          "mean_price": 7.5128,
+          "min_price": 0.8182,
+          "max_price": 25.0,
+          "std_dev": 9.5863,
+          "coefficient_of_variation": 127.6,
+          "confidence": 31.1,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 318,
+          "median_price": 1.0,
+          "mean_price": 58348600.8126,
+          "min_price": 0.0123,
+          "max_price": 1548000000.0,
+          "std_dev": 272165345.5989,
+          "coefficient_of_variation": 466.45,
+          "confidence": 70.0,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 1441,
+          "median_price": 0.8571,
+          "mean_price": 30885029.2256,
+          "min_price": 0.0123,
+          "max_price": 1595000000.0,
+          "std_dev": 190239306.9908,
+          "coefficient_of_variation": 615.96,
+          "confidence": 68.5,
+          "is_recommended": true
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 1441,
+          "median_price": 0.8571,
+          "mean_price": 30885029.2256,
+          "min_price": 0.0123,
+          "max_price": 1595000000.0,
+          "std_dev": 190239306.9908,
+          "coefficient_of_variation": 615.96,
+          "confidence": 67.0,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": true,
+            "shop_cost": 10,
+            "bags_per_unit": 0.19231,
+            "total_cost_per_unit": 1.9231
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 10,
+            "bags_per_unit": 0.1,
+            "total_cost_per_unit": 1.0
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 10,
+            "bags_per_unit": 0.08571,
+            "total_cost_per_unit": 0.8571
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 10,
+            "bags_per_unit": 0.08571,
+            "total_cost_per_unit": 0.8571
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        }
+      }
+    },
+    "Morrigan's coif": {
+      "recommended_window": "7d",
+      "windows": {
+        "1h": {
+          "has_data": false,
+          "trades": 1,
+          "median_price": 0.0,
+          "mean_price": 0.0,
+          "min_price": 0.0,
+          "max_price": 0.0,
+          "std_dev": 0.0,
+          "coefficient_of_variation": 0.0,
+          "confidence": 0.0,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 21,
+          "median_price": 0.6364,
+          "mean_price": 54857758.0854,
+          "min_price": 0.0116,
+          "max_price": 740000000.0,
+          "std_dev": 172134235.7884,
+          "coefficient_of_variation": 313.78,
+          "confidence": 46.8,
+          "is_recommended": true
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 79,
+          "median_price": 0.3,
+          "mean_price": 20855013.518,
+          "min_price": 0.0035,
+          "max_price": 740000000.0,
+          "std_dev": 98583905.8212,
+          "coefficient_of_variation": 472.71,
+          "confidence": 68.5,
+          "is_recommended": false
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 120,
+          "median_price": 0.5,
+          "mean_price": 21074650.1184,
+          "min_price": 0.0035,
+          "max_price": 740000000.0,
+          "std_dev": 86698428.8642,
+          "coefficient_of_variation": 411.39,
+          "confidence": 67.0,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 6,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 6,
+            "bags_per_unit": 0.106067,
+            "total_cost_per_unit": 0.6364
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 6,
+            "bags_per_unit": 0.05,
+            "total_cost_per_unit": 0.3
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 6,
+            "bags_per_unit": 0.083333,
+            "total_cost_per_unit": 0.5
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        }
+      }
+    },
+    "Statius's warhammer": {
+      "recommended_window": "30d",
+      "windows": {
+        "1h": {
+          "has_data": true,
+          "trades": 6,
+          "median_price": 0.7882,
+          "mean_price": 0.9435,
+          "min_price": 0.0865,
+          "max_price": 3.0,
+          "std_dev": 0.9757,
+          "coefficient_of_variation": 103.41,
+          "confidence": 35.1,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 81,
+          "median_price": 1.6667,
+          "mean_price": 4.9178,
+          "min_price": 0.0178,
+          "max_price": 25.0,
+          "std_dev": 6.2288,
+          "coefficient_of_variation": 126.66,
+          "confidence": 74.7,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 242,
+          "median_price": 1.0,
+          "mean_price": 1033062.0257,
+          "min_price": 0.0024,
+          "max_price": 250000000.0,
+          "std_dev": 16037370.2851,
+          "coefficient_of_variation": 1552.41,
+          "confidence": 68.5,
+          "is_recommended": true
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 315,
+          "median_price": 1.2,
+          "mean_price": 3799814.8291,
+          "min_price": 0.0024,
+          "max_price": 295000000.0,
+          "std_dev": 26293462.7725,
+          "coefficient_of_variation": 691.97,
+          "confidence": 67.0,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": true,
+            "shop_cost": 9,
+            "bags_per_unit": 0.087578,
+            "total_cost_per_unit": 0.7882
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 9,
+            "bags_per_unit": 0.185189,
+            "total_cost_per_unit": 1.6667
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 9,
+            "bags_per_unit": 0.111111,
+            "total_cost_per_unit": 1.0
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 9,
+            "bags_per_unit": 0.133333,
+            "total_cost_per_unit": 1.2
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        }
+      }
+    },
+    "Statius's platebody": {
+      "recommended_window": "30d",
+      "windows": {
+        "1h": {
+          "has_data": true,
+          "trades": 6,
+          "median_price": 3.3095,
+          "mean_price": 5.2362,
+          "min_price": 0.1036,
+          "max_price": 20.0,
+          "std_dev": 6.7375,
+          "coefficient_of_variation": 128.67,
+          "confidence": 30.1,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 158,
+          "median_price": 1.3,
+          "mean_price": 84250.7392,
+          "min_price": 0.0236,
+          "max_price": 8718120.8054,
+          "std_dev": 770098.5898,
+          "coefficient_of_variation": 914.06,
+          "confidence": 70.0,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 487,
+          "median_price": 1.3,
+          "mean_price": 5853013.3201,
+          "min_price": 0.0139,
+          "max_price": 850000000.0,
+          "std_dev": 61207645.1462,
+          "coefficient_of_variation": 1045.75,
+          "confidence": 68.5,
+          "is_recommended": true
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 1141,
+          "median_price": 0.9,
+          "mean_price": 6997777.5415,
+          "min_price": 0.0044,
+          "max_price": 850000000.0,
+          "std_dev": 58995840.4801,
+          "coefficient_of_variation": 843.07,
+          "confidence": 67.0,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": true,
+            "shop_cost": 9,
+            "bags_per_unit": 0.367722,
+            "total_cost_per_unit": 3.3095
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 9,
+            "bags_per_unit": 0.144444,
+            "total_cost_per_unit": 1.3
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 9,
+            "bags_per_unit": 0.144444,
+            "total_cost_per_unit": 1.3
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 9,
+            "bags_per_unit": 0.1,
+            "total_cost_per_unit": 0.9
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        }
+      }
+    },
+    "Warrior ring (i)": {
+      "recommended_window": "7d",
+      "windows": {
+        "1h": {
+          "has_data": false,
+          "trades": 0,
+          "median_price": 0.0,
+          "mean_price": 0.0,
+          "min_price": 0.0,
+          "max_price": 0.0,
+          "std_dev": 0.0,
+          "coefficient_of_variation": 0.0,
+          "confidence": 0.0,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 5,
+          "median_price": 0.1471,
+          "mean_price": 0.3611,
+          "min_price": 0.0725,
+          "max_price": 1.0,
+          "std_dev": 0.346,
+          "coefficient_of_variation": 95.82,
+          "confidence": 44.8,
+          "is_recommended": true
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 27,
+          "median_price": 0.1515,
+          "mean_price": 26732472.3098,
+          "min_price": 0.0147,
+          "max_price": 699000000.0,
+          "std_dev": 131867373.5479,
+          "coefficient_of_variation": 493.29,
+          "confidence": 50.1,
+          "is_recommended": false
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 130,
+          "median_price": 12578674.9482,
+          "mean_price": 133725782.1475,
+          "min_price": 0.0147,
+          "max_price": 899000000.0,
+          "std_dev": 283396154.9674,
+          "coefficient_of_variation": 211.92,
+          "confidence": 67.0,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 1,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 1,
+            "bags_per_unit": 0.1471,
+            "total_cost_per_unit": 0.1471
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 1,
+            "bags_per_unit": 0.1515,
+            "total_cost_per_unit": 0.1515
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 1,
+            "bags_per_unit": 12578674.9482,
+            "total_cost_per_unit": 12578674.9482
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        }
+      }
+    },
+    "Statius's platelegs": {
+      "recommended_window": "30d",
+      "windows": {
+        "1h": {
+          "has_data": true,
+          "trades": 15,
+          "median_price": 1.6,
+          "mean_price": 3.6975,
+          "min_price": 0.1143,
+          "max_price": 18.0,
+          "std_dev": 5.008,
+          "coefficient_of_variation": 135.44,
+          "confidence": 35.9,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 167,
+          "median_price": 1.5,
+          "mean_price": 28835.9133,
+          "min_price": 0.0236,
+          "max_price": 4330000.0,
+          "std_dev": 335925.9652,
+          "coefficient_of_variation": 1164.96,
+          "confidence": 70.0,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 496,
+          "median_price": 1.4226,
+          "mean_price": 5117047.494,
+          "min_price": 0.0077,
+          "max_price": 850000000.0,
+          "std_dev": 56149573.3132,
+          "coefficient_of_variation": 1097.3,
+          "confidence": 68.5,
+          "is_recommended": true
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 1113,
+          "median_price": 1.0,
+          "mean_price": 9751386.5819,
+          "min_price": 0.0077,
+          "max_price": 850000000.0,
+          "std_dev": 73198562.3488,
+          "coefficient_of_variation": 750.65,
+          "confidence": 67.0,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": true,
+            "shop_cost": 9,
+            "bags_per_unit": 0.177778,
+            "total_cost_per_unit": 1.6
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 9,
+            "bags_per_unit": 0.166667,
+            "total_cost_per_unit": 1.5
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 9,
+            "bags_per_unit": 0.158067,
+            "total_cost_per_unit": 1.4226
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 9,
+            "bags_per_unit": 0.111111,
+            "total_cost_per_unit": 1.0
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        }
+      }
+    },
+    "Pegasian boots": {
+      "recommended_window": "24h",
+      "windows": {
+        "1h": {
+          "has_data": true,
+          "trades": 6,
+          "median_price": 7.0,
+          "mean_price": 7.8667,
+          "min_price": 2.0,
+          "max_price": 14.0,
+          "std_dev": 5.0155,
+          "coefficient_of_variation": 63.76,
+          "confidence": 43.0,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 330,
+          "median_price": 0.7687,
+          "mean_price": 12637269.7315,
+          "min_price": 0.0057,
+          "max_price": 1574000000.0,
+          "std_dev": 123804599.3037,
+          "coefficient_of_variation": 979.68,
+          "confidence": 70.0,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 1372,
+          "median_price": 0.8333,
+          "mean_price": 30127673.9929,
+          "min_price": 0.0057,
+          "max_price": 1595000000.0,
+          "std_dev": 187933089.9103,
+          "coefficient_of_variation": 623.79,
+          "confidence": 68.5,
+          "is_recommended": false
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 1372,
+          "median_price": 0.8333,
+          "mean_price": 30127673.9929,
+          "min_price": 0.0057,
+          "max_price": 1595000000.0,
+          "std_dev": 187933089.9103,
+          "coefficient_of_variation": 623.79,
+          "confidence": 67.0,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": true,
+            "shop_cost": 9,
+            "bags_per_unit": 0.777778,
+            "total_cost_per_unit": 7.0
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 9,
+            "bags_per_unit": 0.085411,
+            "total_cost_per_unit": 0.7687
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 9,
+            "bags_per_unit": 0.092589,
+            "total_cost_per_unit": 0.8333
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 9,
+            "bags_per_unit": 0.092589,
+            "total_cost_per_unit": 0.8333
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        }
+      }
+    },
+    "Primordial boots": {
+      "recommended_window": "30d",
+      "windows": {
+        "1h": {
+          "has_data": true,
+          "trades": 7,
+          "median_price": 1.6,
+          "mean_price": 5.7128,
+          "min_price": 0.3913,
+          "max_price": 17.0,
+          "std_dev": 6.8678,
+          "coefficient_of_variation": 120.22,
+          "confidence": 32.6,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 360,
+          "median_price": 1.0,
+          "mean_price": 25413871.7669,
+          "min_price": 0.0107,
+          "max_price": 1680000000.0,
+          "std_dev": 186186799.4342,
+          "coefficient_of_variation": 732.62,
+          "confidence": 70.0,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 1298,
+          "median_price": 0.9286,
+          "mean_price": 31054201.9065,
+          "min_price": 0.0107,
+          "max_price": 1680000000.0,
+          "std_dev": 185824774.2546,
+          "coefficient_of_variation": 598.39,
+          "confidence": 68.5,
+          "is_recommended": true
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 1298,
+          "median_price": 0.9286,
+          "mean_price": 31054201.9065,
+          "min_price": 0.0107,
+          "max_price": 1680000000.0,
+          "std_dev": 185824774.2546,
+          "coefficient_of_variation": 598.39,
+          "confidence": 67.0,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": true,
+            "shop_cost": 8,
+            "bags_per_unit": 0.2,
+            "total_cost_per_unit": 1.6
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 8,
+            "bags_per_unit": 0.125,
+            "total_cost_per_unit": 1.0
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 8,
+            "bags_per_unit": 0.116075,
+            "total_cost_per_unit": 0.9286
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 8,
+            "bags_per_unit": 0.116075,
+            "total_cost_per_unit": 0.9286
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        }
+      }
+    },
+    "Vesta's chainbody": {
+      "recommended_window": "30d",
+      "windows": {
+        "1h": {
+          "has_data": true,
+          "trades": 13,
+          "median_price": 1.0,
+          "mean_price": 6.2096,
+          "min_price": 0.0338,
+          "max_price": 22.0,
+          "std_dev": 8.0131,
+          "coefficient_of_variation": 129.04,
+          "confidence": 35.6,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 176,
+          "median_price": 2.0,
+          "mean_price": 6.0735,
+          "min_price": 0.02,
+          "max_price": 25.0,
+          "std_dev": 7.3378,
+          "coefficient_of_variation": 120.82,
+          "confidence": 75.8,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 704,
+          "median_price": 2.2222,
+          "mean_price": 16961612.1982,
+          "min_price": 0.003,
+          "max_price": 875000000.0,
+          "std_dev": 81238836.8964,
+          "coefficient_of_variation": 478.96,
+          "confidence": 68.5,
+          "is_recommended": true
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 1500,
+          "median_price": 1.8,
+          "mean_price": 18605888.6287,
+          "min_price": 0.0027,
+          "max_price": 875000000.0,
+          "std_dev": 82804787.6385,
+          "coefficient_of_variation": 445.05,
+          "confidence": 67.0,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": true,
+            "shop_cost": 13,
+            "bags_per_unit": 0.076923,
+            "total_cost_per_unit": 1.0
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 13,
+            "bags_per_unit": 0.153846,
+            "total_cost_per_unit": 2.0
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 13,
+            "bags_per_unit": 0.170938,
+            "total_cost_per_unit": 2.2222
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 13,
+            "bags_per_unit": 0.138462,
+            "total_cost_per_unit": 1.8
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        }
+      }
+    },
+    "Devout boots": {
+      "recommended_window": "7d",
+      "windows": {
+        "1h": {
+          "has_data": true,
+          "trades": 7,
+          "median_price": 8.3333,
+          "mean_price": 15.3402,
+          "min_price": 0.4587,
+          "max_price": 53.0,
+          "std_dev": 18.0146,
+          "coefficient_of_variation": 117.43,
+          "confidence": 33.1,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 278,
+          "median_price": 6.8167,
+          "mean_price": 15.231,
+          "min_price": 0.0996,
+          "max_price": 68.0,
+          "std_dev": 17.5259,
+          "coefficient_of_variation": 115.07,
+          "confidence": 77.0,
+          "is_recommended": true
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 915,
+          "median_price": 5.0,
+          "mean_price": 11.7165,
+          "min_price": 0.025,
+          "max_price": 85.0,
+          "std_dev": 15.2367,
+          "coefficient_of_variation": 130.04,
+          "confidence": 72.5,
+          "is_recommended": false
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 1500,
+          "median_price": 3.6515,
+          "mean_price": 1102619.32,
+          "min_price": 0.0222,
+          "max_price": 650000000.0,
+          "std_dev": 24056512.616,
+          "coefficient_of_variation": 2181.76,
+          "confidence": 67.0,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": true,
+            "shop_cost": 35,
+            "bags_per_unit": 0.238094,
+            "total_cost_per_unit": 8.3333
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 35,
+            "bags_per_unit": 0.194763,
+            "total_cost_per_unit": 6.8167
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 35,
+            "bags_per_unit": 0.142857,
+            "total_cost_per_unit": 5.0
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 35,
+            "bags_per_unit": 0.104329,
+            "total_cost_per_unit": 3.6515
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        }
+      }
+    },
+    "Malediction ward": {
+      "recommended_window": "24h",
+      "windows": {
+        "1h": {
+          "has_data": true,
+          "trades": 6,
+          "median_price": 0.9962,
+          "mean_price": 3.3118,
+          "min_price": 0.4286,
+          "max_price": 10.0,
+          "std_dev": 3.7804,
+          "coefficient_of_variation": 114.15,
+          "confidence": 33.0,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 26,
+          "median_price": 2.947,
+          "mean_price": 7.0055,
+          "min_price": 0.4286,
+          "max_price": 38.0,
+          "std_dev": 9.6264,
+          "coefficient_of_variation": 137.41,
+          "confidence": 53.3,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 77,
+          "median_price": 2.6923,
+          "mean_price": 62753366.2203,
+          "min_price": 0.0816,
+          "max_price": 1998000000.0,
+          "std_dev": 317831500.0365,
+          "coefficient_of_variation": 506.48,
+          "confidence": 68.5,
+          "is_recommended": false
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 188,
+          "median_price": 2.0,
+          "mean_price": 25702179.4942,
+          "min_price": 0.0816,
+          "max_price": 1998000000.0,
+          "std_dev": 205733380.2787,
+          "coefficient_of_variation": 800.45,
+          "confidence": 67.0,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": true,
+            "shop_cost": 5,
+            "bags_per_unit": 0.19924,
+            "total_cost_per_unit": 0.9962
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 5,
+            "bags_per_unit": 0.5894,
+            "total_cost_per_unit": 2.947
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 5,
+            "bags_per_unit": 0.53846,
+            "total_cost_per_unit": 2.6923
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 5,
+            "bags_per_unit": 0.4,
+            "total_cost_per_unit": 2.0
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        }
+      }
+    },
+    "Statius's full helm": {
+      "recommended_window": "30d",
+      "windows": {
+        "1h": {
+          "has_data": true,
+          "trades": 8,
+          "median_price": 1.4318,
+          "mean_price": 5.4198,
+          "min_price": 0.0962,
+          "max_price": 19.0,
+          "std_dev": 7.8605,
+          "coefficient_of_variation": 145.03,
+          "confidence": 28.4,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 107,
+          "median_price": 1.4,
+          "mean_price": 3.3114,
+          "min_price": 0.0161,
+          "max_price": 19.0,
+          "std_dev": 5.1293,
+          "coefficient_of_variation": 154.9,
+          "confidence": 70.0,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 307,
+          "median_price": 1.5,
+          "mean_price": 1265038.3492,
+          "min_price": 0.0102,
+          "max_price": 350000000.0,
+          "std_dev": 20036207.2058,
+          "coefficient_of_variation": 1583.84,
+          "confidence": 68.5,
+          "is_recommended": true
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 815,
+          "median_price": 1.2,
+          "mean_price": 8864692.0073,
+          "min_price": 0.01,
+          "max_price": 950000000.0,
+          "std_dev": 73963220.4149,
+          "coefficient_of_variation": 834.36,
+          "confidence": 67.0,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": true,
+            "shop_cost": 7,
+            "bags_per_unit": 0.204543,
+            "total_cost_per_unit": 1.4318
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 7,
+            "bags_per_unit": 0.2,
+            "total_cost_per_unit": 1.4
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 7,
+            "bags_per_unit": 0.214286,
+            "total_cost_per_unit": 1.5
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 7,
+            "bags_per_unit": 0.171429,
+            "total_cost_per_unit": 1.2
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        }
+      }
+    },
+    "Serpentine helm": {
+      "recommended_window": "30d",
+      "windows": {
+        "1h": {
+          "has_data": true,
+          "trades": 5,
+          "median_price": 2.0,
+          "mean_price": 4.3683,
+          "min_price": 0.5556,
+          "max_price": 16.0,
+          "std_dev": 5.8446,
+          "coefficient_of_variation": 133.8,
+          "confidence": 28.2,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 140,
+          "median_price": 1.7071,
+          "mean_price": 10178575.2082,
+          "min_price": 0.0369,
+          "max_price": 950000000.0,
+          "std_dev": 89187624.2593,
+          "coefficient_of_variation": 876.23,
+          "confidence": 70.0,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 552,
+          "median_price": 1.5556,
+          "mean_price": 9936877.8291,
+          "min_price": 0.0093,
+          "max_price": 1455000000.0,
+          "std_dev": 86640791.7341,
+          "coefficient_of_variation": 871.91,
+          "confidence": 68.5,
+          "is_recommended": true
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 1237,
+          "median_price": 1.3333,
+          "mean_price": 17784429.4114,
+          "min_price": 0.0093,
+          "max_price": 1455000000.0,
+          "std_dev": 101886036.1128,
+          "coefficient_of_variation": 572.89,
+          "confidence": 67.0,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": true,
+            "shop_cost": 9,
+            "bags_per_unit": 0.222222,
+            "total_cost_per_unit": 2.0
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 9,
+            "bags_per_unit": 0.189678,
+            "total_cost_per_unit": 1.7071
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 9,
+            "bags_per_unit": 0.172844,
+            "total_cost_per_unit": 1.5556
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 9,
+            "bags_per_unit": 0.148144,
+            "total_cost_per_unit": 1.3333
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        }
+      }
+    },
+    "Barrelchest war axe": {
+      "recommended_window": "7d",
+      "windows": {
+        "1h": {
+          "has_data": true,
+          "trades": 7,
+          "median_price": 10.7143,
+          "mean_price": 17.0306,
+          "min_price": 5.0,
+          "max_price": 55.0,
+          "std_dev": 16.4827,
+          "coefficient_of_variation": 96.78,
+          "confidence": 37.2,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 292,
+          "median_price": 11.0,
+          "mean_price": 20.6442,
+          "min_price": 0.24,
+          "max_price": 100.0,
+          "std_dev": 22.5306,
+          "coefficient_of_variation": 109.14,
+          "confidence": 78.2,
+          "is_recommended": true
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 991,
+          "median_price": 7.1111,
+          "mean_price": 16.2763,
+          "min_price": 0.08,
+          "max_price": 100.0,
+          "std_dev": 20.8028,
+          "coefficient_of_variation": 127.81,
+          "confidence": 72.9,
+          "is_recommended": false
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 1500,
+          "median_price": 5.225,
+          "mean_price": 660012.8653,
+          "min_price": 0.0174,
+          "max_price": 990000000.0,
+          "std_dev": 25553167.7688,
+          "coefficient_of_variation": 3871.62,
+          "confidence": 67.0,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": true,
+            "shop_cost": 45,
+            "bags_per_unit": 0.238096,
+            "total_cost_per_unit": 10.7143
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 45,
+            "bags_per_unit": 0.244444,
+            "total_cost_per_unit": 11.0
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 45,
+            "bags_per_unit": 0.158024,
+            "total_cost_per_unit": 7.1111
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 45,
+            "bags_per_unit": 0.116111,
+            "total_cost_per_unit": 5.225
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        }
+      }
+    },
+    "Barrelchest maul": {
+      "recommended_window": "7d",
+      "windows": {
+        "1h": {
+          "has_data": true,
+          "trades": 8,
+          "median_price": 15.0,
+          "mean_price": 21.0757,
+          "min_price": 2.1053,
+          "max_price": 59.0,
+          "std_dev": 16.7265,
+          "coefficient_of_variation": 79.36,
+          "confidence": 41.5,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 249,
+          "median_price": 11.0,
+          "mean_price": 18.4231,
+          "min_price": 0.6329,
+          "max_price": 99.0,
+          "std_dev": 19.1387,
+          "coefficient_of_variation": 103.88,
+          "confidence": 79.2,
+          "is_recommended": true
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 769,
+          "median_price": 7.0,
+          "mean_price": 14.8412,
+          "min_price": 0.0163,
+          "max_price": 155.0,
+          "std_dev": 18.9855,
+          "coefficient_of_variation": 127.92,
+          "confidence": 72.9,
+          "is_recommended": false
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 1500,
+          "median_price": 4.5,
+          "mean_price": 6748.0884,
+          "min_price": 0.0163,
+          "max_price": 10106382.9787,
+          "std_dev": 260858.4193,
+          "coefficient_of_variation": 3865.66,
+          "confidence": 67.0,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": true,
+            "shop_cost": 45,
+            "bags_per_unit": 0.333333,
+            "total_cost_per_unit": 15.0
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 45,
+            "bags_per_unit": 0.244444,
+            "total_cost_per_unit": 11.0
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 45,
+            "bags_per_unit": 0.155556,
+            "total_cost_per_unit": 7.0
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 45,
+            "bags_per_unit": 0.1,
+            "total_cost_per_unit": 4.5
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        }
+      }
+    },
+    "Barrelchest sword": {
+      "recommended_window": "7d",
+      "windows": {
+        "1h": {
+          "has_data": true,
+          "trades": 6,
+          "median_price": 20.5,
+          "mean_price": 26.6562,
+          "min_price": 4.9375,
+          "max_price": 70.0,
+          "std_dev": 21.0477,
+          "coefficient_of_variation": 78.96,
+          "confidence": 40.0,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 239,
+          "median_price": 10.4,
+          "mean_price": 19.0792,
+          "min_price": 0.24,
+          "max_price": 130.0,
+          "std_dev": 20.9263,
+          "coefficient_of_variation": 109.68,
+          "confidence": 78.1,
+          "is_recommended": true
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 709,
+          "median_price": 6.5455,
+          "mean_price": 14.6257,
+          "min_price": 0.0592,
+          "max_price": 130.0,
+          "std_dev": 18.9171,
+          "coefficient_of_variation": 129.34,
+          "confidence": 72.6,
+          "is_recommended": false
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 1343,
+          "median_price": 4.0,
+          "mean_price": 10.2483,
+          "min_price": 0.0592,
+          "max_price": 130.0,
+          "std_dev": 15.2138,
+          "coefficient_of_variation": 148.45,
+          "confidence": 67.3,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": true,
+            "shop_cost": 40,
+            "bags_per_unit": 0.5125,
+            "total_cost_per_unit": 20.5
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 40,
+            "bags_per_unit": 0.26,
+            "total_cost_per_unit": 10.4
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 40,
+            "bags_per_unit": 0.163637,
+            "total_cost_per_unit": 6.5455
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 40,
+            "bags_per_unit": 0.1,
+            "total_cost_per_unit": 4.0
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        }
+      }
+    },
+    "Spectral spirit shield": {
+      "recommended_window": "7d",
+      "windows": {
+        "1h": {
+          "has_data": false,
+          "trades": 1,
+          "median_price": 0.0,
+          "mean_price": 0.0,
+          "min_price": 0.0,
+          "max_price": 0.0,
+          "std_dev": 0.0,
+          "coefficient_of_variation": 0.0,
+          "confidence": 0.0,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 19,
+          "median_price": 0.8571,
+          "mean_price": 4605264.7855,
+          "min_price": 0.0755,
+          "max_price": 87500000.0,
+          "std_dev": 19538476.4649,
+          "coefficient_of_variation": 424.26,
+          "confidence": 45.2,
+          "is_recommended": true
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 102,
+          "median_price": 1.3929,
+          "mean_price": 10518794.7534,
+          "min_price": 0.0471,
+          "max_price": 600000000.0,
+          "std_dev": 69810946.5651,
+          "coefficient_of_variation": 663.68,
+          "confidence": 68.5,
+          "is_recommended": false
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 246,
+          "median_price": 1.5,
+          "mean_price": 23878905.0358,
+          "min_price": 0.0471,
+          "max_price": 600000000.0,
+          "std_dev": 99764254.0494,
+          "coefficient_of_variation": 417.79,
+          "confidence": 67.0,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 3,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 3,
+            "bags_per_unit": 0.2857,
+            "total_cost_per_unit": 0.8571
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 3,
+            "bags_per_unit": 0.4643,
+            "total_cost_per_unit": 1.3929
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 3,
+            "bags_per_unit": 0.5,
+            "total_cost_per_unit": 1.5
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        }
+      }
+    },
+    "Dragon scimitar (or)": {
+      "recommended_window": "7d",
+      "windows": {
+        "1h": {
+          "has_data": false,
+          "trades": 0,
+          "median_price": 0.0,
+          "mean_price": 0.0,
+          "min_price": 0.0,
+          "max_price": 0.0,
+          "std_dev": 0.0,
+          "coefficient_of_variation": 0.0,
+          "confidence": 0.0,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 28,
+          "median_price": 22.375,
+          "mean_price": 32.1222,
+          "min_price": 2.4583,
+          "max_price": 150.0,
+          "std_dev": 30.6498,
+          "coefficient_of_variation": 95.42,
+          "confidence": 63.3,
+          "is_recommended": true
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 107,
+          "median_price": 18.0,
+          "mean_price": 29.3206,
+          "min_price": 1.0,
+          "max_price": 150.0,
+          "std_dev": 28.5225,
+          "coefficient_of_variation": 97.28,
+          "confidence": 79.0,
+          "is_recommended": false
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 135,
+          "median_price": 20.0,
+          "mean_price": 31.9511,
+          "min_price": 1.0,
+          "max_price": 150.0,
+          "std_dev": 30.0098,
+          "coefficient_of_variation": 93.92,
+          "confidence": 78.2,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 75,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 75,
+            "bags_per_unit": 0.298333,
+            "total_cost_per_unit": 22.375
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 75,
+            "bags_per_unit": 0.24,
+            "total_cost_per_unit": 18.0
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 75,
+            "bags_per_unit": 0.266667,
+            "total_cost_per_unit": 20.0
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        }
+      }
+    },
+    "Dragon hasta": {
+      "recommended_window": "24h",
+      "windows": {
+        "1h": {
+          "has_data": false,
+          "trades": 1,
+          "median_price": 0.0,
+          "mean_price": 0.0,
+          "min_price": 0.0,
+          "max_price": 0.0,
+          "std_dev": 0.0,
+          "coefficient_of_variation": 0.0,
+          "confidence": 0.0,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 27,
+          "median_price": 2.7143,
+          "mean_price": 6.0383,
+          "min_price": 0.425,
+          "max_price": 30.0,
+          "std_dev": 7.4005,
+          "coefficient_of_variation": 122.56,
+          "confidence": 57.1,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 66,
+          "median_price": 2.6905,
+          "mean_price": 5.6571,
+          "min_price": 0.3226,
+          "max_price": 30.0,
+          "std_dev": 6.7904,
+          "coefficient_of_variation": 120.03,
+          "confidence": 74.5,
+          "is_recommended": false
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 174,
+          "median_price": 2.8,
+          "mean_price": 6.4488,
+          "min_price": 0.0971,
+          "max_price": 50.0,
+          "std_dev": 7.7647,
+          "coefficient_of_variation": 120.4,
+          "confidence": 72.9,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 5,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 5,
+            "bags_per_unit": 0.54286,
+            "total_cost_per_unit": 2.7143
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 5,
+            "bags_per_unit": 0.5381,
+            "total_cost_per_unit": 2.6905
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 5,
+            "bags_per_unit": 0.56,
+            "total_cost_per_unit": 2.8
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        }
+      }
+    },
+    "Frozen scimitar": {
+      "recommended_window": "7d",
+      "windows": {
+        "1h": {
+          "has_data": false,
+          "trades": 0,
+          "median_price": 0.0,
+          "mean_price": 0.0,
+          "min_price": 0.0,
+          "max_price": 0.0,
+          "std_dev": 0.0,
+          "coefficient_of_variation": 0.0,
+          "confidence": 0.0,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 33,
+          "median_price": 23.3333,
+          "mean_price": 37.1403,
+          "min_price": 4.1053,
+          "max_price": 105.0,
+          "std_dev": 30.159,
+          "coefficient_of_variation": 81.2,
+          "confidence": 70.2,
+          "is_recommended": true
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 120,
+          "median_price": 19.375,
+          "mean_price": 30.6824,
+          "min_price": 1.6667,
+          "max_price": 120.0,
+          "std_dev": 29.5486,
+          "coefficient_of_variation": 96.3,
+          "confidence": 79.2,
+          "is_recommended": false
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 171,
+          "median_price": 15.0,
+          "mean_price": 25.4897,
+          "min_price": 0.4167,
+          "max_price": 120.0,
+          "std_dev": 26.9095,
+          "coefficient_of_variation": 105.57,
+          "confidence": 75.9,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 75,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 75,
+            "bags_per_unit": 0.311111,
+            "total_cost_per_unit": 23.3333
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 75,
+            "bags_per_unit": 0.258333,
+            "total_cost_per_unit": 19.375
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 75,
+            "bags_per_unit": 0.2,
+            "total_cost_per_unit": 15.0
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        }
+      }
+    },
+    "3rd age bow": {
+      "recommended_window": "24h",
+      "windows": {
+        "1h": {
+          "has_data": false,
+          "trades": 3,
+          "median_price": 0.0,
+          "mean_price": 0.0,
+          "min_price": 0.0,
+          "max_price": 0.0,
+          "std_dev": 0.0,
+          "coefficient_of_variation": 0.0,
+          "confidence": 0.0,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 79,
+          "median_price": 6.4286,
+          "mean_price": 17.3896,
+          "min_price": 0.7471,
+          "max_price": 85.0,
+          "std_dev": 21.9264,
+          "coefficient_of_variation": 126.09,
+          "confidence": 74.8,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 229,
+          "median_price": 5.625,
+          "mean_price": 16.0351,
+          "min_price": 0.1139,
+          "max_price": 165.0,
+          "std_dev": 23.5084,
+          "coefficient_of_variation": 146.61,
+          "confidence": 69.2,
+          "is_recommended": false
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 486,
+          "median_price": 4.4444,
+          "mean_price": 11.2693,
+          "min_price": 0.0591,
+          "max_price": 165.0,
+          "std_dev": 18.0245,
+          "coefficient_of_variation": 159.94,
+          "confidence": 67.0,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 45,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 45,
+            "bags_per_unit": 0.142858,
+            "total_cost_per_unit": 6.4286
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 45,
+            "bags_per_unit": 0.125,
+            "total_cost_per_unit": 5.625
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 45,
+            "bags_per_unit": 0.098764,
+            "total_cost_per_unit": 4.4444
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        }
+      }
+    },
+    "Ring of malevolence": {
+      "recommended_window": "30d",
+      "windows": {
+        "1h": {
+          "has_data": false,
+          "trades": 0,
+          "median_price": 0.0,
+          "mean_price": 0.0,
+          "min_price": 0.0,
+          "max_price": 0.0,
+          "std_dev": 0.0,
+          "coefficient_of_variation": 0.0,
+          "confidence": 0.0,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": false,
+          "trades": 0,
+          "median_price": 0.0,
+          "mean_price": 0.0,
+          "min_price": 0.0,
+          "max_price": 0.0,
+          "std_dev": 0.0,
+          "coefficient_of_variation": 0.0,
+          "confidence": 0.0,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 6,
+          "median_price": 1475.0,
+          "mean_price": 1533.3333,
+          "min_price": 750.0,
+          "max_price": 3000.0,
+          "std_dev": 713.9483,
+          "coefficient_of_variation": 46.56,
+          "confidence": 54.0,
+          "is_recommended": true
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 23,
+          "median_price": 1500.0,
+          "mean_price": 1558.6522,
+          "min_price": 450.0,
+          "max_price": 3000.0,
+          "std_dev": 631.8496,
+          "coefficient_of_variation": 40.54,
+          "confidence": 67.3,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 2000,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 2000,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 2000,
+            "bags_per_unit": 0.7375,
+            "total_cost_per_unit": 1475.0
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 2000,
+            "bags_per_unit": 0.75,
+            "total_cost_per_unit": 1500.0
+          }
+        }
+      }
+    },
+    "Justiciar faceguard": {
+      "recommended_window": "30d",
+      "windows": {
+        "1h": {
+          "has_data": false,
+          "trades": 0,
+          "median_price": 0.0,
+          "mean_price": 0.0,
+          "min_price": 0.0,
+          "max_price": 0.0,
+          "std_dev": 0.0,
+          "coefficient_of_variation": 0.0,
+          "confidence": 0.0,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": false,
+          "trades": 3,
+          "median_price": 0.0,
+          "mean_price": 0.0,
+          "min_price": 0.0,
+          "max_price": 0.0,
+          "std_dev": 0.0,
+          "coefficient_of_variation": 0.0,
+          "confidence": 0.0,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 29,
+          "median_price": 649.0,
+          "mean_price": 830.2759,
+          "min_price": 349.5,
+          "max_price": 2000.0,
+          "std_dev": 448.2515,
+          "coefficient_of_variation": 53.99,
+          "confidence": 70.9,
+          "is_recommended": true
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 71,
+          "median_price": 650.0,
+          "mean_price": 747.1549,
+          "min_price": 250.0,
+          "max_price": 2000.0,
+          "std_dev": 363.6108,
+          "coefficient_of_variation": 48.67,
+          "confidence": 87.3,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 875,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 875,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 875,
+            "bags_per_unit": 0.741714,
+            "total_cost_per_unit": 649.0
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 875,
+            "bags_per_unit": 0.742857,
+            "total_cost_per_unit": 650.0
+          }
+        }
+      }
+    },
+    "Blade of saeldor": {
+      "recommended_window": "30d",
+      "windows": {
+        "1h": {
+          "has_data": true,
+          "trades": 15,
+          "median_price": 520.0,
+          "mean_price": 495.0,
+          "min_price": 250.0,
+          "max_price": 565.0,
+          "std_dev": 77.3089,
+          "coefficient_of_variation": 15.62,
+          "confidence": 59.9,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 244,
+          "median_price": 500.0,
+          "mean_price": 456.1159,
+          "min_price": 23.8095,
+          "max_price": 800.0,
+          "std_dev": 161.2626,
+          "coefficient_of_variation": 35.36,
+          "confidence": 92.9,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 1100,
+          "median_price": 380.0,
+          "mean_price": 387.8143,
+          "min_price": 12.5,
+          "max_price": 800.0,
+          "std_dev": 163.9695,
+          "coefficient_of_variation": 42.28,
+          "confidence": 90.0,
+          "is_recommended": true
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 1485,
+          "median_price": 340.0,
+          "mean_price": 359.4311,
+          "min_price": 12.5,
+          "max_price": 800.0,
+          "std_dev": 156.9914,
+          "coefficient_of_variation": 43.68,
+          "confidence": 88.3,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": true,
+            "shop_cost": 500,
+            "bags_per_unit": 1.04,
+            "total_cost_per_unit": 520.0
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 500,
+            "bags_per_unit": 1.0,
+            "total_cost_per_unit": 500.0
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 500,
+            "bags_per_unit": 0.76,
+            "total_cost_per_unit": 380.0
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 500,
+            "bags_per_unit": 0.68,
+            "total_cost_per_unit": 340.0
+          }
+        }
+      }
+    },
+    "Dark brimstone ring": {
+      "recommended_window": "30d",
+      "windows": {
+        "1h": {
+          "has_data": false,
+          "trades": 0,
+          "median_price": 0.0,
+          "mean_price": 0.0,
+          "min_price": 0.0,
+          "max_price": 0.0,
+          "std_dev": 0.0,
+          "coefficient_of_variation": 0.0,
+          "confidence": 0.0,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": false,
+          "trades": 1,
+          "median_price": 0.0,
+          "mean_price": 0.0,
+          "min_price": 0.0,
+          "max_price": 0.0,
+          "std_dev": 0.0,
+          "coefficient_of_variation": 0.0,
+          "confidence": 0.0,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 5,
+          "median_price": 20000.0,
+          "mean_price": 19860.0,
+          "min_price": 19500.0,
+          "max_price": 20000.0,
+          "std_dev": 195.9592,
+          "coefficient_of_variation": 0.99,
+          "confidence": 62.3,
+          "is_recommended": true
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 10,
+          "median_price": 19900.0,
+          "mean_price": 18930.0,
+          "min_price": 16000.0,
+          "max_price": 20000.0,
+          "std_dev": 1511.3239,
+          "coefficient_of_variation": 7.98,
+          "confidence": 63.4,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 25000,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 25000,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 25000,
+            "bags_per_unit": 0.8,
+            "total_cost_per_unit": 20000.0
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 25000,
+            "bags_per_unit": 0.796,
+            "total_cost_per_unit": 19900.0
+          }
+        }
+      }
+    },
+    "Ghommal's hilt": {
+      "recommended_window": "30d",
+      "windows": {
+        "1h": {
+          "has_data": false,
+          "trades": 0,
+          "median_price": 0.0,
+          "mean_price": 0.0,
+          "min_price": 0.0,
+          "max_price": 0.0,
+          "std_dev": 0.0,
+          "coefficient_of_variation": 0.0,
+          "confidence": 0.0,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": false,
+          "trades": 2,
+          "median_price": 0.0,
+          "mean_price": 0.0,
+          "min_price": 0.0,
+          "max_price": 0.0,
+          "std_dev": 0.0,
+          "coefficient_of_variation": 0.0,
+          "confidence": 0.0,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 18,
+          "median_price": 4000.0,
+          "mean_price": 4447.1111,
+          "min_price": 1500.0,
+          "max_price": 10000.0,
+          "std_dev": 1932.2289,
+          "coefficient_of_variation": 43.45,
+          "confidence": 64.2,
+          "is_recommended": true
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 54,
+          "median_price": 3800.0,
+          "mean_price": 3962.0926,
+          "min_price": 1500.0,
+          "max_price": 10000.0,
+          "std_dev": 1344.5167,
+          "coefficient_of_variation": 33.93,
+          "confidence": 90.2,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 5000,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 5000,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 5000,
+            "bags_per_unit": 0.8,
+            "total_cost_per_unit": 4000.0
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 5000,
+            "bags_per_unit": 0.76,
+            "total_cost_per_unit": 3800.0
+          }
+        }
+      }
+    },
+    "Torture ornament kit": {
+      "recommended_window": "30d",
+      "windows": {
+        "1h": {
+          "has_data": true,
+          "trades": 15,
+          "median_price": 520.0,
+          "mean_price": 436.7,
+          "min_price": 147.5,
+          "max_price": 650.0,
+          "std_dev": 181.3174,
+          "coefficient_of_variation": 41.52,
+          "confidence": 54.7,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 171,
+          "median_price": 600.0,
+          "mean_price": 540.4251,
+          "min_price": 75.0,
+          "max_price": 839.0,
+          "std_dev": 176.0453,
+          "coefficient_of_variation": 32.58,
+          "confidence": 93.5,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 618,
+          "median_price": 500.0,
+          "mean_price": 460.4026,
+          "min_price": 35.0,
+          "max_price": 850.0,
+          "std_dev": 178.3082,
+          "coefficient_of_variation": 38.73,
+          "confidence": 90.8,
+          "is_recommended": true
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 1500,
+          "median_price": 390.0,
+          "mean_price": 387.8572,
+          "min_price": 7.8,
+          "max_price": 850.0,
+          "std_dev": 160.7017,
+          "coefficient_of_variation": 41.43,
+          "confidence": 88.7,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": true,
+            "shop_cost": 600,
+            "bags_per_unit": 0.866667,
+            "total_cost_per_unit": 520.0
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 600,
+            "bags_per_unit": 1.0,
+            "total_cost_per_unit": 600.0
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 600,
+            "bags_per_unit": 0.833333,
+            "total_cost_per_unit": 500.0
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 600,
+            "bags_per_unit": 0.65,
+            "total_cost_per_unit": 390.0
+          }
+        }
+      }
+    },
+    "Verdant partyhat": {
+      "recommended_window": "30d",
+      "windows": {
+        "1h": {
+          "has_data": false,
+          "trades": 1,
+          "median_price": 0.0,
+          "mean_price": 0.0,
+          "min_price": 0.0,
+          "max_price": 0.0,
+          "std_dev": 0.0,
+          "coefficient_of_variation": 0.0,
+          "confidence": 0.0,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": false,
+          "trades": 4,
+          "median_price": 0.0,
+          "mean_price": 0.0,
+          "min_price": 0.0,
+          "max_price": 0.0,
+          "std_dev": 0.0,
+          "coefficient_of_variation": 0.0,
+          "confidence": 0.0,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 13,
+          "median_price": 38500.0,
+          "mean_price": 39960.3846,
+          "min_price": 22500.0,
+          "max_price": 50000.0,
+          "std_dev": 9164.7096,
+          "coefficient_of_variation": 22.93,
+          "confidence": 64.3,
+          "is_recommended": true
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 36,
+          "median_price": 39999.0,
+          "mean_price": 36712.3796,
+          "min_price": 13333.3333,
+          "max_price": 50000.0,
+          "std_dev": 9878.1285,
+          "coefficient_of_variation": 26.91,
+          "confidence": 80.4,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 45000,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 45000,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 45000,
+            "bags_per_unit": 0.855556,
+            "total_cost_per_unit": 38500.0
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 45000,
+            "bags_per_unit": 0.888867,
+            "total_cost_per_unit": 39999.0
+          }
+        }
+      }
+    },
+    "Pernix chaps": {
+      "recommended_window": "30d",
+      "windows": {
+        "1h": {
+          "has_data": true,
+          "trades": 6,
+          "median_price": 3675.0,
+          "mean_price": 3373.6667,
+          "min_price": 1865.0,
+          "max_price": 3777.0,
+          "std_dev": 681.8105,
+          "coefficient_of_variation": 20.21,
+          "confidence": 51.8,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 83,
+          "median_price": 3950.0,
+          "mean_price": 3805.249,
+          "min_price": 1125.0,
+          "max_price": 5350.0,
+          "std_dev": 885.2146,
+          "coefficient_of_variation": 23.26,
+          "confidence": 95.3,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 336,
+          "median_price": 3050.0,
+          "mean_price": 2962.2817,
+          "min_price": 411.0,
+          "max_price": 5350.0,
+          "std_dev": 1104.7001,
+          "coefficient_of_variation": 37.29,
+          "confidence": 91.0,
+          "is_recommended": true
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 898,
+          "median_price": 2750.0,
+          "mean_price": 2672.9824,
+          "min_price": 357.1429,
+          "max_price": 5350.0,
+          "std_dev": 929.7097,
+          "coefficient_of_variation": 34.78,
+          "confidence": 90.0,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": true,
+            "shop_cost": 3500,
+            "bags_per_unit": 1.05,
+            "total_cost_per_unit": 3675.0
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 3500,
+            "bags_per_unit": 1.128571,
+            "total_cost_per_unit": 3950.0
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 3500,
+            "bags_per_unit": 0.871429,
+            "total_cost_per_unit": 3050.0
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 3500,
+            "bags_per_unit": 0.785714,
+            "total_cost_per_unit": 2750.0
+          }
+        }
+      }
+    },
+    "Pernix body": {
+      "recommended_window": "30d",
+      "windows": {
+        "1h": {
+          "has_data": true,
+          "trades": 7,
+          "median_price": 3600.0,
+          "mean_price": 3389.5714,
+          "min_price": 1750.0,
+          "max_price": 3777.0,
+          "std_dev": 676.2732,
+          "coefficient_of_variation": 19.95,
+          "confidence": 52.6,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 87,
+          "median_price": 3850.0,
+          "mean_price": 3630.6073,
+          "min_price": 662.5,
+          "max_price": 5000.0,
+          "std_dev": 852.2858,
+          "coefficient_of_variation": 23.48,
+          "confidence": 95.3,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 326,
+          "median_price": 3200.0,
+          "mean_price": 3015.2579,
+          "min_price": 307.6923,
+          "max_price": 5000.0,
+          "std_dev": 1010.8112,
+          "coefficient_of_variation": 33.52,
+          "confidence": 91.8,
+          "is_recommended": true
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 873,
+          "median_price": 2780.0,
+          "mean_price": 2680.5733,
+          "min_price": 250.0,
+          "max_price": 5000.0,
+          "std_dev": 912.4915,
+          "coefficient_of_variation": 34.04,
+          "confidence": 90.2,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": true,
+            "shop_cost": 3500,
+            "bags_per_unit": 1.028571,
+            "total_cost_per_unit": 3600.0
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 3500,
+            "bags_per_unit": 1.1,
+            "total_cost_per_unit": 3850.0
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 3500,
+            "bags_per_unit": 0.914286,
+            "total_cost_per_unit": 3200.0
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 3500,
+            "bags_per_unit": 0.794286,
+            "total_cost_per_unit": 2780.0
+          }
+        }
+      }
+    },
+    "Crystal platelegs": {
+      "recommended_window": "30d",
+      "windows": {
+        "1h": {
+          "has_data": true,
+          "trades": 7,
+          "median_price": 550.0,
+          "mean_price": 517.1429,
+          "min_price": 325.0,
+          "max_price": 675.0,
+          "std_dev": 122.2368,
+          "coefficient_of_variation": 23.64,
+          "confidence": 51.9,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 234,
+          "median_price": 600.0,
+          "mean_price": 576.5247,
+          "min_price": 60.0,
+          "max_price": 1040.0,
+          "std_dev": 174.1925,
+          "coefficient_of_variation": 30.21,
+          "confidence": 94.0,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 877,
+          "median_price": 579.0,
+          "mean_price": 531.5413,
+          "min_price": 53.3333,
+          "max_price": 1040.0,
+          "std_dev": 190.8726,
+          "coefficient_of_variation": 35.91,
+          "confidence": 91.3,
+          "is_recommended": true
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 1500,
+          "median_price": 500.0,
+          "mean_price": 490.8872,
+          "min_price": 25.0,
+          "max_price": 1040.0,
+          "std_dev": 192.8811,
+          "coefficient_of_variation": 39.29,
+          "confidence": 89.1,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": true,
+            "shop_cost": 600,
+            "bags_per_unit": 0.916667,
+            "total_cost_per_unit": 550.0
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 600,
+            "bags_per_unit": 1.0,
+            "total_cost_per_unit": 600.0
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 600,
+            "bags_per_unit": 0.965,
+            "total_cost_per_unit": 579.0
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 600,
+            "bags_per_unit": 0.833333,
+            "total_cost_per_unit": 500.0
+          }
+        }
+      }
+    },
+    "Crystal platebody": {
+      "recommended_window": "30d",
+      "windows": {
+        "1h": {
+          "has_data": true,
+          "trades": 11,
+          "median_price": 650.0,
+          "mean_price": 624.0,
+          "min_price": 520.0,
+          "max_price": 695.0,
+          "std_dev": 49.0732,
+          "coefficient_of_variation": 7.86,
+          "confidence": 58.2,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 243,
+          "median_price": 600.0,
+          "mean_price": 551.8568,
+          "min_price": 35.2941,
+          "max_price": 1000.0,
+          "std_dev": 168.3178,
+          "coefficient_of_variation": 30.5,
+          "confidence": 93.9,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 929,
+          "median_price": 580.0,
+          "mean_price": 542.1033,
+          "min_price": 35.2941,
+          "max_price": 1400.0,
+          "std_dev": 190.2857,
+          "coefficient_of_variation": 35.1,
+          "confidence": 91.5,
+          "is_recommended": true
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 1500,
+          "median_price": 500.0,
+          "mean_price": 503.4294,
+          "min_price": 26.3333,
+          "max_price": 1400.0,
+          "std_dev": 187.8087,
+          "coefficient_of_variation": 37.31,
+          "confidence": 89.5,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": true,
+            "shop_cost": 600,
+            "bags_per_unit": 1.083333,
+            "total_cost_per_unit": 650.0
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 600,
+            "bags_per_unit": 1.0,
+            "total_cost_per_unit": 600.0
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 600,
+            "bags_per_unit": 0.966667,
+            "total_cost_per_unit": 580.0
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 600,
+            "bags_per_unit": 0.833333,
+            "total_cost_per_unit": 500.0
+          }
+        }
+      }
+    },
+    "Verdant pendant": {
+      "recommended_window": "30d",
+      "windows": {
+        "1h": {
+          "has_data": false,
+          "trades": 2,
+          "median_price": 0.0,
+          "mean_price": 0.0,
+          "min_price": 0.0,
+          "max_price": 0.0,
+          "std_dev": 0.0,
+          "coefficient_of_variation": 0.0,
+          "confidence": 0.0,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 81,
+          "median_price": 22000.0,
+          "mean_price": 21779.463,
+          "min_price": 5000.0,
+          "max_price": 28000.0,
+          "std_dev": 4213.4038,
+          "coefficient_of_variation": 19.35,
+          "confidence": 96.1,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 355,
+          "median_price": 19250.0,
+          "mean_price": 18880.2526,
+          "min_price": 5000.0,
+          "max_price": 28000.0,
+          "std_dev": 4471.9957,
+          "coefficient_of_variation": 23.69,
+          "confidence": 93.8,
+          "is_recommended": true
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 977,
+          "median_price": 18000.0,
+          "mean_price": 18230.8344,
+          "min_price": 1900.0,
+          "max_price": 28000.0,
+          "std_dev": 3762.461,
+          "coefficient_of_variation": 20.64,
+          "confidence": 92.9,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 20000,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 20000,
+            "bags_per_unit": 1.1,
+            "total_cost_per_unit": 22000.0
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 20000,
+            "bags_per_unit": 0.9625,
+            "total_cost_per_unit": 19250.0
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 20000,
+            "bags_per_unit": 0.9,
+            "total_cost_per_unit": 18000.0
+          }
+        }
+      }
+    },
+    "Torva platebody": {
+      "recommended_window": "30d",
+      "windows": {
+        "1h": {
+          "has_data": false,
+          "trades": 1,
+          "median_price": 0.0,
+          "mean_price": 0.0,
+          "min_price": 0.0,
+          "max_price": 0.0,
+          "std_dev": 0.0,
+          "coefficient_of_variation": 0.0,
+          "confidence": 0.0,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 83,
+          "median_price": 5000.0,
+          "mean_price": 4684.9543,
+          "min_price": 749.875,
+          "max_price": 5995.0,
+          "std_dev": 1072.5087,
+          "coefficient_of_variation": 22.89,
+          "confidence": 95.4,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 421,
+          "median_price": 4400.0,
+          "mean_price": 3956.6785,
+          "min_price": 375.0,
+          "max_price": 5999.0,
+          "std_dev": 1232.7562,
+          "coefficient_of_variation": 31.16,
+          "confidence": 92.3,
+          "is_recommended": true
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 1161,
+          "median_price": 3600.0,
+          "mean_price": 3527.6571,
+          "min_price": 291.0769,
+          "max_price": 6000.0,
+          "std_dev": 1126.1341,
+          "coefficient_of_variation": 31.92,
+          "confidence": 90.6,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 4500,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 4500,
+            "bags_per_unit": 1.111111,
+            "total_cost_per_unit": 5000.0
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 4500,
+            "bags_per_unit": 0.977778,
+            "total_cost_per_unit": 4400.0
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 4500,
+            "bags_per_unit": 0.8,
+            "total_cost_per_unit": 3600.0
+          }
+        }
+      }
+    },
+    "Occult ornament kit": {
+      "recommended_window": "30d",
+      "windows": {
+        "1h": {
+          "has_data": true,
+          "trades": 9,
+          "median_price": 400.0,
+          "mean_price": 358.4206,
+          "min_price": 64.2857,
+          "max_price": 500.0,
+          "std_dev": 134.9707,
+          "coefficient_of_variation": 37.66,
+          "confidence": 50.7,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 159,
+          "median_price": 410.0,
+          "mean_price": 389.5505,
+          "min_price": 64.2857,
+          "max_price": 650.0,
+          "std_dev": 129.3038,
+          "coefficient_of_variation": 33.19,
+          "confidence": 93.4,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 559,
+          "median_price": 395.0,
+          "mean_price": 358.8985,
+          "min_price": 33.6364,
+          "max_price": 750.0,
+          "std_dev": 141.7483,
+          "coefficient_of_variation": 39.5,
+          "confidence": 90.6,
+          "is_recommended": true
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 1418,
+          "median_price": 299.0,
+          "mean_price": 297.37,
+          "min_price": 16.6667,
+          "max_price": 850.0,
+          "std_dev": 129.7994,
+          "coefficient_of_variation": 43.65,
+          "confidence": 88.3,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": true,
+            "shop_cost": 400,
+            "bags_per_unit": 1.0,
+            "total_cost_per_unit": 400.0
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 400,
+            "bags_per_unit": 1.025,
+            "total_cost_per_unit": 410.0
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 400,
+            "bags_per_unit": 0.9875,
+            "total_cost_per_unit": 395.0
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 400,
+            "bags_per_unit": 0.7475,
+            "total_cost_per_unit": 299.0
+          }
+        }
+      }
+    },
+    "Torva platelegs": {
+      "recommended_window": "30d",
+      "windows": {
+        "1h": {
+          "has_data": true,
+          "trades": 5,
+          "median_price": 4740.0,
+          "mean_price": 4740.8,
+          "min_price": 4724.0,
+          "max_price": 4750.0,
+          "std_dev": 9.5163,
+          "coefficient_of_variation": 0.2,
+          "confidence": 55.0,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 94,
+          "median_price": 5000.0,
+          "mean_price": 4787.3327,
+          "min_price": 333.2778,
+          "max_price": 6000.0,
+          "std_dev": 1041.1671,
+          "coefficient_of_variation": 21.75,
+          "confidence": 95.7,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 410,
+          "median_price": 4444.0,
+          "mean_price": 3992.5355,
+          "min_price": 333.2778,
+          "max_price": 6000.0,
+          "std_dev": 1248.4379,
+          "coefficient_of_variation": 31.27,
+          "confidence": 92.2,
+          "is_recommended": true
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 1141,
+          "median_price": 3700.0,
+          "mean_price": 3611.5698,
+          "min_price": 316.6667,
+          "max_price": 6000.0,
+          "std_dev": 1100.3525,
+          "coefficient_of_variation": 30.47,
+          "confidence": 90.9,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": true,
+            "shop_cost": 4500,
+            "bags_per_unit": 1.053333,
+            "total_cost_per_unit": 4740.0
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 4500,
+            "bags_per_unit": 1.111111,
+            "total_cost_per_unit": 5000.0
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 4500,
+            "bags_per_unit": 0.987556,
+            "total_cost_per_unit": 4444.0
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 4500,
+            "bags_per_unit": 0.822222,
+            "total_cost_per_unit": 3700.0
+          }
+        }
+      }
+    },
+    "Orb of terror": {
+      "recommended_window": "7d",
+      "windows": {
+        "1h": {
+          "has_data": false,
+          "trades": 0,
+          "median_price": 0.0,
+          "mean_price": 0.0,
+          "min_price": 0.0,
+          "max_price": 0.0,
+          "std_dev": 0.0,
+          "coefficient_of_variation": 0.0,
+          "confidence": 0.0,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 5,
+          "median_price": 14950.0,
+          "mean_price": 15170.0,
+          "min_price": 14500.0,
+          "max_price": 16500.0,
+          "std_dev": 688.186,
+          "coefficient_of_variation": 4.54,
+          "confidence": 63.1,
+          "is_recommended": true
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 10,
+          "median_price": 15500.0,
+          "mean_price": 16365.0,
+          "min_price": 14500.0,
+          "max_price": 21000.0,
+          "std_dev": 2003.004,
+          "coefficient_of_variation": 12.24,
+          "confidence": 64.1,
+          "is_recommended": false
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 18,
+          "median_price": 19000.0,
+          "mean_price": 18586.1111,
+          "min_price": 14500.0,
+          "max_price": 24500.0,
+          "std_dev": 3128.5338,
+          "coefficient_of_variation": 16.83,
+          "confidence": 68.0,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 15000,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 15000,
+            "bags_per_unit": 0.996667,
+            "total_cost_per_unit": 14950.0
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 15000,
+            "bags_per_unit": 1.033333,
+            "total_cost_per_unit": 15500.0
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 15000,
+            "bags_per_unit": 1.266667,
+            "total_cost_per_unit": 19000.0
+          }
+        }
+      }
+    },
+    "Inquisitor faceguard": {
+      "recommended_window": "30d",
+      "windows": {
+        "1h": {
+          "has_data": false,
+          "trades": 0,
+          "median_price": 0.0,
+          "mean_price": 0.0,
+          "min_price": 0.0,
+          "max_price": 0.0,
+          "std_dev": 0.0,
+          "coefficient_of_variation": 0.0,
+          "confidence": 0.0,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 52,
+          "median_price": 9999.0,
+          "mean_price": 9907.9936,
+          "min_price": 909.0,
+          "max_price": 14000.0,
+          "std_dev": 2701.9126,
+          "coefficient_of_variation": 27.27,
+          "confidence": 94.5,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 184,
+          "median_price": 9750.0,
+          "mean_price": 9197.1123,
+          "min_price": 909.0,
+          "max_price": 14000.0,
+          "std_dev": 2561.5437,
+          "coefficient_of_variation": 27.85,
+          "confidence": 92.9,
+          "is_recommended": true
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 225,
+          "median_price": 9500.0,
+          "mean_price": 8909.5052,
+          "min_price": 909.0,
+          "max_price": 14000.0,
+          "std_dev": 2533.0532,
+          "coefficient_of_variation": 28.43,
+          "confidence": 91.3,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 10000,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 10000,
+            "bags_per_unit": 0.9999,
+            "total_cost_per_unit": 9999.0
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 10000,
+            "bags_per_unit": 0.975,
+            "total_cost_per_unit": 9750.0
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 10000,
+            "bags_per_unit": 0.95,
+            "total_cost_per_unit": 9500.0
+          }
+        }
+      }
+    },
+    "Holy alien pet": {
+      "recommended_window": "30d",
+      "windows": {
+        "1h": {
+          "has_data": false,
+          "trades": 0,
+          "median_price": 0.0,
+          "mean_price": 0.0,
+          "min_price": 0.0,
+          "max_price": 0.0,
+          "std_dev": 0.0,
+          "coefficient_of_variation": 0.0,
+          "confidence": 0.0,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": false,
+          "trades": 3,
+          "median_price": 0.0,
+          "mean_price": 0.0,
+          "min_price": 0.0,
+          "max_price": 0.0,
+          "std_dev": 0.0,
+          "coefficient_of_variation": 0.0,
+          "confidence": 0.0,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 9,
+          "median_price": 10000.0,
+          "mean_price": 10650.0,
+          "min_price": 8500.0,
+          "max_price": 15000.0,
+          "std_dev": 1915.4344,
+          "coefficient_of_variation": 17.99,
+          "confidence": 62.1,
+          "is_recommended": true
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 38,
+          "median_price": 9250.0,
+          "mean_price": 9414.5351,
+          "min_price": 833.3333,
+          "max_price": 15000.0,
+          "std_dev": 2955.2028,
+          "coefficient_of_variation": 31.39,
+          "confidence": 81.1,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 10000,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 10000,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 10000,
+            "bags_per_unit": 1.0,
+            "total_cost_per_unit": 10000.0
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 10000,
+            "bags_per_unit": 0.925,
+            "total_cost_per_unit": 9250.0
+          }
+        }
+      }
+    },
+    "Inquisitor legguards": {
+      "recommended_window": "7d",
+      "windows": {
+        "1h": {
+          "has_data": false,
+          "trades": 0,
+          "median_price": 0.0,
+          "mean_price": 0.0,
+          "min_price": 0.0,
+          "max_price": 0.0,
+          "std_dev": 0.0,
+          "coefficient_of_variation": 0.0,
+          "confidence": 0.0,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 24,
+          "median_price": 10000.0,
+          "mean_price": 10839.5208,
+          "min_price": 3222.0,
+          "max_price": 15000.0,
+          "std_dev": 2500.3383,
+          "coefficient_of_variation": 23.07,
+          "confidence": 74.6,
+          "is_recommended": true
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 111,
+          "median_price": 10700.0,
+          "mean_price": 10736.5045,
+          "min_price": 3222.0,
+          "max_price": 15000.0,
+          "std_dev": 2094.557,
+          "coefficient_of_variation": 19.51,
+          "confidence": 94.6,
+          "is_recommended": false
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 181,
+          "median_price": 10000.0,
+          "mean_price": 10445.5994,
+          "min_price": 3222.0,
+          "max_price": 15000.0,
+          "std_dev": 1941.9517,
+          "coefficient_of_variation": 18.59,
+          "confidence": 93.3,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 10000,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 10000,
+            "bags_per_unit": 1.0,
+            "total_cost_per_unit": 10000.0
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 10000,
+            "bags_per_unit": 1.07,
+            "total_cost_per_unit": 10700.0
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 10000,
+            "bags_per_unit": 1.0,
+            "total_cost_per_unit": 10000.0
+          }
+        }
+      }
+    },
+    "Verdant ring": {
+      "recommended_window": "30d",
+      "windows": {
+        "1h": {
+          "has_data": false,
+          "trades": 3,
+          "median_price": 0.0,
+          "mean_price": 0.0,
+          "min_price": 0.0,
+          "max_price": 0.0,
+          "std_dev": 0.0,
+          "coefficient_of_variation": 0.0,
+          "confidence": 0.0,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 63,
+          "median_price": 13000.0,
+          "mean_price": 12667.6984,
+          "min_price": 5000.0,
+          "max_price": 18000.0,
+          "std_dev": 2280.8664,
+          "coefficient_of_variation": 18.01,
+          "confidence": 96.4,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 327,
+          "median_price": 10000.0,
+          "mean_price": 10379.9796,
+          "min_price": 1000.0,
+          "max_price": 18000.0,
+          "std_dev": 2453.3037,
+          "coefficient_of_variation": 23.63,
+          "confidence": 93.8,
+          "is_recommended": true
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 869,
+          "median_price": 10000.0,
+          "mean_price": 10363.4177,
+          "min_price": 500.0,
+          "max_price": 18000.0,
+          "std_dev": 2104.7695,
+          "coefficient_of_variation": 20.31,
+          "confidence": 92.9,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 10000,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 10000,
+            "bags_per_unit": 1.3,
+            "total_cost_per_unit": 13000.0
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 10000,
+            "bags_per_unit": 1.0,
+            "total_cost_per_unit": 10000.0
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 10000,
+            "bags_per_unit": 1.0,
+            "total_cost_per_unit": 10000.0
+          }
+        }
+      }
+    },
+    "Crystal helmet": {
+      "recommended_window": "30d",
+      "windows": {
+        "1h": {
+          "has_data": true,
+          "trades": 7,
+          "median_price": 590.0,
+          "mean_price": 541.4286,
+          "min_price": 300.0,
+          "max_price": 775.0,
+          "std_dev": 165.7605,
+          "coefficient_of_variation": 30.62,
+          "confidence": 50.5,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 192,
+          "median_price": 550.0,
+          "mean_price": 502.7698,
+          "min_price": 13.75,
+          "max_price": 1250.0,
+          "std_dev": 180.2217,
+          "coefficient_of_variation": 35.85,
+          "confidence": 92.8,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 660,
+          "median_price": 500.0,
+          "mean_price": 454.7426,
+          "min_price": 13.75,
+          "max_price": 1250.0,
+          "std_dev": 178.3041,
+          "coefficient_of_variation": 39.21,
+          "confidence": 90.7,
+          "is_recommended": true
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 1500,
+          "median_price": 400.0,
+          "mean_price": 408.5685,
+          "min_price": 13.75,
+          "max_price": 1250.0,
+          "std_dev": 177.0364,
+          "coefficient_of_variation": 43.33,
+          "confidence": 88.3,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": true,
+            "shop_cost": 500,
+            "bags_per_unit": 1.18,
+            "total_cost_per_unit": 590.0
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 500,
+            "bags_per_unit": 1.1,
+            "total_cost_per_unit": 550.0
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 500,
+            "bags_per_unit": 1.0,
+            "total_cost_per_unit": 500.0
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 500,
+            "bags_per_unit": 0.8,
+            "total_cost_per_unit": 400.0
+          }
+        }
+      }
+    },
+    "Sanguinesti staff (e)": {
+      "recommended_window": "7d",
+      "windows": {
+        "1h": {
+          "has_data": false,
+          "trades": 0,
+          "median_price": 0.0,
+          "mean_price": 0.0,
+          "min_price": 0.0,
+          "max_price": 0.0,
+          "std_dev": 0.0,
+          "coefficient_of_variation": 0.0,
+          "confidence": 0.0,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 11,
+          "median_price": 18000.0,
+          "mean_price": 18217.2727,
+          "min_price": 10000.0,
+          "max_price": 22995.0,
+          "std_dev": 4060.181,
+          "coefficient_of_variation": 22.29,
+          "confidence": 64.3,
+          "is_recommended": true
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 40,
+          "median_price": 17399.5,
+          "mean_price": 16390.9,
+          "min_price": 5000.0,
+          "max_price": 23455.0,
+          "std_dev": 4853.0318,
+          "coefficient_of_variation": 29.61,
+          "confidence": 84.6,
+          "is_recommended": false
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 157,
+          "median_price": 14000.0,
+          "mean_price": 14410.9045,
+          "min_price": 5000.0,
+          "max_price": 23455.0,
+          "std_dev": 3316.2911,
+          "coefficient_of_variation": 23.01,
+          "confidence": 92.4,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 17500,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 17500,
+            "bags_per_unit": 1.028571,
+            "total_cost_per_unit": 18000.0
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 17500,
+            "bags_per_unit": 0.994257,
+            "total_cost_per_unit": 17399.5
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 17500,
+            "bags_per_unit": 0.8,
+            "total_cost_per_unit": 14000.0
+          }
+        }
+      }
+    },
+    "Virtus robe top": {
+      "recommended_window": "7d",
+      "windows": {
+        "1h": {
+          "has_data": true,
+          "trades": 5,
+          "median_price": 3800.0,
+          "mean_price": 3740.0,
+          "min_price": 3500.0,
+          "max_price": 3850.0,
+          "std_dev": 124.0967,
+          "coefficient_of_variation": 3.32,
+          "confidence": 54.3,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 77,
+          "median_price": 3600.0,
+          "mean_price": 3361.6439,
+          "min_price": 937.5,
+          "max_price": 4900.0,
+          "std_dev": 829.5082,
+          "coefficient_of_variation": 24.68,
+          "confidence": 95.1,
+          "is_recommended": true
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 289,
+          "median_price": 2900.0,
+          "mean_price": 2772.5926,
+          "min_price": 316.6667,
+          "max_price": 4900.0,
+          "std_dev": 996.4011,
+          "coefficient_of_variation": 35.94,
+          "confidence": 91.3,
+          "is_recommended": false
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 749,
+          "median_price": 2600.0,
+          "mean_price": 2537.2558,
+          "min_price": 242.8571,
+          "max_price": 4900.0,
+          "std_dev": 874.2044,
+          "coefficient_of_variation": 34.45,
+          "confidence": 90.1,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": true,
+            "shop_cost": 3500,
+            "bags_per_unit": 1.085714,
+            "total_cost_per_unit": 3800.0
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 3500,
+            "bags_per_unit": 1.028571,
+            "total_cost_per_unit": 3600.0
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 3500,
+            "bags_per_unit": 0.828571,
+            "total_cost_per_unit": 2900.0
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 3500,
+            "bags_per_unit": 0.742857,
+            "total_cost_per_unit": 2600.0
+          }
+        }
+      }
+    },
+    "Volatile orb": {
+      "recommended_window": "30d",
+      "windows": {
+        "1h": {
+          "has_data": false,
+          "trades": 0,
+          "median_price": 0.0,
+          "mean_price": 0.0,
+          "min_price": 0.0,
+          "max_price": 0.0,
+          "std_dev": 0.0,
+          "coefficient_of_variation": 0.0,
+          "confidence": 0.0,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": false,
+          "trades": 4,
+          "median_price": 0.0,
+          "mean_price": 0.0,
+          "min_price": 0.0,
+          "max_price": 0.0,
+          "std_dev": 0.0,
+          "coefficient_of_variation": 0.0,
+          "confidence": 0.0,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 12,
+          "median_price": 11500.0,
+          "mean_price": 11250.0,
+          "min_price": 6000.0,
+          "max_price": 15000.0,
+          "std_dev": 2340.762,
+          "coefficient_of_variation": 20.81,
+          "confidence": 63.9,
+          "is_recommended": true
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 29,
+          "median_price": 10850.0,
+          "mean_price": 10867.6437,
+          "min_price": 3616.6667,
+          "max_price": 15000.0,
+          "std_dev": 2530.5929,
+          "coefficient_of_variation": 23.29,
+          "confidence": 75.5,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 11150,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 11150,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 11150,
+            "bags_per_unit": 1.03139,
+            "total_cost_per_unit": 11500.0
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 11150,
+            "bags_per_unit": 0.973094,
+            "total_cost_per_unit": 10850.0
+          }
+        }
+      }
+    },
+    "Grand ring (i)": {
+      "recommended_window": "30d",
+      "windows": {
+        "1h": {
+          "has_data": false,
+          "trades": 4,
+          "median_price": 0.0,
+          "mean_price": 0.0,
+          "min_price": 0.0,
+          "max_price": 0.0,
+          "std_dev": 0.0,
+          "coefficient_of_variation": 0.0,
+          "confidence": 0.0,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 117,
+          "median_price": 16500.0,
+          "mean_price": 16173.8547,
+          "min_price": 7500.0,
+          "max_price": 19895.0,
+          "std_dev": 2039.5119,
+          "coefficient_of_variation": 12.61,
+          "confidence": 97.5,
+          "is_recommended": false
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 386,
+          "median_price": 15550.0,
+          "mean_price": 14973.8795,
+          "min_price": 1750.0,
+          "max_price": 22000.0,
+          "std_dev": 2959.1264,
+          "coefficient_of_variation": 19.76,
+          "confidence": 94.5,
+          "is_recommended": true
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 1081,
+          "median_price": 14000.0,
+          "mean_price": 13952.0972,
+          "min_price": 1750.0,
+          "max_price": 22750.0,
+          "std_dev": 2760.7138,
+          "coefficient_of_variation": 19.79,
+          "confidence": 93.0,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 15000,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": true,
+            "shop_cost": 15000,
+            "bags_per_unit": 1.1,
+            "total_cost_per_unit": 16500.0
+          },
+          "30d": {
+            "available": true,
+            "shop_cost": 15000,
+            "bags_per_unit": 1.036667,
+            "total_cost_per_unit": 15550.0
+          },
+          "90d": {
+            "available": true,
+            "shop_cost": 15000,
+            "bags_per_unit": 0.933333,
+            "total_cost_per_unit": 14000.0
+          }
+        }
+      }
+    },
+    "Blood diamonds": {
+      "recommended_window": "7d",
+      "windows": {
+        "1h": {
+          "has_data": true,
+          "trades": 112,
+          "median_price": 0.4416,
+          "mean_price": 84103617.996,
+          "min_price": 0.0068,
+          "max_price": 790000000.0,
+          "std_dev": 223957697.3853,
+          "coefficient_of_variation": 266.29,
+          "confidence": 61.0,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 1500,
+          "median_price": 0.1562,
+          "mean_price": 57028219.8957,
+          "min_price": 0.0013,
+          "max_price": 999000000.0,
+          "std_dev": 188693050.5318,
+          "coefficient_of_variation": 330.88,
+          "confidence": 70.0,
+          "is_recommended": true
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 1500,
+          "median_price": 0.1562,
+          "mean_price": 57028219.8957,
+          "min_price": 0.0013,
+          "max_price": 999000000.0,
+          "std_dev": 188693050.5318,
+          "coefficient_of_variation": 330.88,
+          "confidence": 68.5,
+          "is_recommended": false
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 1500,
+          "median_price": 0.1562,
+          "mean_price": 57028219.8957,
+          "min_price": 0.0013,
+          "max_price": 999000000.0,
+          "std_dev": 188693050.5318,
+          "coefficient_of_variation": 330.88,
+          "confidence": 67.0,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        }
+      }
+    },
+    "Bloodchanting stone": {
+      "recommended_window": "7d",
+      "windows": {
+        "1h": {
+          "has_data": true,
+          "trades": 51,
+          "median_price": 217.0,
+          "mean_price": 295.6688,
+          "min_price": 9.2373,
+          "max_price": 1050.0,
+          "std_dev": 274.4826,
+          "coefficient_of_variation": 92.83,
+          "confidence": 72.4,
+          "is_recommended": false
+        },
+        "7d": {
+          "has_data": true,
+          "trades": 1070,
+          "median_price": 205.3,
+          "mean_price": 294.0282,
+          "min_price": 1.9311,
+          "max_price": 1230.0,
+          "std_dev": 291.1434,
+          "coefficient_of_variation": 99.02,
+          "confidence": 80.2,
+          "is_recommended": true
+        },
+        "30d": {
+          "has_data": true,
+          "trades": 1500,
+          "median_price": 194.7917,
+          "mean_price": 284.8261,
+          "min_price": 1.1871,
+          "max_price": 1230.0,
+          "std_dev": 286.4271,
+          "coefficient_of_variation": 100.56,
+          "confidence": 78.4,
+          "is_recommended": false
+        },
+        "90d": {
+          "has_data": true,
+          "trades": 1500,
+          "median_price": 194.7917,
+          "mean_price": 284.8261,
+          "min_price": 1.1871,
+          "max_price": 1230.0,
+          "std_dev": 286.4271,
+          "coefficient_of_variation": 100.56,
+          "confidence": 76.9,
+          "is_recommended": false
+        }
+      },
+      "ratios": {
+        "Blood Shards": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        },
+        "Blood Synthesis Tokens": {
+          "1h": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "7d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "30d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          },
+          "90d": {
+            "available": false,
+            "shop_cost": 0,
+            "bags_per_unit": 0.0,
+            "total_cost_per_unit": 0.0
+          }
+        }
+      }
+    }
+  },
+  "bloodchanting": {
+    "1h": {
+      "can_calculate": true,
+      "best_shard_source": {
+        "name": "Vesta's spear",
+        "bags_per_shard": 0.05806,
+        "shop_cost": 10,
+        "confidence": 40.9
+      },
+      "best_token_source": {
+        "name": "Torture ornament kit",
+        "bags_per_token": 0.866667,
+        "shop_cost": 600,
+        "confidence": 54.7
+      },
+      "costs": {
+        "shards": 14.52,
+        "tokens": 433.33,
+        "diamonds": 4.42,
+        "total": 452.26
+      },
+      "stone_market_price": 217.0,
+      "profit": -235.26,
+      "roi_percent": -52.02,
+      "profitable": false,
+      "recommendation": "Buy from Market"
+    },
+    "7d": {
+      "can_calculate": true,
+      "best_shard_source": {
+        "name": "Zuriel's hood",
+        "bags_per_shard": 0.040175,
+        "shop_cost": 8,
+        "confidence": 64.4
+      },
+      "best_token_source": {
+        "name": "Orb of terror",
+        "bags_per_token": 0.996667,
+        "shop_cost": 15000,
+        "confidence": 63.1
+      },
+      "costs": {
+        "shards": 10.04,
+        "tokens": 498.33,
+        "diamonds": 1.56,
+        "total": 509.94
+      },
+      "stone_market_price": 205.3,
+      "profit": -304.64,
+      "roi_percent": -59.74,
+      "profitable": false,
+      "recommendation": "Buy from Market"
+    },
+    "30d": {
+      "can_calculate": true,
+      "best_shard_source": {
+        "name": "Zuriel's hood",
+        "bags_per_shard": 0.0336,
+        "shop_cost": 8,
+        "confidence": 68.5
+      },
+      "best_token_source": {
+        "name": "Ring of malevolence",
+        "bags_per_token": 0.7375,
+        "shop_cost": 2000,
+        "confidence": 54.0
+      },
+      "costs": {
+        "shards": 8.4,
+        "tokens": 368.75,
+        "diamonds": 1.56,
+        "total": 378.71
+      },
+      "stone_market_price": 194.79,
+      "profit": -183.92,
+      "roi_percent": -48.56,
+      "profitable": false,
+      "recommendation": "Buy from Market"
+    },
+    "90d": {
+      "can_calculate": true,
+      "best_shard_source": {
+        "name": "Zuriel's hood",
+        "bags_per_shard": 0.033212,
+        "shop_cost": 8,
+        "confidence": 67.0
+      },
+      "best_token_source": {
+        "name": "Torture ornament kit",
+        "bags_per_token": 0.65,
+        "shop_cost": 600,
+        "confidence": 88.7
+      },
+      "costs": {
+        "shards": 8.3,
+        "tokens": 325.0,
+        "diamonds": 1.56,
+        "total": 334.87
+      },
+      "stone_market_price": 194.79,
+      "profit": -140.07,
+      "roi_percent": -41.83,
+      "profitable": false,
+      "recommendation": "Buy from Market"
+    }
+  },
+  "rankings": {
+    "Blood Shards": {
+      "1h": {
+        "median_bags_per_unit": 0.202272,
+        "items": [
+          {
+            "name": "Vesta's spear",
+            "bags_per_unit": 0.05806,
+            "confidence": 40.9,
+            "roi": 71.3
+          },
+          {
+            "name": "Vesta's plateskirt",
+            "bags_per_unit": 0.076923,
+            "confidence": 33.7,
+            "roi": 61.97
+          },
+          {
+            "name": "Vesta's chainbody",
+            "bags_per_unit": 0.076923,
+            "confidence": 35.6,
+            "roi": 61.97
+          },
+          {
+            "name": "Statius's warhammer",
+            "bags_per_unit": 0.087578,
+            "confidence": 35.1,
+            "roi": 56.7
+          },
+          {
+            "name": "Statius's platelegs",
+            "bags_per_unit": 0.177778,
+            "confidence": 35.9,
+            "roi": 12.11
+          },
+          {
+            "name": "Eternal boots",
+            "bags_per_unit": 0.19231,
+            "confidence": 31.1,
+            "roi": 4.92
+          },
+          {
+            "name": "Malediction ward",
+            "bags_per_unit": 0.19924,
+            "confidence": 33.0,
+            "roi": 1.5
+          },
+          {
+            "name": "Primordial boots",
+            "bags_per_unit": 0.2,
+            "confidence": 32.6,
+            "roi": 1.12
+          },
+          {
+            "name": "Statius's full helm",
+            "bags_per_unit": 0.204543,
+            "confidence": 28.4,
+            "roi": -1.12
+          },
+          {
+            "name": "Serpentine helm",
+            "bags_per_unit": 0.222222,
+            "confidence": 28.2,
+            "roi": -9.86
+          },
+          {
+            "name": "Devout boots",
+            "bags_per_unit": 0.238094,
+            "confidence": 33.1,
+            "roi": -17.71
+          },
+          {
+            "name": "Barrelchest war axe",
+            "bags_per_unit": 0.238096,
+            "confidence": 37.2,
+            "roi": -17.71
+          },
+          {
+            "name": "Barrelchest maul",
+            "bags_per_unit": 0.333333,
+            "confidence": 41.5,
+            "roi": -64.79
+          },
+          {
+            "name": "Statius's platebody",
+            "bags_per_unit": 0.367722,
+            "confidence": 30.1,
+            "roi": -81.8
+          },
+          {
+            "name": "Barrelchest sword",
+            "bags_per_unit": 0.5125,
+            "confidence": 40.0,
+            "roi": -153.37
+          },
+          {
+            "name": "Pegasian boots",
+            "bags_per_unit": 0.777778,
+            "confidence": 43.0,
+            "roi": -284.52
+          }
+        ]
+      },
+      "7d": {
+        "median_bags_per_unit": 0.166667,
+        "items": [
+          {
+            "name": "Zuriel's hood",
+            "bags_per_unit": 0.040175,
+            "confidence": 64.4,
+            "roi": 75.9
+          },
+          {
+            "name": "Vesta's spear",
+            "bags_per_unit": 0.06667,
+            "confidence": 58.0,
+            "roi": 60.0
+          },
+          {
+            "name": "Pegasian boots",
+            "bags_per_unit": 0.085411,
+            "confidence": 70.0,
+            "roi": 48.75
+          },
+          {
+            "name": "Eternal boots",
+            "bags_per_unit": 0.1,
+            "confidence": 70.0,
+            "roi": 40.0
+          },
+          {
+            "name": "Bandos chestplate",
+            "bags_per_unit": 0.1039,
+            "confidence": 50.8,
+            "roi": 37.66
+          },
+          {
+            "name": "Morrigan's coif",
+            "bags_per_unit": 0.106067,
+            "confidence": 46.8,
+            "roi": 36.36
+          },
+          {
+            "name": "Primordial boots",
+            "bags_per_unit": 0.125,
+            "confidence": 70.0,
+            "roi": 25.0
+          },
+          {
+            "name": "Vesta's plateskirt",
+            "bags_per_unit": 0.138462,
+            "confidence": 74.1,
+            "roi": 16.92
+          },
+          {
+            "name": "3rd age bow",
+            "bags_per_unit": 0.142858,
+            "confidence": 74.8,
+            "roi": 14.29
+          },
+          {
+            "name": "Statius's platebody",
+            "bags_per_unit": 0.144444,
+            "confidence": 70.0,
+            "roi": 13.33
+          },
+          {
+            "name": "Warrior ring (i)",
+            "bags_per_unit": 0.1471,
+            "confidence": 44.8,
+            "roi": 11.74
+          },
+          {
+            "name": "Vesta's chainbody",
+            "bags_per_unit": 0.153846,
+            "confidence": 75.8,
+            "roi": 7.69
+          },
+          {
+            "name": "Statius's platelegs",
+            "bags_per_unit": 0.166667,
+            "confidence": 70.0,
+            "roi": 0.0
+          },
+          {
+            "name": "Statius's warhammer",
+            "bags_per_unit": 0.185189,
+            "confidence": 74.7,
+            "roi": -11.11
+          },
+          {
+            "name": "Serpentine helm",
+            "bags_per_unit": 0.189678,
+            "confidence": 70.0,
+            "roi": -13.81
+          },
+          {
+            "name": "Devout boots",
+            "bags_per_unit": 0.194763,
+            "confidence": 77.0,
+            "roi": -16.86
+          },
+          {
+            "name": "Statius's full helm",
+            "bags_per_unit": 0.2,
+            "confidence": 70.0,
+            "roi": -20.0
+          },
+          {
+            "name": "Barrelchest war axe",
+            "bags_per_unit": 0.244444,
+            "confidence": 78.2,
+            "roi": -46.67
+          },
+          {
+            "name": "Barrelchest maul",
+            "bags_per_unit": 0.244444,
+            "confidence": 79.2,
+            "roi": -46.67
+          },
+          {
+            "name": "Barrelchest sword",
+            "bags_per_unit": 0.26,
+            "confidence": 78.1,
+            "roi": -56.0
+          },
+          {
+            "name": "Spectral spirit shield",
+            "bags_per_unit": 0.2857,
+            "confidence": 45.2,
+            "roi": -71.42
+          },
+          {
+            "name": "Dragon scimitar (or)",
+            "bags_per_unit": 0.298333,
+            "confidence": 63.3,
+            "roi": -79.0
+          },
+          {
+            "name": "Frozen scimitar",
+            "bags_per_unit": 0.311111,
+            "confidence": 70.2,
+            "roi": -86.67
+          },
+          {
+            "name": "Dragon hasta",
+            "bags_per_unit": 0.54286,
+            "confidence": 57.1,
+            "roi": -225.72
+          },
+          {
+            "name": "Malediction ward",
+            "bags_per_unit": 0.5894,
+            "confidence": 53.3,
+            "roi": -253.64
+          }
+        ]
+      },
+      "30d": {
+        "median_bags_per_unit": 0.158024,
+        "items": [
+          {
+            "name": "Zuriel's hood",
+            "bags_per_unit": 0.0336,
+            "confidence": 68.5,
+            "roi": 78.74
+          },
+          {
+            "name": "Morrigan's coif",
+            "bags_per_unit": 0.05,
+            "confidence": 68.5,
+            "roi": 68.36
+          },
+          {
+            "name": "Vesta's spear",
+            "bags_per_unit": 0.07583,
+            "confidence": 68.5,
+            "roi": 52.01
+          },
+          {
+            "name": "Eternal boots",
+            "bags_per_unit": 0.08571,
+            "confidence": 68.5,
+            "roi": 45.76
+          },
+          {
+            "name": "Pegasian boots",
+            "bags_per_unit": 0.092589,
+            "confidence": 68.5,
+            "roi": 41.41
+          },
+          {
+            "name": "Statius's warhammer",
+            "bags_per_unit": 0.111111,
+            "confidence": 68.5,
+            "roi": 29.69
+          },
+          {
+            "name": "Primordial boots",
+            "bags_per_unit": 0.116075,
+            "confidence": 68.5,
+            "roi": 26.55
+          },
+          {
+            "name": "3rd age bow",
+            "bags_per_unit": 0.125,
+            "confidence": 69.2,
+            "roi": 20.9
+          },
+          {
+            "name": "Devout boots",
+            "bags_per_unit": 0.142857,
+            "confidence": 72.5,
+            "roi": 9.6
+          },
+          {
+            "name": "Statius's platebody",
+            "bags_per_unit": 0.144444,
+            "confidence": 68.5,
+            "roi": 8.59
+          },
+          {
+            "name": "Warrior ring (i)",
+            "bags_per_unit": 0.1515,
+            "confidence": 50.1,
+            "roi": 4.13
+          },
+          {
+            "name": "Barrelchest maul",
+            "bags_per_unit": 0.155556,
+            "confidence": 72.9,
+            "roi": 1.56
+          },
+          {
+            "name": "Barrelchest war axe",
+            "bags_per_unit": 0.158024,
+            "confidence": 72.9,
+            "roi": 0.0
+          },
+          {
+            "name": "Statius's platelegs",
+            "bags_per_unit": 0.158067,
+            "confidence": 68.5,
+            "roi": -0.03
+          },
+          {
+            "name": "Barrelchest sword",
+            "bags_per_unit": 0.163637,
+            "confidence": 72.6,
+            "roi": -3.55
+          },
+          {
+            "name": "Vesta's plateskirt",
+            "bags_per_unit": 0.166669,
+            "confidence": 68.5,
+            "roi": -5.47
+          },
+          {
+            "name": "Vesta's chainbody",
+            "bags_per_unit": 0.170938,
+            "confidence": 68.5,
+            "roi": -8.17
+          },
+          {
+            "name": "Serpentine helm",
+            "bags_per_unit": 0.172844,
+            "confidence": 68.5,
+            "roi": -9.38
+          },
+          {
+            "name": "Statius's full helm",
+            "bags_per_unit": 0.214286,
+            "confidence": 68.5,
+            "roi": -35.6
+          },
+          {
+            "name": "Dragon scimitar (or)",
+            "bags_per_unit": 0.24,
+            "confidence": 79.0,
+            "roi": -51.88
+          },
+          {
+            "name": "Frozen scimitar",
+            "bags_per_unit": 0.258333,
+            "confidence": 79.2,
+            "roi": -63.48
+          },
+          {
+            "name": "Spectral spirit shield",
+            "bags_per_unit": 0.4643,
+            "confidence": 68.5,
+            "roi": -193.82
+          },
+          {
+            "name": "Bandos chestplate",
+            "bags_per_unit": 0.5,
+            "confidence": 68.5,
+            "roi": -216.41
+          },
+          {
+            "name": "Dragon hasta",
+            "bags_per_unit": 0.5381,
+            "confidence": 74.5,
+            "roi": -240.52
+          },
+          {
+            "name": "Malediction ward",
+            "bags_per_unit": 0.53846,
+            "confidence": 68.5,
+            "roi": -240.75
+          }
+        ]
+      },
+      "90d": {
+        "median_bags_per_unit": 0.116111,
+        "items": [
+          {
+            "name": "Zuriel's hood",
+            "bags_per_unit": 0.033212,
+            "confidence": 67.0,
+            "roi": 71.4
+          },
+          {
+            "name": "Vesta's spear",
+            "bags_per_unit": 0.08,
+            "confidence": 67.0,
+            "roi": 31.1
+          },
+          {
+            "name": "Morrigan's coif",
+            "bags_per_unit": 0.083333,
+            "confidence": 67.0,
+            "roi": 28.23
+          },
+          {
+            "name": "Eternal boots",
+            "bags_per_unit": 0.08571,
+            "confidence": 67.0,
+            "roi": 26.18
+          },
+          {
+            "name": "Pegasian boots",
+            "bags_per_unit": 0.092589,
+            "confidence": 67.0,
+            "roi": 20.26
+          },
+          {
+            "name": "3rd age bow",
+            "bags_per_unit": 0.098764,
+            "confidence": 67.0,
+            "roi": 14.94
+          },
+          {
+            "name": "Statius's platebody",
+            "bags_per_unit": 0.1,
+            "confidence": 67.0,
+            "roi": 13.88
+          },
+          {
+            "name": "Barrelchest maul",
+            "bags_per_unit": 0.1,
+            "confidence": 67.0,
+            "roi": 13.88
+          },
+          {
+            "name": "Barrelchest sword",
+            "bags_per_unit": 0.1,
+            "confidence": 67.3,
+            "roi": 13.88
+          },
+          {
+            "name": "Devout boots",
+            "bags_per_unit": 0.104329,
+            "confidence": 67.0,
+            "roi": 10.15
+          },
+          {
+            "name": "Statius's platelegs",
+            "bags_per_unit": 0.111111,
+            "confidence": 67.0,
+            "roi": 4.31
+          },
+          {
+            "name": "Primordial boots",
+            "bags_per_unit": 0.116075,
+            "confidence": 67.0,
+            "roi": 0.03
+          },
+          {
+            "name": "Barrelchest war axe",
+            "bags_per_unit": 0.116111,
+            "confidence": 67.0,
+            "roi": 0.0
+          },
+          {
+            "name": "Statius's warhammer",
+            "bags_per_unit": 0.133333,
+            "confidence": 67.0,
+            "roi": -14.83
+          },
+          {
+            "name": "Vesta's chainbody",
+            "bags_per_unit": 0.138462,
+            "confidence": 67.0,
+            "roi": -19.25
+          },
+          {
+            "name": "Serpentine helm",
+            "bags_per_unit": 0.148144,
+            "confidence": 67.0,
+            "roi": -27.59
+          },
+          {
+            "name": "Vesta's plateskirt",
+            "bags_per_unit": 0.153846,
+            "confidence": 67.0,
+            "roi": -32.5
+          },
+          {
+            "name": "Statius's full helm",
+            "bags_per_unit": 0.171429,
+            "confidence": 67.0,
+            "roi": -47.64
+          },
+          {
+            "name": "Frozen scimitar",
+            "bags_per_unit": 0.2,
+            "confidence": 75.9,
+            "roi": -72.25
+          },
+          {
+            "name": "Dragon scimitar (or)",
+            "bags_per_unit": 0.266667,
+            "confidence": 78.2,
+            "roi": -129.67
+          },
+          {
+            "name": "Malediction ward",
+            "bags_per_unit": 0.4,
+            "confidence": 67.0,
+            "roi": -244.5
+          },
+          {
+            "name": "Bandos chestplate",
+            "bags_per_unit": 0.5,
+            "confidence": 67.0,
+            "roi": -330.62
+          },
+          {
+            "name": "Spectral spirit shield",
+            "bags_per_unit": 0.5,
+            "confidence": 67.0,
+            "roi": -330.62
+          },
+          {
+            "name": "Dragon hasta",
+            "bags_per_unit": 0.56,
+            "confidence": 72.9,
+            "roi": -382.3
+          },
+          {
+            "name": "Warrior ring (i)",
+            "bags_per_unit": 12578674.9482,
+            "confidence": 67.0,
+            "roi": -10833318834.64
+          }
+        ]
+      }
+    },
+    "Blood Synthesis Tokens": {
+      "1h": {
+        "median_bags_per_unit": 1.045,
+        "items": [
+          {
+            "name": "Torture ornament kit",
+            "bags_per_unit": 0.866667,
+            "confidence": 54.7,
+            "roi": 17.07
+          },
+          {
+            "name": "Crystal platelegs",
+            "bags_per_unit": 0.916667,
+            "confidence": 51.9,
+            "roi": 12.28
+          },
+          {
+            "name": "Occult ornament kit",
+            "bags_per_unit": 1.0,
+            "confidence": 50.7,
+            "roi": 4.31
+          },
+          {
+            "name": "Pernix body",
+            "bags_per_unit": 1.028571,
+            "confidence": 52.6,
+            "roi": 1.57
+          },
+          {
+            "name": "Blade of saeldor",
+            "bags_per_unit": 1.04,
+            "confidence": 59.9,
+            "roi": 0.48
+          },
+          {
+            "name": "Pernix chaps",
+            "bags_per_unit": 1.05,
+            "confidence": 51.8,
+            "roi": -0.48
+          },
+          {
+            "name": "Torva platelegs",
+            "bags_per_unit": 1.053333,
+            "confidence": 55.0,
+            "roi": -0.8
+          },
+          {
+            "name": "Crystal platebody",
+            "bags_per_unit": 1.083333,
+            "confidence": 58.2,
+            "roi": -3.67
+          },
+          {
+            "name": "Virtus robe top",
+            "bags_per_unit": 1.085714,
+            "confidence": 54.3,
+            "roi": -3.9
+          },
+          {
+            "name": "Crystal helmet",
+            "bags_per_unit": 1.18,
+            "confidence": 50.5,
+            "roi": -12.92
+          }
+        ]
+      },
+      "7d": {
+        "median_bags_per_unit": 1.028571,
+        "items": [
+          {
+            "name": "Orb of terror",
+            "bags_per_unit": 0.996667,
+            "confidence": 63.1,
+            "roi": 3.1
+          },
+          {
+            "name": "Inquisitor faceguard",
+            "bags_per_unit": 0.9999,
+            "confidence": 94.5,
+            "roi": 2.79
+          },
+          {
+            "name": "Blade of saeldor",
+            "bags_per_unit": 1.0,
+            "confidence": 92.9,
+            "roi": 2.78
+          },
+          {
+            "name": "Torture ornament kit",
+            "bags_per_unit": 1.0,
+            "confidence": 93.5,
+            "roi": 2.78
+          },
+          {
+            "name": "Crystal platelegs",
+            "bags_per_unit": 1.0,
+            "confidence": 94.0,
+            "roi": 2.78
+          },
+          {
+            "name": "Crystal platebody",
+            "bags_per_unit": 1.0,
+            "confidence": 93.9,
+            "roi": 2.78
+          },
+          {
+            "name": "Inquisitor legguards",
+            "bags_per_unit": 1.0,
+            "confidence": 74.6,
+            "roi": 2.78
+          },
+          {
+            "name": "Occult ornament kit",
+            "bags_per_unit": 1.025,
+            "confidence": 93.4,
+            "roi": 0.35
+          },
+          {
+            "name": "Sanguinesti staff (e)",
+            "bags_per_unit": 1.028571,
+            "confidence": 64.3,
+            "roi": 0.0
+          },
+          {
+            "name": "Virtus robe top",
+            "bags_per_unit": 1.028571,
+            "confidence": 95.1,
+            "roi": 0.0
+          },
+          {
+            "name": "Pernix body",
+            "bags_per_unit": 1.1,
+            "confidence": 95.3,
+            "roi": -6.94
+          },
+          {
+            "name": "Verdant pendant",
+            "bags_per_unit": 1.1,
+            "confidence": 96.1,
+            "roi": -6.94
+          },
+          {
+            "name": "Crystal helmet",
+            "bags_per_unit": 1.1,
+            "confidence": 92.8,
+            "roi": -6.94
+          },
+          {
+            "name": "Grand ring (i)",
+            "bags_per_unit": 1.1,
+            "confidence": 97.5,
+            "roi": -6.94
+          },
+          {
+            "name": "Torva platebody",
+            "bags_per_unit": 1.111111,
+            "confidence": 95.4,
+            "roi": -8.02
+          },
+          {
+            "name": "Torva platelegs",
+            "bags_per_unit": 1.111111,
+            "confidence": 95.7,
+            "roi": -8.02
+          },
+          {
+            "name": "Pernix chaps",
+            "bags_per_unit": 1.128571,
+            "confidence": 95.3,
+            "roi": -9.72
+          },
+          {
+            "name": "Verdant ring",
+            "bags_per_unit": 1.3,
+            "confidence": 96.4,
+            "roi": -26.39
+          }
+        ]
+      },
+      "30d": {
+        "median_bags_per_unit": 0.966667,
+        "items": [
+          {
+            "name": "Ring of malevolence",
+            "bags_per_unit": 0.7375,
+            "confidence": 54.0,
+            "roi": 23.71
+          },
+          {
+            "name": "Justiciar faceguard",
+            "bags_per_unit": 0.741714,
+            "confidence": 70.9,
+            "roi": 23.27
+          },
+          {
+            "name": "Blade of saeldor",
+            "bags_per_unit": 0.76,
+            "confidence": 90.0,
+            "roi": 21.38
+          },
+          {
+            "name": "Dark brimstone ring",
+            "bags_per_unit": 0.8,
+            "confidence": 62.3,
+            "roi": 17.24
+          },
+          {
+            "name": "Ghommal's hilt",
+            "bags_per_unit": 0.8,
+            "confidence": 64.2,
+            "roi": 17.24
+          },
+          {
+            "name": "Virtus robe top",
+            "bags_per_unit": 0.828571,
+            "confidence": 91.3,
+            "roi": 14.29
+          },
+          {
+            "name": "Torture ornament kit",
+            "bags_per_unit": 0.833333,
+            "confidence": 90.8,
+            "roi": 13.79
+          },
+          {
+            "name": "Verdant partyhat",
+            "bags_per_unit": 0.855556,
+            "confidence": 64.3,
+            "roi": 11.49
+          },
+          {
+            "name": "Pernix chaps",
+            "bags_per_unit": 0.871429,
+            "confidence": 91.0,
+            "roi": 9.85
+          },
+          {
+            "name": "Pernix body",
+            "bags_per_unit": 0.914286,
+            "confidence": 91.8,
+            "roi": 5.42
+          },
+          {
+            "name": "Verdant pendant",
+            "bags_per_unit": 0.9625,
+            "confidence": 93.8,
+            "roi": 0.43
+          },
+          {
+            "name": "Crystal platelegs",
+            "bags_per_unit": 0.965,
+            "confidence": 91.3,
+            "roi": 0.17
+          },
+          {
+            "name": "Crystal platebody",
+            "bags_per_unit": 0.966667,
+            "confidence": 91.5,
+            "roi": 0.0
+          },
+          {
+            "name": "Inquisitor faceguard",
+            "bags_per_unit": 0.975,
+            "confidence": 92.9,
+            "roi": -0.86
+          },
+          {
+            "name": "Torva platebody",
+            "bags_per_unit": 0.977778,
+            "confidence": 92.3,
+            "roi": -1.15
+          },
+          {
+            "name": "Occult ornament kit",
+            "bags_per_unit": 0.9875,
+            "confidence": 90.6,
+            "roi": -2.16
+          },
+          {
+            "name": "Torva platelegs",
+            "bags_per_unit": 0.987556,
+            "confidence": 92.2,
+            "roi": -2.16
+          },
+          {
+            "name": "Sanguinesti staff (e)",
+            "bags_per_unit": 0.994257,
+            "confidence": 84.6,
+            "roi": -2.85
+          },
+          {
+            "name": "Holy alien pet",
+            "bags_per_unit": 1.0,
+            "confidence": 62.1,
+            "roi": -3.45
+          },
+          {
+            "name": "Verdant ring",
+            "bags_per_unit": 1.0,
+            "confidence": 93.8,
+            "roi": -3.45
+          },
+          {
+            "name": "Crystal helmet",
+            "bags_per_unit": 1.0,
+            "confidence": 90.7,
+            "roi": -3.45
+          },
+          {
+            "name": "Volatile orb",
+            "bags_per_unit": 1.03139,
+            "confidence": 63.9,
+            "roi": -6.7
+          },
+          {
+            "name": "Orb of terror",
+            "bags_per_unit": 1.033333,
+            "confidence": 64.1,
+            "roi": -6.9
+          },
+          {
+            "name": "Grand ring (i)",
+            "bags_per_unit": 1.036667,
+            "confidence": 94.5,
+            "roi": -7.24
+          },
+          {
+            "name": "Inquisitor legguards",
+            "bags_per_unit": 1.07,
+            "confidence": 94.6,
+            "roi": -10.69
+          }
+        ]
+      },
+      "90d": {
+        "median_bags_per_unit": 0.8,
+        "items": [
+          {
+            "name": "Torture ornament kit",
+            "bags_per_unit": 0.65,
+            "confidence": 88.7,
+            "roi": 18.75
+          },
+          {
+            "name": "Blade of saeldor",
+            "bags_per_unit": 0.68,
+            "confidence": 88.3,
+            "roi": 15.0
+          },
+          {
+            "name": "Justiciar faceguard",
+            "bags_per_unit": 0.742857,
+            "confidence": 87.3,
+            "roi": 7.14
+          },
+          {
+            "name": "Virtus robe top",
+            "bags_per_unit": 0.742857,
+            "confidence": 90.1,
+            "roi": 7.14
+          },
+          {
+            "name": "Occult ornament kit",
+            "bags_per_unit": 0.7475,
+            "confidence": 88.3,
+            "roi": 6.56
+          },
+          {
+            "name": "Ring of malevolence",
+            "bags_per_unit": 0.75,
+            "confidence": 67.3,
+            "roi": 6.25
+          },
+          {
+            "name": "Ghommal's hilt",
+            "bags_per_unit": 0.76,
+            "confidence": 90.2,
+            "roi": 5.0
+          },
+          {
+            "name": "Pernix chaps",
+            "bags_per_unit": 0.785714,
+            "confidence": 90.0,
+            "roi": 1.79
+          },
+          {
+            "name": "Pernix body",
+            "bags_per_unit": 0.794286,
+            "confidence": 90.2,
+            "roi": 0.71
+          },
+          {
+            "name": "Dark brimstone ring",
+            "bags_per_unit": 0.796,
+            "confidence": 63.4,
+            "roi": 0.5
+          },
+          {
+            "name": "Torva platebody",
+            "bags_per_unit": 0.8,
+            "confidence": 90.6,
+            "roi": 0.0
+          },
+          {
+            "name": "Crystal helmet",
+            "bags_per_unit": 0.8,
+            "confidence": 88.3,
+            "roi": 0.0
+          },
+          {
+            "name": "Sanguinesti staff (e)",
+            "bags_per_unit": 0.8,
+            "confidence": 92.4,
+            "roi": 0.0
+          },
+          {
+            "name": "Torva platelegs",
+            "bags_per_unit": 0.822222,
+            "confidence": 90.9,
+            "roi": -2.78
+          },
+          {
+            "name": "Crystal platelegs",
+            "bags_per_unit": 0.833333,
+            "confidence": 89.1,
+            "roi": -4.17
+          },
+          {
+            "name": "Crystal platebody",
+            "bags_per_unit": 0.833333,
+            "confidence": 89.5,
+            "roi": -4.17
+          },
+          {
+            "name": "Verdant partyhat",
+            "bags_per_unit": 0.888867,
+            "confidence": 80.4,
+            "roi": -11.11
+          },
+          {
+            "name": "Verdant pendant",
+            "bags_per_unit": 0.9,
+            "confidence": 92.9,
+            "roi": -12.5
+          },
+          {
+            "name": "Holy alien pet",
+            "bags_per_unit": 0.925,
+            "confidence": 81.1,
+            "roi": -15.62
+          },
+          {
+            "name": "Grand ring (i)",
+            "bags_per_unit": 0.933333,
+            "confidence": 93.0,
+            "roi": -16.67
+          },
+          {
+            "name": "Inquisitor faceguard",
+            "bags_per_unit": 0.95,
+            "confidence": 91.3,
+            "roi": -18.75
+          },
+          {
+            "name": "Volatile orb",
+            "bags_per_unit": 0.973094,
+            "confidence": 75.5,
+            "roi": -21.64
+          },
+          {
+            "name": "Inquisitor legguards",
+            "bags_per_unit": 1.0,
+            "confidence": 93.3,
+            "roi": -25.0
+          },
+          {
+            "name": "Verdant ring",
+            "bags_per_unit": 1.0,
+            "confidence": 92.9,
+            "roi": -25.0
+          },
+          {
+            "name": "Orb of terror",
+            "bags_per_unit": 1.266667,
+            "confidence": 68.0,
+            "roi": -58.33
+          }
+        ]
+      }
+    }
+  }
+}
