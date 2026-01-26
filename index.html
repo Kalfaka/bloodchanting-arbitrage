@@ -144,7 +144,7 @@
             Market Analysis
           </h2>
           <p class="text-sm text-osrs-light">
-            Select time window and currency to see smart buy recommendations
+            Select time window and currency...
           </p>
         </div>
 
@@ -183,14 +183,9 @@
       <div class="osrs-panel rounded-lg p-4">
         <h3 class="text-lg font-bold text-osrs-gold mb-3">
           <span class="tooltip-trigger" data-tooltip="ROI (Return on Investment) shows how efficient each item is vs median. Positive ROI = item has lower bags/unit than median (cheaper to acquire currency). Example: +50% ROI means this item costs 50% less per shard/token than average!">
-            Top 15 by ROI (Current Window)
+            Top 15 by ROI
           </span>
         </h3>
-        <div class="text-xs bg-osrs-dark p-2 rounded mb-2">
-          <p class="text-green-400">+50% = Much cheaper than median (excellent!)</p>
-          <p class="text-yellow-400">0% = Average price (at median)</p>
-          <p class="text-red-400">-50% = Much more expensive (bad deal)</p>
-        </div>
         <div class="chart-container">
           <canvas id="roi-chart"></canvas>
         </div>
@@ -199,14 +194,9 @@
       <div class="osrs-panel rounded-lg p-4">
         <h3 class="text-lg font-bold text-osrs-gold mb-3">
           <span class="tooltip-trigger" data-tooltip="This chart shows the relationship between reliability and potential ROI for different items.">
-            Trade Volume vs ROI (Current Window)
+            Trade Volume vs ROI
           </span>
         </h3>
-        <div class="text-xs bg-osrs-dark p-2 rounded mb-2">
-          <p class="font-bold text-osrs-gold mb-1">Trade Volume:</p>
-          <p>More trades = more reliable price data</p>
-          <p>Fewer trades = use caution, price may be volatile</p>
-        </div>
         <div class="chart-container">
           <canvas id="confidence-chart"></canvas>
         </div>
@@ -221,10 +211,6 @@
           </h2>
           <span id="showing-count" class="text-osrs-light text-sm">Showing top 20</span>
         </div>
-        <p class="text-sm text-osrs-light mt-2">
-          Ranked by <strong class="text-osrs-orange">ROI (efficiency vs median)</strong> for the <strong class="text-osrs-orange" id="current-window-display">current</strong> time window.
-          Positive ROI = lower bags/unit = better arbitrage opportunity.
-        </p>
       </div>
 
       <div id="recommendations-list" class="grid grid-cols-1 gap-3">
