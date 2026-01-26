@@ -36,12 +36,9 @@ jobs:
           mkdir -p _site
           # Copy only the files needed for the website
           cp index.html _site/
-          cp styles.css _site/
+          cp -r assets _site/
           cp -r js _site/
           cp -r data _site/
-          # Copy favicon if it exists
-          if [ -f favicon.png ]; then cp favicon.png _site/; fi
-          if [ -f favicon.ico ]; then cp favicon.ico _site/; fi
           # Copy any markdown documentation you want accessible
           if [ -f README.md ]; then cp README.md _site/; fi
 
