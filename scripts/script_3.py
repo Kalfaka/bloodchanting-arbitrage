@@ -117,7 +117,7 @@ class VoLatilityAwareAnalyzer:
         return filtered
     
     def calculate_window_stats(self, trades: List[Dict]) -> Dict:
-        """Calculate statistics for a set of trades."""
+        """Calculate statistics for a set of trades with outlier filtering."""
         if not trades or len(trades) < MIN_TRADES_THRESHOLD:
             return {
                 'has_data': False,
@@ -129,17 +129,25 @@ class VoLatilityAwareAnalyzer:
                 'std_dev': 0.0,
                 'cv': 0.0
             }
-        
+
         prices = []
         for trade in trades:
             try:
-                amount = trade['amount']
                 price = trade['price']
-                if amount > 0:
-                    prices.append(price / amount)
+                currency = trade.get('currency', 1)  # Default to bags if missing
+
+                # Convert price to bags if needed
+                # currency: 0 = GP, 1 = Bags (1 bag = 100M GP)
+                # NOTE: price is per-unit, not total!
+                if currency == 0:
+                    price_in_bags = price / 100_000_000  # Convert GP to bags
+                else:
+                    price_in_bags = price  # Already in bags
+
+                prices.append(price_in_bags)
             except (KeyError, ZeroDivisionError):
                 continue
-        
+
         if len(prices) < MIN_TRADES_THRESHOLD:
             return {
                 'has_data': False,
@@ -151,11 +159,32 @@ class VoLatilityAwareAnalyzer:
                 'std_dev': 0.0,
                 'cv': 0.0
             }
-        
+
+        # Apply aggressive outlier filtering for data with extreme outliers
         prices_array = np.array(prices)
-        median = float(np.median(prices_array))
-        mean = float(np.mean(prices_array))
-        std = float(np.std(prices_array))
+
+        # Use percentile-based filtering: remove bottom 10% and top 10%
+        # This handles cases where fake/error trades cluster at extremes
+        p10 = np.percentile(prices_array, 10)
+        p90 = np.percentile(prices_array, 90)
+
+        # Filter to middle 80% of data
+        filtered_prices = prices_array[(prices_array >= p10) & (prices_array <= p90)]
+
+        # If filtering removed too many data points, fall back to less aggressive filtering
+        if len(filtered_prices) < MIN_TRADES_THRESHOLD:
+            # Try 25th-75th percentile (middle 50%)
+            p25 = np.percentile(prices_array, 25)
+            p75 = np.percentile(prices_array, 75)
+            filtered_prices = prices_array[(prices_array >= p25) & (prices_array <= p75)]
+
+            # If still not enough, use all data
+            if len(filtered_prices) < MIN_TRADES_THRESHOLD:
+                filtered_prices = prices_array
+
+        median = float(np.median(filtered_prices))
+        mean = float(np.mean(filtered_prices))
+        std = float(np.std(filtered_prices))
         cv = (std / mean * 100) if mean > 0 else 0.0
         
         return {
@@ -163,8 +192,8 @@ class VoLatilityAwareAnalyzer:
             'trades': len(trades),
             'median_price': round(median, 4),
             'mean_price': round(mean, 4),
-            'min_price': round(float(np.min(prices_array)), 4),
-            'max_price': round(float(np.max(prices_array)), 4),
+            'min_price': round(float(np.min(filtered_prices)), 4),
+            'max_price': round(float(np.max(filtered_prices)), 4),
             'std_dev': round(std, 4),
             'cv': round(cv, 2)
         }
